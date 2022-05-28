@@ -1,0 +1,16 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+
+target 'TATest_iOS' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for TATest_iOS
+  pod 'ThinkingSDK' #需要打开 source 'https://github.com/CocoaPods/Specs.git'
+#  pod 'BMKLocationKit' #需要打开 source 'https://github.com/CocoaPods/Specs.git'
+
+#  ENV["ThinkingSDK_source"] = '1'
+#  pod 'ThinkingSDK', :path => '../../ios-sdk'
+
+end

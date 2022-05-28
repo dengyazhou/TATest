@@ -1,0 +1,16 @@
+PODS:
+  - ThinkingSDK (2.7.3)
+
+DEPENDENCIES:
+  - ThinkingSDK
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ThinkingSDK
+
+SPEC CHECKSUMS:
+  ThinkingSDK: a19f2854ea905efdaf3e329c438d048623657e4b
+
+PODFILE CHECKSUM: b29e642b6b64f26436e68c2197868a16e618b555
+
+COCOAPODS: 1.10.1
