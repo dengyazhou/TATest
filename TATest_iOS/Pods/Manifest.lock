@@ -1,16 +1,16 @@
 PODS:
-  - ThinkingSDK (2.7.3)
+  - ThinkingSDK (2.8.0.1)
 
 DEPENDENCIES:
-  - ThinkingSDK
+  - ThinkingSDK (from `../../ios-sdk`)
 
-SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
-    - ThinkingSDK
+EXTERNAL SOURCES:
+  ThinkingSDK:
+    :path: "../../ios-sdk"
 
 SPEC CHECKSUMS:
-  ThinkingSDK: a19f2854ea905efdaf3e329c438d048623657e4b
+  ThinkingSDK: 4b78b6e5fa5fda7f3614d24d0a271cdacc8ce8c9
 
-PODFILE CHECKSUM: b29e642b6b64f26436e68c2197868a16e618b555
+PODFILE CHECKSUM: 3da37204a1bb1d5a215d99f9b9421c3d6e96eda3
 
 COCOAPODS: 1.10.1
