@@ -228,9 +228,15 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     
 #pragma mark 7.4 获取预置属性
     //获取属性对象
-//    TDPresetProperties *presetProperties = [instance getPresetProperties];
+    TDPresetProperties *presetProperties = [instance getPresetProperties];
     //生成事件预置属性
-//    NSDictionary *properties = [presetProperties toEventPresetProperties];
+    NSDictionary *properties = [presetProperties toEventPresetProperties];
+    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    NSString *uuid = [[NSUUID UUID] UUIDString];
+    NSString *device_id = properties[@"#device_id"];
+    NSLog(@"=====>>>>idfv:%@",idfv);
+    NSLog(@"=====>>>>uuid:%@",uuid);
+    NSLog(@"=====>>>>device_id:%@",device_id);
     
 #pragma mark 7.6 预制属性开关
 //    [instance track:@"product_arm" properties:@{@"product_name": @"解封"}];
