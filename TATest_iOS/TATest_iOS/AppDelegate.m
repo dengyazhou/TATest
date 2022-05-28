@@ -228,15 +228,15 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     
 #pragma mark 7.4 获取预置属性
     //获取属性对象
-    TDPresetProperties *presetProperties = [instance getPresetProperties];
-    //生成事件预置属性
-    NSDictionary *properties = [presetProperties toEventPresetProperties];
-    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
-    NSString *uuid = [[NSUUID UUID] UUIDString];
-    NSString *device_id = properties[@"#device_id"];
-    NSLog(@"=====>>>>idfv:%@",idfv);
-    NSLog(@"=====>>>>uuid:%@",uuid);
-    NSLog(@"=====>>>>device_id:%@",device_id);
+//    TDPresetProperties *presetProperties = [instance getPresetProperties];
+//    //生成事件预置属性
+//    NSDictionary *properties = [presetProperties toEventPresetProperties];
+//    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
+//    NSString *uuid = [[NSUUID UUID] UUIDString];
+//    NSString *device_id = properties[@"#device_id"];
+//    NSLog(@"=====>>>>idfv:%@",idfv);
+//    NSLog(@"=====>>>>uuid:%@",uuid);
+//    NSLog(@"=====>>>>device_id:%@",device_id);
     
 #pragma mark 7.6 预制属性开关
 //    [instance track:@"product_arm" properties:@{@"product_name": @"解封"}];
@@ -278,12 +278,42 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    config.secretKey = [[TDSecretKey alloc] initWithVersion:1 publicKey:@"MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCzAKEGsq67Yd03"];// 配置版本号、公钥等密钥信息
     
     
-//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppStart |
-//    ThinkingAnalyticsEventTypeAppInstall |
-//    ThinkingAnalyticsEventTypeAppEnd |
-//    ThinkingAnalyticsEventTypeAppViewScreen |
-//    ThinkingAnalyticsEventTypeAppClick |
-//    ThinkingAnalyticsEventTypeAppViewCrash];
+#pragma mark iOS SDK 自动采集指南
+//    ThinkingAnalyticsEventTypeAppInstall，APP 安装，记录 APP 被安装的日志
+//    ThinkingAnalyticsEventTypeAppStart，APP 启动事件，记录 APP 启动或从后台恢复
+//    ThinkingAnalyticsEventTypeAppEnd，APP 关闭事件，记录 APP 调入后台
+//    ThinkingAnalyticsEventTypeAppViewScreen，APP 浏览页面事件
+//    ThinkingAnalyticsEventTypeAppClick，APP 点击控件事件
+//    ThinkingAnalyticsEventTypeAppViewCrash，APP 崩溃事件
+    
+//    [instance identify:@"dyz_identify_V1"];
+//    [instance setSuperProperties:@{@"Channel_V1":@"ABC",@"Server_V1":@123,@"isTest_V1":@YES}];
+    //如需设置公共事件属性或设置自定义访客 ID，请务必确保在开启自动采集之前调用 setSuperProperties:或 identify:
+    //设置完访客ID与公共属性后，再开启自动采集
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppInstall |
+//     ThinkingAnalyticsEventTypeAppStart |
+//     ThinkingAnalyticsEventTypeAppEnd |
+//     ThinkingAnalyticsEventTypeAppViewScreen |
+//     ThinkingAnalyticsEventTypeAppClick |
+//     ThinkingAnalyticsEventTypeAppViewCrash];
+    
+    //打开自动采集功能，同时设置自定义属性
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"auto_key1_dyz": @"auto_value123"}];
+    
+//    [instance setAutoTrackProperties:ThinkingAnalyticsEventTypeAppEnd properties:@{@"auto_key2": @"auto_value222"}];//好像没效果
+    
+#pragma mark 自动采集事件回调
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll callback:^NSDictionary * _Nonnull(ThinkingAnalyticsAutoTrackEventType eventType, NSDictionary * _Nonnull properties) {
+//        if (eventType == ThinkingAnalyticsEventTypeAppStart) {
+//            return @{@"addkey_dyz_V1":@"addvalueStare"};
+//        }
+//        if (eventType == ThinkingAnalyticsEventTypeAppEnd) {
+//            return @{@"updatekey":@"updatevalue"};
+//        }
+//        return @{};
+//    }];
+    
+    
     return YES;
 }
 

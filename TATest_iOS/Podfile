@@ -9,6 +9,7 @@ target 'TATest_iOS' do
   # Pods for TATest_iOS
 #  pod 'ThinkingSDK' #需要打开 source 'https://github.com/CocoaPods/Specs.git'
 #  pod 'BMKLocationKit' #需要打开 source 'https://github.com/CocoaPods/Specs.git'
+  pod 'Masonry' #不需要打开 source 'https://github.com/CocoaPods/Specs.git'
 
   ENV["ThinkingSDK_source"] = '1'
   pod 'ThinkingSDK', :path => '../../ios-sdk'

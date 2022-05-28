@@ -15,6 +15,11 @@
 		B6756EA52841B3F200CAF38C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6756EA42841B3F200CAF38C /* Assets.xcassets */; };
 		B6756EA82841B3F200CAF38C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6756EA62841B3F200CAF38C /* LaunchScreen.storyboard */; };
 		B6756EAB2841B3F200CAF38C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EAA2841B3F200CAF38C /* main.m */; };
+		B6756EB82842025100CAF38C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EB72842025000CAF38C /* HomeViewController.m */; };
+		B6756EBB2842091600CAF38C /* AppViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EBA2842091600CAF38C /* AppViewViewController.m */; };
+		B6756EBE28420EFA00CAF38C /* AppClickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EBD28420EFA00CAF38C /* AppClickViewController.m */; };
+		B6756EC128421BA700CAF38C /* AppClickTableViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EC028421BA700CAF38C /* AppClickTableViewVC.m */; };
+		B6756EC42842285600CAF38C /* IgnoredViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756EC32842285600CAF38C /* IgnoredViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,16 @@
 		B6756EA72841B3F200CAF38C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B6756EA92841B3F200CAF38C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B6756EAA2841B3F200CAF38C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B6756EB62842025000CAF38C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		B6756EB72842025000CAF38C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		B6756EB92842091600CAF38C /* AppViewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppViewViewController.h; sourceTree = "<group>"; };
+		B6756EBA2842091600CAF38C /* AppViewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppViewViewController.m; sourceTree = "<group>"; };
+		B6756EBC28420EFA00CAF38C /* AppClickViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppClickViewController.h; sourceTree = "<group>"; };
+		B6756EBD28420EFA00CAF38C /* AppClickViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppClickViewController.m; sourceTree = "<group>"; };
+		B6756EBF28421BA700CAF38C /* AppClickTableViewVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppClickTableViewVC.h; sourceTree = "<group>"; };
+		B6756EC028421BA700CAF38C /* AppClickTableViewVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppClickTableViewVC.m; sourceTree = "<group>"; };
+		B6756EC22842285600CAF38C /* IgnoredViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IgnoredViewController.h; sourceTree = "<group>"; };
+		B6756EC32842285600CAF38C /* IgnoredViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IgnoredViewController.m; sourceTree = "<group>"; };
 		EB6B570B1AF53E962FC92F9D /* Pods-TATest_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATest_iOS.debug.xcconfig"; path = "Target Support Files/Pods-TATest_iOS/Pods-TATest_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +98,9 @@
 				B6756E9C2841B3F100CAF38C /* SceneDelegate.m */,
 				B6756E9E2841B3F100CAF38C /* ViewController.h */,
 				B6756E9F2841B3F100CAF38C /* ViewController.m */,
+				B6756EB62842025000CAF38C /* HomeViewController.h */,
+				B6756EB72842025000CAF38C /* HomeViewController.m */,
+				B6756EB52842020200CAF38C /* AutoTracker */,
 				B6756EA12841B3F100CAF38C /* Main.storyboard */,
 				B6756EA42841B3F200CAF38C /* Assets.xcassets */,
 				B6756EA62841B3F200CAF38C /* LaunchScreen.storyboard */,
@@ -90,6 +108,21 @@
 				B6756EAA2841B3F200CAF38C /* main.m */,
 			);
 			path = TATest_iOS;
+			sourceTree = "<group>";
+		};
+		B6756EB52842020200CAF38C /* AutoTracker */ = {
+			isa = PBXGroup;
+			children = (
+				B6756EB92842091600CAF38C /* AppViewViewController.h */,
+				B6756EBA2842091600CAF38C /* AppViewViewController.m */,
+				B6756EBC28420EFA00CAF38C /* AppClickViewController.h */,
+				B6756EBD28420EFA00CAF38C /* AppClickViewController.m */,
+				B6756EBF28421BA700CAF38C /* AppClickTableViewVC.h */,
+				B6756EC028421BA700CAF38C /* AppClickTableViewVC.m */,
+				B6756EC22842285600CAF38C /* IgnoredViewController.h */,
+				B6756EC32842285600CAF38C /* IgnoredViewController.m */,
+			);
+			path = AutoTracker;
 			sourceTree = "<group>";
 		};
 		D0B8D2508B5D6D3CA513B350 /* Frameworks */ = {
@@ -216,8 +249,13 @@
 			files = (
 				B6756EA02841B3F100CAF38C /* ViewController.m in Sources */,
 				B6756E9A2841B3F100CAF38C /* AppDelegate.m in Sources */,
+				B6756EBB2842091600CAF38C /* AppViewViewController.m in Sources */,
+				B6756EC128421BA700CAF38C /* AppClickTableViewVC.m in Sources */,
 				B6756EAB2841B3F200CAF38C /* main.m in Sources */,
+				B6756EB82842025100CAF38C /* HomeViewController.m in Sources */,
+				B6756EBE28420EFA00CAF38C /* AppClickViewController.m in Sources */,
 				B6756E9D2841B3F100CAF38C /* SceneDelegate.m in Sources */,
+				B6756EC42842285600CAF38C /* IgnoredViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
