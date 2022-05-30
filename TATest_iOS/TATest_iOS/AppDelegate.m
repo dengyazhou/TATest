@@ -22,7 +22,7 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     // Override point for customization after application launch.
     
 #pragma mark 1.3 初始化
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     // 支持初始化多个APPID实例
 //     ThinkingAnalyticsSDK *instance2 = [ThinkingAnalyticsSDK startWithAppId:APP_ID2 withUrl:SERVER_URL2];
 //    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
@@ -226,17 +226,19 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     // 使用苹果公司 NTP 服务对时间进行校准
 //    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];
     
-#pragma mark 7.4 获取预置属性
+#pragma mark 7.4 获取预置属性 device_id等等
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     //获取属性对象
-//    TDPresetProperties *presetProperties = [instance getPresetProperties];
-//    //生成事件预置属性
-//    NSDictionary *properties = [presetProperties toEventPresetProperties];
-//    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
-//    NSString *uuid = [[NSUUID UUID] UUIDString];
-//    NSString *device_id = properties[@"#device_id"];
-//    NSLog(@"=====>>>>idfv:%@",idfv);
-//    NSLog(@"=====>>>>uuid:%@",uuid);
-//    NSLog(@"=====>>>>device_id:%@",device_id);
+    TDPresetProperties *presetProperties = [instance getPresetProperties];
+    //生成事件预置属性
+    NSDictionary *properties = [presetProperties toEventPresetProperties];
+    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
+    NSString *uuid = [[NSUUID UUID] UUIDString];
+    NSString *device_id = properties[@"#device_id"];
+    NSLog(@"=====>>>>idfv:%@",idfv);//D364E712-D6BF-408C-81D7-B1BBA974045E
+    NSLog(@"=====>>>>uuid:%@",uuid);
+    NSLog(@"=====>>>>device_id:%@",device_id);//D364E712-D6BF-408C-81D7-B1BBA974045E
+    NSLog(@"=====>>>>distinctId:%@",[instance getDistinctId]);
     
 #pragma mark 7.6 预制属性开关
 //    [instance track:@"product_arm" properties:@{@"product_name": @"解封"}];
@@ -313,6 +315,12 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //        return @{};
 //    }];
     
+#pragma mark 创建轻实例
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    //通过之前创建的实例，调用createLightInstance生成轻实例
+//    ThinkingAnalyticsSDK *lightInstance = [instance createLightInstance];
+//    [lightInstance login:@"ligth0001@thinkingdata.cn"];
+//    [lightInstance track:@"some_event" properties:@{@"ligth_V1":@"第一个访客"}];
     
     return YES;
 }
