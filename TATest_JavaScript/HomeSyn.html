@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>首页 同步载入</title>
+
+<script src="ta_js_sdk/thinkingdata.umd.min.js"></script>
+<script>
+    // 创建 SDK 配置对象
+    var config = {
+        appId: 'a5bf4fc2f8a248a7a02b9a62a58bf1e9',
+        serverUrl: 'http://ta_test.receiver.thinkingdata.cn',
+    };
+    // 将 SDK 实例赋给全局变量 ta，或者其他您指定的变量
+    window.ta = thinkingdata;
+
+    // 用配置对象初始化 SDK
+    ta.init(config);
+
+    // 之后您就可以使用 ta 来上报事件了
+    // ta.track('test_event_JS_V3');
+
+    // 2.1 设置访客 ID（可选）
+    // ta.identify("123yazhou.deng");
+
+    // 2.2 设置账号 ID
+    // ta.login("ABC_123456yazhou.shushu");
+
+    
+    // 3.2 监控 HTML 元素点击事件
+    // ta.trackLink(
+    //     {
+    //         id: ["id1"] //自定义的ID名称
+    //     }, //监控元素的规则
+    //     "click", //追踪事件的名称
+    //     {
+    //         production: "产品名V1",
+    //         name: "元素标识名V1"
+    //     } //事件的属性
+    // );
+    
+    // 3.3.2 设置页面公共属性
+    // ta.setPageProperty( { page_id_V_JS: "page10002" } );
+
+    // 3.3.3 设置页面动态公共属性
+    // ta.setDynamicSuperProperties( function() {
+    //     var d = new Date();
+    //     d.setHours(10);
+    //     return { dateV_JS: d };
+    // } );
+
+    // 3.3.4 设置静态公共属性
+    // ta.setSuperProperties( { channelV_JS: "渠道名", user_nameV_JS: "用户名"} );
+    // 清除一条静态公共事件属性，比如将之前设置 'channel' 属性清除，之后的数据将不会该属性
+    // ta.unsetSuperProperty("channelV_JS");
+    // 清除所有静态公共事件属性
+    // ta.clearSuperProperties();
+
+    // 3.4 记录事件时长
+    // 开始计时，记录的事件为'Purchase'
+    // ta.timeEvent("Purchase");
+    // ta.track( "Purchase", { Item: "商品A", ItemNum: 1, Cost: 100} );
+
+    // 3.5 自动采集页面浏览事件
+    // ta.quick("autoTrack");
+
+    // 4.1 设置用户属性（userSet）
+    // ta.userSet( { vip_level: "钻石会员"} );
+
+    // 4.2 初始化用户属性（userSetOnce）
+    // ta.userSetOnce( { UserName1: "TA1" } );
+
+    // 4.3 累加用户属性（userAdd）
+    // ta.userAdd( {total_revenue: 50} );
+
+    // 4.4 重置用户属性（userUnset）
+    // ta.userUnset("username1");
+
+    // 4.5 删除用户（userDel）
+    // ta.userDel();
+
+    // ta.track('test_event_JS_V3');
+    
+    function track() {
+        // document.write("<h1>这是一个标题129</h1>"); 
+        // ta.track('test_event_JS_V8');
+        console.log('test_event_JS_V10');
+
+        // document.getElementById("id1").innerHTML = "你好";
+
+        // 获取当前页面的页面公共属性
+        // var pageProperty = ta.getPageProperty();
+        // console.log(pageProperty);
+
+        // 获取静态公共事件属性
+        // var superProperties = ta.getSuperProperties();
+        // console.log(superProperties);
+
+    }
+</script>
+
+</head>
+<body>
+    <h1>TATest_JavaScript</h1>
+    <p>首页 同步载入</p>
+
+    <button id="id1" onclick="track(this)">上传事件</button>    
+</body>
+</html>

@@ -227,18 +227,18 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];
     
 #pragma mark 7.4 获取预置属性 device_id等等
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     //获取属性对象
-    TDPresetProperties *presetProperties = [instance getPresetProperties];
+//    TDPresetProperties *presetProperties = [instance getPresetProperties];
     //生成事件预置属性
-    NSDictionary *properties = [presetProperties toEventPresetProperties];
-    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
-    NSString *uuid = [[NSUUID UUID] UUIDString];
-    NSString *device_id = properties[@"#device_id"];
-    NSLog(@"=====>>>>idfv:%@",idfv);//D364E712-D6BF-408C-81D7-B1BBA974045E
-    NSLog(@"=====>>>>uuid:%@",uuid);
-    NSLog(@"=====>>>>device_id:%@",device_id);//D364E712-D6BF-408C-81D7-B1BBA974045E
-    NSLog(@"=====>>>>distinctId:%@",[instance getDistinctId]);
+//    NSDictionary *properties = [presetProperties toEventPresetProperties];
+//    NSString *idfv = [[UIDevice currentDevice].identifierForVendor UUIDString];
+//    NSString *uuid = [[NSUUID UUID] UUIDString];
+//    NSString *device_id = properties[@"#device_id"];
+//    NSLog(@"=====>>>>idfv:%@",idfv);//D364E712-D6BF-408C-81D7-B1BBA974045E
+//    NSLog(@"=====>>>>uuid:%@",uuid);
+//    NSLog(@"=====>>>>device_id:%@",device_id);//D364E712-D6BF-408C-81D7-B1BBA974045E
+//    NSLog(@"=====>>>>distinctId:%@",[instance getDistinctId]);
     
 #pragma mark 7.6 预制属性开关
 //    [instance track:@"product_arm" properties:@{@"product_name": @"解封"}];
@@ -287,17 +287,18 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    ThinkingAnalyticsEventTypeAppViewScreen，APP 浏览页面事件
 //    ThinkingAnalyticsEventTypeAppClick，APP 点击控件事件
 //    ThinkingAnalyticsEventTypeAppViewCrash，APP 崩溃事件
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     
 //    [instance identify:@"dyz_identify_V1"];
 //    [instance setSuperProperties:@{@"Channel_V1":@"ABC",@"Server_V1":@123,@"isTest_V1":@YES}];
     //如需设置公共事件属性或设置自定义访客 ID，请务必确保在开启自动采集之前调用 setSuperProperties:或 identify:
     //设置完访客ID与公共属性后，再开启自动采集
-//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppInstall |
-//     ThinkingAnalyticsEventTypeAppStart |
-//     ThinkingAnalyticsEventTypeAppEnd |
-//     ThinkingAnalyticsEventTypeAppViewScreen |
-//     ThinkingAnalyticsEventTypeAppClick |
-//     ThinkingAnalyticsEventTypeAppViewCrash];
+    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppInstall |
+     ThinkingAnalyticsEventTypeAppStart |
+     ThinkingAnalyticsEventTypeAppEnd |
+     ThinkingAnalyticsEventTypeAppViewScreen |
+     ThinkingAnalyticsEventTypeAppClick |
+     ThinkingAnalyticsEventTypeAppViewCrash];
     
     //打开自动采集功能，同时设置自定义属性
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"auto_key1_dyz": @"auto_value123"}];

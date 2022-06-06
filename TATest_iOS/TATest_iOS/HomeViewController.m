@@ -44,8 +44,8 @@
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark APP 崩溃事件 ta_app_crash
-//    NSArray *array = @[@"str1",@"sr2",@"str3"];
-//    NSString *str = array[3];
+    NSArray *array = @[@"str1",@"sr2",@"str3"];
+    NSString *str = array[3];
     
 #pragma mark 忽略自动采集事件
 //    IgnoredViewController *vc = [[IgnoredViewController alloc] init];
