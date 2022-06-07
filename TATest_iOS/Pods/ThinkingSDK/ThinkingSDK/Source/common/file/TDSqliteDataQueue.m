@@ -4,6 +4,7 @@
 #import "TDLogging.h"
 #import "TDJSONUtil.h"
 #import "TDConfig.h"
+#import "TDEventRecord.h"
 
 @implementation TDSqliteDataQueue {
     sqlite3 *_database;
@@ -25,6 +26,7 @@
     dispatch_once(&onceToken, ^{
         NSString *filepath = [[NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"TDData-data.plist"];
         sharedInstance = [[self alloc] initWithPath:filepath withAppid:appid];
+        TDLogDebug(@"数据库路径：%@", filepath);
     });
     return sharedInstance;
 }
@@ -50,6 +52,10 @@
             [self delExpiredData];
         }
         
+        if (![self isExistColumnInTable:@"uuid"]) {
+            [self addColumnText:@"uuid"];
+        }
+        
     } else {
         return nil;
     }
@@ -68,6 +74,16 @@
     @try {
         sqlite3_exec(_database, [query UTF8String], NULL, NULL, &errMsg);
         sqlite3_exec(_database, [query2 UTF8String], NULL, NULL, &errMsg);
+    } @catch (NSException *exception) {
+        TDLogError(@"addColumn: %@", exception);
+    }
+}
+
+- (void)addColumnText:(NSString *)columnText {
+    NSString *query = [NSString stringWithFormat:@"alter table TDData add '%@' TEXT", columnText];;
+    char *errMsg;
+    @try {
+        sqlite3_exec(_database, [query UTF8String], NULL, NULL, &errMsg);
     } @catch (NSException *exception) {
         TDLogError(@"addColumn: %@", exception);
     }
@@ -129,21 +145,21 @@
     return [self sqliteCountForAppid:appid];
 }
 
-- (NSArray *)getFirstRecords:(NSUInteger)recordSize withAppid:(NSString *)appid {
+- (NSArray<TDEventRecord *> *)getFirstRecords:(NSUInteger)recordSize withAppid:(NSString *)appid {
     if (_allmessageCount == 0) {
         return @[];
     }
     
-    NSMutableArray *contentArray = [[NSMutableArray alloc] init];
-    NSString *query = @"SELECT content FROM TDData where appid=? ORDER BY id ASC LIMIT ?";
-
+    NSMutableArray *records = [[NSMutableArray alloc] init];
+    NSString *query = @"SELECT id,content FROM TDData where appid=? ORDER BY id ASC LIMIT ?";
     sqlite3_stmt *stmt = NULL;
     int rc = sqlite3_prepare_v2(_database, [query UTF8String], -1, &stmt, NULL);
     if (rc == SQLITE_OK) {
         sqlite3_bind_text(stmt, 1, [appid UTF8String], -1, SQLITE_TRANSIENT);
         sqlite3_bind_int(stmt, 2, (int)recordSize);
         while (sqlite3_step(stmt) == SQLITE_ROW) {
-            char *jsonChar = (char *)sqlite3_column_text(stmt, 0);
+            sqlite3_int64 index = sqlite3_column_int64(stmt, 0);
+            char *jsonChar = (char *)sqlite3_column_text(stmt, 1);
             if (!jsonChar) {
                 continue;
             }
@@ -154,12 +170,35 @@
                                                                       options:NSJSONReadingMutableContainers
                                                                         error:&err];
             if (!err && [eventDict isKindOfClass:[NSDictionary class]]) {
-                [contentArray addObject:eventDict];
+                [records addObject:[[TDEventRecord alloc] initWithIndex:[NSNumber numberWithLongLong:index] content:eventDict]];
             }
         }
     }
     sqlite3_finalize(stmt);
-    return [NSArray arrayWithArray:contentArray];
+    return records;
+}
+
+- (BOOL)removeDataWithuids:(NSArray *)uids {
+
+    if (uids.count == 0) {
+        return NO;
+    }
+    
+    NSString *query = [NSString stringWithFormat:@"DELETE FROM TDData WHERE uuid IN (%@);", [uids componentsJoinedByString:@","]];
+    sqlite3_stmt *stmt;
+
+    if (sqlite3_prepare_v2(_database, query.UTF8String, -1, &stmt, NULL) != SQLITE_OK) {
+        TDLogError(@"Delete records Error: %s", sqlite3_errmsg(_database));
+        return NO;
+    }
+    BOOL success = YES;
+    if (sqlite3_step(stmt) != SQLITE_DONE) {
+        TDLogError(@"Delete records Error: %s", sqlite3_errmsg(_database));
+        success = NO;
+    }
+    sqlite3_finalize(stmt);
+    _allmessageCount = [self sqliteCount];
+    return YES;
 }
 
 - (BOOL)removeFirstRecords:(NSUInteger)recordSize withAppid:(NSString *)appid {
@@ -192,6 +231,52 @@
     }
     sqlite3_finalize(stmt);
     _allmessageCount = [self sqliteCount];
+    return YES;
+}
+
+- (NSArray *)upadteRecordIds:(NSArray<NSNumber *> *)recordIds {
+    if (recordIds.count == 0) {
+        return @[];
+    }
+    NSMutableArray *uids = [NSMutableArray arrayWithCapacity:recordIds.count];
+    [recordIds enumerateObjectsUsingBlock:^(NSNumber *recordId, NSUInteger idx, BOOL * _Nonnull stop) {
+        NSString *uuid = [self rand13NumString];
+        NSString *query = [NSString stringWithFormat:@"UPDATE TDData SET uuid = '%@' WHERE id = %lld;", uuid, [recordId longLongValue]];
+        if ([self execUpdateSQL:query]) {
+            [uids addObject:uuid];
+        }
+    }];
+    return uids;
+}
+
+
+#pragma mark - 生成随机的13位数字
+-(NSString *)rand13NumString
+{
+    int NUMBER_OF_CHARS = 13;
+    
+    char data[NUMBER_OF_CHARS];
+    
+    for (int x = 0; x < NUMBER_OF_CHARS; data[x++] = (char)('1' + (arc4random_uniform(9))));
+    
+    NSString *numString = [[NSString alloc] initWithBytes:data length:NUMBER_OF_CHARS encoding:NSUTF8StringEncoding];
+    
+    return numString;
+}
+
+
+- (BOOL)execUpdateSQL:(NSString *)sql {
+
+    sqlite3_stmt *stmt;
+    if (sqlite3_prepare_v2(_database, sql.UTF8String, -1, &stmt, NULL) != SQLITE_OK) {
+        TDLogError(@"Update Records Error: %s", sqlite3_errmsg(_database));
+        return NO;
+    }
+    if (sqlite3_step(stmt) != SQLITE_DONE) {
+        TDLogError(@"Update Records Error: %s", sqlite3_errmsg(_database));
+        return NO;
+    }
+    sqlite3_finalize(stmt);
     return YES;
 }
 

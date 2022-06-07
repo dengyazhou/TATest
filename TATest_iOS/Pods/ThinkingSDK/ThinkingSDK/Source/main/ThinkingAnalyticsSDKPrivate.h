@@ -26,6 +26,8 @@ static NSString * const TD_APP_INSTALL_EVENT                = @"ta_app_install";
 
 static NSString * const TD_CRASH_REASON                     = @"#app_crashed_reason";
 static NSString * const TD_RESUME_FROM_BACKGROUND           = @"#resume_from_background";
+static NSString * const TD_START_REASON                     = @"#start_reason";
+static NSString * const TD_BACKGROUND_DURATION              = @"#background_duration";
 
 static kEDEventTypeName const TD_EVENT_TYPE_TRACK           = @"track";
 
@@ -35,12 +37,13 @@ static kEDEventTypeName const TD_EVENT_TYPE_USER_SET        = @"user_set";
 static kEDEventTypeName const TD_EVENT_TYPE_USER_SETONCE    = @"user_setOnce";
 static kEDEventTypeName const TD_EVENT_TYPE_USER_UNSET      = @"user_unset";
 static kEDEventTypeName const TD_EVENT_TYPE_USER_APPEND     = @"user_append";
+static kEDEventTypeName const TD_EVENT_TYPE_USER_UNIQ_APPEND= @"user_uniq_append";
 
 static NSString * const TD_EVENT_START                      = @"eventStart";
 static NSString * const TD_EVENT_DURATION                   = @"eventDuration";
 
-static NSString * const TD_EVENT_BACKGROUND_DURATION        = @"event_background_duration";
-static NSString * const TD_EVENT_ENTERBACKGROUND_TIME       = @"event_enter_background_time";
+static NSString * const TD_EVENT_BACKGROUND_DURATION        = @"event_background_duration";// 进入后台经历的时间
+static NSString * const TD_EVENT_ENTERBACKGROUND_TIME       = @"event_enter_background_time";// 进入后台的时刻
 
 static char TD_AUTOTRACK_VIEW_ID;
 static char TD_AUTOTRACK_VIEW_ID_APPID;
@@ -75,11 +78,17 @@ static NSString * const TA_JS_TRACK_SCHEME = @"thinkinganalytics://trackEvent";
 @property (atomic, copy) NSString *identifyId;
 @property (atomic, strong) NSDictionary *superProperty;
 @property (atomic, strong) NSMutableDictionary *autoCustomProperty;// 自动采集自定义属性
+@property (atomic, copy) NSDictionary*(^autoTrackCallback)(ThinkingAnalyticsAutoTrackEventType type, NSDictionary *properties);// 自动采集回调
 @property (atomic, strong) NSMutableSet *ignoredViewTypeList;
 @property (atomic, strong) NSMutableSet *ignoredViewControllers;
 @property (nonatomic, assign) BOOL relaunchInBackGround;// 标识是否是后台自启动事件
+
+/// 标识是否暂停网络上报，默认 NO 上报网络正常流程；YES 入本地数据库但不网络上报
+@property (atomic, assign, getter=isTrackPause) BOOL trackPause;
+
 @property (nonatomic, assign) BOOL isEnabled;
 @property (atomic, assign) BOOL isOptOut;
+
 @property (nonatomic, strong, nullable) NSTimer *timer;
 @property (nonatomic, strong) NSPredicate *regexKey;
 @property (nonatomic, strong) NSPredicate *regexAutoTrackKey;
@@ -103,8 +112,8 @@ static NSString * const TA_JS_TRACK_SCHEME = @"thinkinganalytics://trackEvent";
 - (BOOL)isAutoTrackEventTypeIgnored:(ThinkingAnalyticsAutoTrackEventType)eventType;
 - (BOOL)isViewTypeIgnored:(Class)aClass;
 - (void)retrievePersistedData;
-+ (dispatch_queue_t)serialQueue;
-+ (dispatch_queue_t)networkQueue;
++ (dispatch_queue_t)td_trackQueue;
++ (dispatch_queue_t)td_networkQueue;
 + (UIApplication *)sharedUIApplication;
 - (NSInteger)saveEventsData:(NSDictionary *)data;
 - (void)flushImmediately:(NSDictionary *)dataDic;

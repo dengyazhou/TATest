@@ -1,0 +1,29 @@
+PODS:
+  - Flutter (1.0.0)
+  - thinking_analytics (2.1.0):
+    - Flutter
+    - ThinkingSDK (= 2.8.0.1)
+  - ThinkingSDK (2.8.0.1)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - thinking_analytics (from `.symlinks/plugins/thinking_analytics/ios`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - ThinkingSDK
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  thinking_analytics:
+    :path: ".symlinks/plugins/thinking_analytics/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  thinking_analytics: d0ea0fc499021749a885c487e13655dc93167870
+  ThinkingSDK: 4b78b6e5fa5fda7f3614d24d0a271cdacc8ce8c9
+
+PODFILE CHECKSUM: 914c39a0f1b745cf90d53da8c3fe4c9c2766f4ad
+
+COCOAPODS: 1.11.3
