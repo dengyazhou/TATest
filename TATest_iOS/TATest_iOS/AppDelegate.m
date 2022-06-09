@@ -8,8 +8,8 @@
 #import "AppDelegate.h"
 #import <ThinkingSDK/ThinkingSDK.h>
 
-static NSString *APP_ID = @"a5bf4fc2f8a248a7a02b9a62a58bf1e9";
-static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
+static NSString *APP_ID = @"9ea29e5b57e6440381454bb6681b5e84";
+static NSString *SERVER_URL = @"https://receiver-ta-dev.thinkingdata.cn";
 
 @interface AppDelegate ()
 
