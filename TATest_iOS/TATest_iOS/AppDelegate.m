@@ -22,6 +22,8 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     // Override point for customization after application launch.
     
 #pragma mark 1.3 初始化
+    [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
+
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     // 支持初始化多个APPID实例
 //     ThinkingAnalyticsSDK *instance2 = [ThinkingAnalyticsSDK startWithAppId:APP_ID2 withUrl:SERVER_URL2];
@@ -43,12 +45,16 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     
     // v2.7.2版本以后为实例设置 name
 //    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+//    config.uploadSize = @10;
+//    config.uploadInterval = @3600;
 //    config.name = @"SS_TADemo";
-//    [ThinkingAnalyticsSDK startWithConfig:config];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
 //
 //    // 根据name获取实例
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"SS_TADemo"];
 
+//    [instance track:@"iOS_event20"];
+ 
     
 #pragma mark 1.4 后台自启事件说明
 //    TDConfig *config = [[TDConfig alloc] init];
@@ -172,7 +178,13 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    [instance setNetworkType:TDNetworkTypeOnlyWIFI];
     // 在 2G ,3G, 4G, 5G 及 Wifi 时上传数据, 默认设置
 //    [instance setNetworkType:TDNetworkTypeDefault];
+    
 #pragma mark 6.2 数据上报状态
+    //TATrackStatusPause:  暂时停止数据采集(相当于把数据写入本地数据库TDData-data.plist)和上报
+    //TATrackStatusStop: 停止数据采集和上报，并清除缓存(本地的数据库，例如iOS沙盒Library/TDData-data.plist 和 清空该实例的本地缓存，包括本实例的访客 ID，账号 ID，公共属性)
+    //TATrackStatusSaveOnly: 数据采集入库(本地的数据库，例如iOS沙盒Library/TDData-data.plist),但暂停上报数据
+    //TATrackStatusNormal
+    
     // 暂停上报
 //    [instance setTrackStatus:TATrackStatusPause];
     // 恢复上报
@@ -252,9 +264,14 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    [instance trackWithEventModel:firstModel];
     
 #pragma mark 8.2 可更新事件
-//    TDUpdateEventModel *updateModel = [[TDUpdateEventModel alloc] initWithEventName:@"dyz_update" eventID:@"eventID_1"];
-//    updateModel.properties = @{@"status":@3,@"price":@100};
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    TDUpdateEventModel *updateModel = [[TDUpdateEventModel alloc] initWithEventName:@"dyz_eventUpdate_V1" eventID:@"eventID_4"];
+//    updateModel.properties = @{@"status":@6,@"price":@100};
 //    [instance trackWithEventModel:updateModel];
+//    [instance track:@"event_68"];
+//    [instance track:@"event_68"];
+//    [instance track:@"event_68"];
+//    [instance track:@"event_68"];
   
 //    TDUpdateEventModel *updateModel_new = [[TDUpdateEventModel alloc] initWithEventName:@"dyz_update" eventID:@"eventID_1"];
 //    updateModel_new.properties = @{@"status":@14};
@@ -262,9 +279,11 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    [instance trackWithEventModel:updateModel_new];
     
 #pragma mark 8.3 可重写事件
-//    TDOverwriteEventModel *overwriteModel = [[TDOverwriteEventModel alloc] initWithEventName:@"day_overWrite" eventID:@"day_overWrite_ID_V1"];
-//    overwriteModel.properties = @{@"status":@44,@"price":@444};
-//    [instance trackWithEventModel:overwriteModel];
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+    TDOverwriteEventModel *overwriteModel = [[TDOverwriteEventModel alloc] initWithEventName:@"day_overWrite_V8" eventID:@"day_overWrite_ID_V8"];
+//    overwriteModel.properties = @{@"status":@10,@"price":@7};
+    overwriteModel.properties = @{@"age":@13, @"price":@100};
+    [instance trackWithEventModel:overwriteModel];
     
 //    TDOverwriteEventModel *overwriteModel_new = [[TDOverwriteEventModel alloc] initWithEventName:@"day_overWrite" eventID:@"day_overWrite_ID_V1"];
 //    overwriteModel_new.properties = @{@"status":@5};
@@ -287,18 +306,18 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    ThinkingAnalyticsEventTypeAppViewScreen，APP 浏览页面事件
 //    ThinkingAnalyticsEventTypeAppClick，APP 点击控件事件
 //    ThinkingAnalyticsEventTypeAppViewCrash，APP 崩溃事件
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     
 //    [instance identify:@"dyz_identify_V1"];
 //    [instance setSuperProperties:@{@"Channel_V1":@"ABC",@"Server_V1":@123,@"isTest_V1":@YES}];
     //如需设置公共事件属性或设置自定义访客 ID，请务必确保在开启自动采集之前调用 setSuperProperties:或 identify:
     //设置完访客ID与公共属性后，再开启自动采集
-    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppInstall |
-     ThinkingAnalyticsEventTypeAppStart |
-     ThinkingAnalyticsEventTypeAppEnd |
-     ThinkingAnalyticsEventTypeAppViewScreen |
-     ThinkingAnalyticsEventTypeAppClick |
-     ThinkingAnalyticsEventTypeAppViewCrash];
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppInstall |
+//     ThinkingAnalyticsEventTypeAppStart |
+//     ThinkingAnalyticsEventTypeAppEnd |
+//     ThinkingAnalyticsEventTypeAppViewScreen |
+//     ThinkingAnalyticsEventTypeAppClick |
+//     ThinkingAnalyticsEventTypeAppViewCrash];
     
     //打开自动采集功能，同时设置自定义属性
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"auto_key1_dyz": @"auto_value123"}];

@@ -1,20 +1,23 @@
 PODS:
   - Masonry (1.1.0)
-  - ThinkingSDK (2.8.0.2)
+  - ThinkingSDK (2.8.0.1)
 
 DEPENDENCIES:
   - Masonry
-  - ThinkingSDK
+  - ThinkingSDK (from `../../ios-sdk`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Masonry
-    - ThinkingSDK
+
+EXTERNAL SOURCES:
+  ThinkingSDK:
+    :path: "../../ios-sdk"
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ThinkingSDK: 50a36fdf93f7b28765b06a73a78c2768435257de
+  ThinkingSDK: 4b78b6e5fa5fda7f3614d24d0a271cdacc8ce8c9
 
-PODFILE CHECKSUM: 19d076da41d0fafcda0f0b18a598f359aed905b0
+PODFILE CHECKSUM: 1ac3b534f20fbd1dc7699f310732d8b1a1c3925e
 
 COCOAPODS: 1.11.3

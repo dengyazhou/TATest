@@ -13,7 +13,8 @@ class MyApp extends StatelessWidget {
     ThinkingAnalyticsAPI.enableLog();
     final ThinkingAnalyticsAPI ta = await ThinkingAnalyticsAPI.getInstance("a5bf4fc2f8a248a7a02b9a62a58bf1e9", "http://ta_test.receiver.thinkingdata.cn", mode:ThinkingAnalyticsMode.DEBUG);
 
-    ta.track('simple_event3');
+    ta.track('Simple_ss1');
+    // ta.track('Simple_ss1',properties:{"AsS":"123"});
   }
 
   // This widget is the root of your application.
