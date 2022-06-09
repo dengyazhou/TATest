@@ -56,7 +56,9 @@ App({
         // });
 
         // 上报一条数据
-        ta.track("test_event_13");
+        // ta.track("test_event_14");
+
+        console.log(ta.getDeviceId());
 
       }
     })
