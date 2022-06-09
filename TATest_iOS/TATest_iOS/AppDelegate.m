@@ -255,18 +255,29 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 #pragma mark 7.6 预制属性开关
 //    [instance track:@"product_arm" properties:@{@"product_name": @"解封"}];
     
+#pragma 八、进阶功能
+    //首次事件: 数据没法修改。相同的事件名，如果修改了#first_check_id，那么这个事件就会对应多条(修改几次#first_check_id)数据。
+    //可更新事件: 修改当前传入的属性值，其他属性值保持不变。相同的事件名，如果修改了#event_id，那么这个事件就会对应多条(修改几次#event_id)数据。
+    //可重写事件: 修改当前传入的属性值，其他属性值变为null。相同的事件名，如果修改了#event_id，那么这个事件就会对应多条(修改几次#event_id)数据。
+    
 #pragma mark 8.1 首次事件
-//    TDFirstEventModel *firstModel = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first"];
-//    TDFirstEventModel *firstModel = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first1" firstCheckID:@"checkID_first1"];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    TDFirstEventModel *firstModel = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first2"];
+//    TDFirstEventModel *firstModel1 = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first3" firstCheckID:@"checkID_first3"];
 //    // 可选参数
-//    firstModel.properties = @{@"rtc":@"zego222"};
-//    [firstModel configTime:[NSDate date] timeZone:[NSTimeZone localTimeZone]];
+//    firstModel.properties = @{@"rtc":@"zego2222_4"};
+//    firstModel1.properties = @{@"rtc":@"zego3333_4"};
+////    [firstModel configTime:[NSDate date] timeZone:[NSTimeZone localTimeZone]];
 //    [instance trackWithEventModel:firstModel];
+//    [instance trackWithEventModel:firstModel1];
+    
     
 #pragma mark 8.2 可更新事件
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
-//    TDUpdateEventModel *updateModel = [[TDUpdateEventModel alloc] initWithEventName:@"dyz_eventUpdate_V1" eventID:@"eventID_4"];
+//    TDUpdateEventModel *updateModel = [[TDUpdateEventModel alloc] initWithEventName:@"dyz_update4" eventID:@"e_id4"];
 //    updateModel.properties = @{@"status":@6,@"price":@100};
+//    updateModel.properties = @{@"rtc":@"你好世界！"};
+//    updateModel.properties = @{@"age":@"3",@"rtc":@"nnnnn"};
 //    [instance trackWithEventModel:updateModel];
 //    [instance track:@"event_68"];
 //    [instance track:@"event_68"];
@@ -279,11 +290,11 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    [instance trackWithEventModel:updateModel_new];
     
 #pragma mark 8.3 可重写事件
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
-    TDOverwriteEventModel *overwriteModel = [[TDOverwriteEventModel alloc] initWithEventName:@"day_overWrite_V8" eventID:@"day_overWrite_ID_V8"];
-//    overwriteModel.properties = @{@"status":@10,@"price":@7};
-    overwriteModel.properties = @{@"age":@13, @"price":@100};
-    [instance trackWithEventModel:overwriteModel];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
+//    TDOverwriteEventModel *overwriteModel = [[TDOverwriteEventModel alloc] initWithEventName:@"day_overWrite_V8" eventID:@"day_overWrite_ID_V8"];
+////    overwriteModel.properties = @{@"status":@10,@"price":@7};
+//    overwriteModel.properties = @{@"age":@13, @"price":@100};
+//    [instance trackWithEventModel:overwriteModel];
     
 //    TDOverwriteEventModel *overwriteModel_new = [[TDOverwriteEventModel alloc] initWithEventName:@"day_overWrite" eventID:@"day_overWrite_ID_V1"];
 //    overwriteModel_new.properties = @{@"status":@5};
