@@ -44,12 +44,12 @@ static NSString *SERVER_URL = @"https://receiver-ta-dev.thinkingdata.cn";
 //    [[ThinkingAnalyticsSDK sharedInstance] track:@"event_name" properties:eventProperties];
     
     // v2.7.2版本以后为实例设置 name
-    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+//    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
 //    config.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    config.uploadSize = @10;
 //    config.uploadInterval = @3600;
 //    config.name = @"SS_TADemo";
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
 //
 //    // 根据name获取实例
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"SS_TADemo"];
@@ -94,14 +94,15 @@ static NSString *SERVER_URL = @"https://receiver-ta-dev.thinkingdata.cn";
 //        @"product_num":@1,
 //        @"IsFirstBuy":@YES
 //    };
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
-    NSDate *date = [formatter dateFromString:@"2022-06-09 17:30:12"];//会把输入的本地时间 2022-06-09 17:30:12改成 默认是UTC时间 2022-06-09 09:30:12 +0000
-    NSLog(@"date:%@",date.description);
-    NSString *dateStr = [formatter stringFromDate:date];
-    NSLog(@"dateStr:%@",dateStr);
+//    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+//    formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+////    formatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+//    NSDate *date = [formatter dateFromString:@"2022-06-09 17:30:12"];//会把输入的本地时间 2022-06-09 17:30:12改成 默认是UTC时间 2022-06-09 09:30:12 +0000
+//    NSLog(@"date:%@",date.description);
+//    NSString *dateStr = [formatter stringFromDate:date];//把date转化成formatter.timeZone对应的时间，由于formatter.timeZone默认值为localTimeZone本地时间，所以转为本地时间
+//    NSLog(@"dateStr:%@",dateStr);
 //    [instance track:@"event_2" properties:nil time:[NSDate date] timeZone:[NSTimeZone timeZoneWithName:@"Asia/Shanghai"]];
-//    [instance track:@"event_2" properties:nil time:date timeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];
+//    [instance track:@"event_2" properties:nil time:date timeZone:[NSTimeZone timeZoneWithAbbreviation:@"UTC"]];//把date转为对应时区下的时间
 //    [instance track:@"event_2" properties:nil time:date timeZone:[NSTimeZone localTimeZone]];
 //    [instance track:@"event_2"];
     
