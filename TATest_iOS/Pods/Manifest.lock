@@ -1,6 +1,11 @@
 PODS:
   - Masonry (1.1.0)
-  - ThinkingSDK (2.8.0.1)
+  - ThinkingSDK (2.8.1):
+    - ThinkingSDK/Core (= 2.8.1)
+    - ThinkingSDK/Extension (= 2.8.1)
+  - ThinkingSDK/Core (2.8.1)
+  - ThinkingSDK/Extension (2.8.1):
+    - ThinkingSDK/Core
 
 DEPENDENCIES:
   - Masonry
@@ -16,7 +21,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  ThinkingSDK: 4b78b6e5fa5fda7f3614d24d0a271cdacc8ce8c9
+  ThinkingSDK: aeadb9a7ec34fcf493e898efcf686a05b90404f1
 
 PODFILE CHECKSUM: 1ac3b534f20fbd1dc7699f310732d8b1a1c3925e
 
