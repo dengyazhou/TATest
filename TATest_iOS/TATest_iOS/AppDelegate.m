@@ -59,8 +59,8 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     
 #pragma mark 1.4 后台自启事件说明
     TDConfig *config = [[TDConfig alloc] init];
-    config.launchOptions = launchOptions;
-    config.trackRelaunchedInBackgroundEvents = YES;
+//    config.launchOptions = launchOptions;
+//    config.trackRelaunchedInBackgroundEvents = YES;
     ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL withConfig:config];
     
     [instance track:@"event13" properties:@{@"age1":@12,@"age":@"12"}];

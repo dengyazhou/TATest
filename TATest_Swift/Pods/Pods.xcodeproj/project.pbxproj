@@ -1,0 +1,1409 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		043ED1CD6635A03A6AB95EED09112985 /* TDSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = E456E74EA8EC2E29D0948C2C1A50EE08 /* TDSwizzler.m */; };
+		07A81F0B52E226FA44900D0527A95399 /* TDJSONUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 465F4771C1FE32DEE66468D8A50DDD3B /* TDJSONUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08891E5B38651CBAC4CC224379BECD1F /* ThinkingSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D18DF0F47232F8BB73AEC39FB6D64EB /* ThinkingSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0890AAC7B6BF869078AFB461E8703B51 /* NSObject+TDUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 23B99AC68F4514C4DF583BFF8B06015F /* NSObject+TDUtil.m */; };
+		0990F5FDC58B810DFC80582B04DB7689 /* TDPerformance.m in Sources */ = {isa = PBXBuildFile; fileRef = B91FCB0BD02C8435BDC1848C2A15914D /* TDPerformance.m */; };
+		09EA3134AA15DEBD996C48DD5B3BB1B3 /* TAAdjustSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC39793C991CA6E15B14D0B141BD2BB9 /* TAAdjustSyncData.m */; };
+		0B1B08676D98D6F68F316EDEAE0CB11E /* TDPresetProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 684E5DFE99BA2827B0DA0B7051399956 /* TDPresetProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D172A69AA33EBC2A2F6D3BBC2734E89 /* TAAppExtensionAnalyticConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = CB3EB21D72EBAA75AF699D870D02B681 /* TAAppExtensionAnalyticConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D9F91C13FD39A2BC591D136A3E7A7C2 /* TAAppExtensionAnalyticConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 05314B400C548EE78B04A421A3030B5D /* TAAppExtensionAnalyticConfig.m */; };
+		0FB7F0703141B4EC1D31A15249899D84 /* ThinkingAnalyticsSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 23AFC2940DBEBD5C1A60541BA07623EA /* ThinkingAnalyticsSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0FCD045C13B774B1D60566121AC29946 /* TAReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C4757AAE7B1951E386937B588A4E8D60 /* TAReachability.m */; };
+		136992F946DB4E28B0EEC250FD95D06C /* TDToastView.h in Headers */ = {isa = PBXBuildFile; fileRef = B44866976C20876182869309337D4953 /* TDToastView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		14175AE1552FF2AB1E95CA741404F6E5 /* NSObject+TDUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB400861407EE54BF8F87B99A8DA22A /* NSObject+TDUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1607FF28190034C72DBB16245045501B /* TDInstallTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B0E1205FF2F07307C8B3014F4C5D4E7 /* TDInstallTracker.m */; };
+		167B4C7877E4E0B4D4BA827BE6114806 /* TDSDKUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = DD7D95B3E55B116CC6CA56D1C0A96000 /* TDSDKUtil.m */; };
+		167BF0384DCE71DF7A24E1B3B497D2B3 /* TDRunTime.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2A3226C5AC9EFB539379B336D5F5A5 /* TDRunTime.m */; };
+		1702B54FB8CBEE9768F82FDEBDEBAAD1 /* TDAutoTrackManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 33E72A2EB49CDD0489DE2FA0B7E348CA /* TDAutoTrackManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		176750DD6DA67C496816587D54A58D4E /* TDWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A4FDB7E40EF45E6640FCFA0B317C8D /* TDWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DB5822DDCA171C490E81C34236F3319 /* NSObject+TDSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = 75E02960D4F926C52EC965BFC3C0F1A0 /* NSObject+TDSwizzle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		219B44FA7D4BC78553B5BE51B90F05A2 /* TDCommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C8A77C9508346F05AAC8166F9DBA5062 /* TDCommonUtil.m */; };
+		2209F16B8EEFA51754A46690BF57771E /* TDConstant.h in Headers */ = {isa = PBXBuildFile; fileRef = 818D4476BDA940930F4BB82E10223D2E /* TDConstant.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24B4C9F78ED47B6347969F667805D2CE /* TDCalibratedTimeWithNTP.m in Sources */ = {isa = PBXBuildFile; fileRef = 79B08F5CB1F050BB05E7AC7B68B4FC4F /* TDCalibratedTimeWithNTP.m */; };
+		2588DCA81E4485C695C15B1584EB19DE /* TAAppsFlyerSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = 29870F901081617F99E2E773B912587F /* TAAppsFlyerSyncData.m */; };
+		28FF07EDEFCE58A0BF60EE6236798924 /* TDAESEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = E9281514621DDC7F7B07F1A4982219B5 /* TDAESEncryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2A2B9533CC93933389DD925F4316AC12 /* TDEventRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = FD470D5347A0894188B786BB0624ECF3 /* TDEventRecord.m */; };
+		2DAEFB39DC3C15F8EEAB77A240E3D58D /* TAReYunSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = FD6FBD1C38D187282285518EE8F00B44 /* TAReYunSyncData.m */; };
+		2DDE941EFB7E77EE9F502F5B95021692 /* TDDeviceInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = F6258846992DD442F76DB7EABBBF2AB2 /* TDDeviceInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F6CA45D1DC8F50BDDF632D9E69CE70D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD880C14FAD3144711FC54573D57D06 /* Foundation.framework */; };
+		3161EC00A6D329CE39880D6DEBB450EB /* TDRSAEncryptorPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 60B539D8A52A4B6B1CD0B1FCE796DCC6 /* TDRSAEncryptorPlugin.m */; };
+		3241E0E243F4A450CFF5ED519ABEA840 /* Pods-TATest_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53C88AE7CA5947A1027173C47CE9AC4D /* Pods-TATest_Swift-dummy.m */; };
+		360C477C810659D4BCAACA02A26D1CB5 /* ThinkingAnalyticsSDKPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 66457B81D7D4EAB4C9551CD5261482B0 /* ThinkingAnalyticsSDKPrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		39F3A99E383FA6536C2FBFB02DF54E08 /* TDFPSMonitor.h in Headers */ = {isa = PBXBuildFile; fileRef = AC63404EA34935CD7715CB64B205E207 /* TDFPSMonitor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3CF62FD2014246D75C75F055BF3224F2 /* TDWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BE2E998C7875FB57BE158EDEBEFE982 /* TDWeakProxy.m */; };
+		3E31FC5622879C19B98C367122D6E029 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBD880C14FAD3144711FC54573D57D06 /* Foundation.framework */; };
+		3E3942D31B3446FBF2ACD4E1C6D6F267 /* TDEditableEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 872ECEC9FBD3F376B2D326E09A6170FB /* TDEditableEventModel.m */; };
+		3F67289A3CE56B036907B673267EF63D /* TATrackTimerItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A67F728E4E29264B13DD367616C177B /* TATrackTimerItem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		411DC3B54DB03576BDD7C94392B2E6DB /* TDPublicConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 010C4EEB166130F649A676A017D8B6F1 /* TDPublicConfig.m */; };
+		418301B877A92064BEC3E2C08A690152 /* TDSqliteDataQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B5F221D8E2A1C18D0D2D0CC0E704B874 /* TDSqliteDataQueue.m */; };
+		43E9845BE8C12B97BB291AC8269CD073 /* TATrackTimerItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF1C67B22616E2CAB0BB51ACF5DCA89D /* TATrackTimerItem.m */; };
+		457CDB67468F4597C5682133F48D4BB2 /* UIViewController+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = 9FD052FD8DD85BB39FDDB87B102056D3 /* UIViewController+AutoTrack.m */; };
+		45A0313E805A20601F9E1F86D8920780 /* TDAppState.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDC814E268D73ABC9E44E90406D19AB /* TDAppState.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C337DA1CCA2AFD7EC67E89432FECC01 /* NSString+TDString.m in Sources */ = {isa = PBXBuildFile; fileRef = 8002280AD0A6E0F81E0DBC4C36EF3B46 /* NSString+TDString.m */; };
+		4FED623122AD05123F091ED91A502A1D /* TATradPlusSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = 521E0A9F7C708BA1D58C1B2D7A56ACF1 /* TATradPlusSyncData.m */; };
+		50BB11792D8C02D978EA00B8FF03A3F7 /* TAThirdPartyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A7181B1328B2CBCA9483FF6136FA66EA /* TAThirdPartyManager.m */; };
+		52713AAEE4200532AD5B15B3E5C8A3E0 /* UIViewController+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 13C8170CB5D45AFDDBA97767C7CD6C4E /* UIViewController+AutoTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		530EE63B7D0579A0B1B9DA2FE19275DE /* TDCheck.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CFE6142C00C8AF9A21EA048E2AAC184 /* TDCheck.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54F6C937E58BA694AAEC8213D8644297 /* TDPresetProperties+TDDisProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B38A6DEE73E2FDE9473F7B60118AF3 /* TDPresetProperties+TDDisProperties.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54FA5CD649B24F188D8DDE86CE08DBD8 /* TDEditableEventModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 349813436F54D1129A05E54868729F75 /* TDEditableEventModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5532E762B8197AE2EDB75A84BFECE2B0 /* LightThinkingAnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = FB79CB6E8D6F62D5523E3F9DC032BCBB /* LightThinkingAnalyticsSDK.m */; };
+		581167A4F9001DCCE54722FFECC7C692 /* TDAppState.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DD4904A0DC493ED5ABAF8A28BECFF5 /* TDAppState.m */; };
+		5CD7186F9E5D663D0F4B2E78D027640A /* TDInstallTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = E3C523DB22F451EF1197CB0602EE3837 /* TDInstallTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		604B04845FF5E6B59441B20D55CAD4A5 /* TDRSAEncryptorPlugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C2A962E8F610E4117E35C386E538152 /* TDRSAEncryptorPlugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6094B7279708EDA087164307492872EB /* TDSqliteDataQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = DD965B803902F5108D773862C129D218 /* TDSqliteDataQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62B31C84F3F9EC0F5FEBA54164F363EC /* TDEncrypt.h in Headers */ = {isa = PBXBuildFile; fileRef = 5859F19EA99892768A5CD86729704289 /* TDEncrypt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		659E87A592A8A447BCB33DA4FCEF2AF0 /* TAAppExtensionAnalytic.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DF5080CBA5A0FC5C9DBB185BCEEFE2D /* TAAppExtensionAnalytic.m */; };
+		66211F7188D481339D8F87803177115D /* TATopOnSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = 627093A60ECA6FE036655D2431213078 /* TATopOnSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		667995A17B6CA9E8550F92315CDFFA50 /* TDLogging.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BBB4FBB4AFF4734118B6B525C1BB49A /* TDLogging.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6858DEB7D00C846FA5A07618BFDFFAD3 /* TAThirdPartySyncProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C81662D81B2633B52E8DF3CB944E4E82 /* TAThirdPartySyncProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		709C3A173B9AC1780B1145841FA40153 /* TDNTPServer.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8A7D1B88DAD6711D4C7E30B3B52A04 /* TDNTPServer.m */; };
+		72B9144ECDDCD5879D482C9245F509D2 /* TDPresetProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F6DBDD8F291B20D89EFC75F57F606B3 /* TDPresetProperties.m */; };
+		72E9C1271C141A0FDCDC0A9D61FA32C3 /* NSData+TDGzip.h in Headers */ = {isa = PBXBuildFile; fileRef = 5826EDCA96F5BBD99DD2DA2D74304D48 /* NSData+TDGzip.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74CD033959F7CE7A0C2E98366F0C7936 /* NSString+TDString.h in Headers */ = {isa = PBXBuildFile; fileRef = 12137D6125A493B089A0958A448BDAB9 /* NSString+TDString.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74E0DD6B7C855C328DD7AF9481B22201 /* TDFile.h in Headers */ = {isa = PBXBuildFile; fileRef = 911438A79EC6B1666881CCCE162F18A4 /* TDFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7504AC94FF1AC92E27B4C8E3A1C8E0AE /* TDThirdPartyProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 99B32F353F82EB3B1CD5C8D89C7B33A2 /* TDThirdPartyProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		79ABE85A5C0B76133CDF01917E18B068 /* TAIronSourceSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3500B9CF9416AD247D91F5FF8A296B29 /* TAIronSourceSyncData.m */; };
+		7AAE6DCEB5687405975A1A13428D213F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D490A5AF81A2D7477836C39279F3CD4 /* Security.framework */; };
+		7BC22D3BEF99ACC40CB6C574A430AA03 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88161C126887BF44EE3DCB6E183FEE9A /* SystemConfiguration.framework */; };
+		7C1660B06D21B70B0A811D21EB402EDD /* TDConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = EC935DD307A3360A4A2B2B65DDD8FBC6 /* TDConfig.m */; };
+		7CB56F682E2ABD43A40919A94EBE7111 /* NSDictionary+TDJsonOutput.h in Headers */ = {isa = PBXBuildFile; fileRef = D8561C614CD2DECE8448DBA7313A007A /* NSDictionary+TDJsonOutput.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EA817FBAFA227F285FB3D7173A0ED59 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A579E667611E62CBDD8377C7B6B88DDC /* UIKit.framework */; };
+		7F6317589DC12676E393BD553D3B3E09 /* Pods-TATest_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 50CAD7A2276725428CBE1D95722EE30B /* Pods-TATest_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7FA555284FE64AE4A82913958B76D88A /* TDEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDCE72389BFA6D2AA039E8D264F1DA7 /* TDEventModel.m */; };
+		7FD33940423BF33BAD14A0138F6B77C1 /* TAAppExtensionAnalytic.h in Headers */ = {isa = PBXBuildFile; fileRef = 5597456097AFDE96D46E0B01985283F7 /* TAAppExtensionAnalytic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		827A070BDCA7FE14F8011F36910A13E5 /* TDFirstEventModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 33E358385DB2DB7A51A3D2F6393694E1 /* TDFirstEventModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82E754A23E0AE31BF7BF89E63D242EB9 /* TDCommonUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B2095C07B01F19CEB157540F081C4F5 /* TDCommonUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8513AE050E67D3A7A97F0B2BD02762EF /* TDAutoTrackManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 552F4848B10F5097795A77CFE1130A2D /* TDAutoTrackManager.m */; };
+		88F1B03436CD51F1B9B38BE95126E090 /* TDCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 383538CCB149D48142C59DBA077137D4 /* TDCheck.m */; };
+		8905C660C01B237FC841BFC982C9A3B2 /* TDEncryptAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = 596C0BE75FB572840B96FE244CBD2F21 /* TDEncryptAlgorithm.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A545B2DCE107FFD6B2E2BD2022A5839 /* TDNTPTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 7467CE555FEEEC924591F46B93FB2327 /* TDNTPTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8DEF17D0AE2B7B6E4B1EDD3615160D18 /* TABranchSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = 4664028653B23EFAF425171F0A0561F0 /* TABranchSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E2D8121864F2F44DDC533F4FF9EBED1 /* TAIronSourceSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = A29C497E66BA784FBB4CD09A84671655 /* TAIronSourceSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FCF2BCB61885A0150D2F065A1D28419 /* TDNTPTypes.c in Sources */ = {isa = PBXBuildFile; fileRef = 4308478C77E298422BBE95F944A9C5F9 /* TDNTPTypes.c */; };
+		90CE33F1B3C4F2420B42D106A07F456E /* TAThirdPartyManager.h in Headers */ = {isa = PBXBuildFile; fileRef = F44A5097893AF90A05DE09178FE38A35 /* TAThirdPartyManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9203777F921357BE58D7D5160B2090CE /* TABaseSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A99945CFF4DFBF8A99F9B3D3C6858FA /* TABaseSyncData.m */; };
+		95C99CB70B2515DFFC1487102DA638E0 /* TDCalibratedTimeWithNTP.h in Headers */ = {isa = PBXBuildFile; fileRef = A0E1892FBFC77E7284380BEC77EECD67 /* TDCalibratedTimeWithNTP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		95D083CEF0A2A0E21EFC923E9AA855B6 /* TDAESEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = 276EBFFFCB35B35736769BA5FC530CFD /* TDAESEncryptor.m */; };
+		96BE8E9A21C44672D03557FE5C7DD261 /* TDOSLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DD4B85FF2ADE1E3B8F59D52F866C707 /* TDOSLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9788B84666F6A859DC7653D247ED7817 /* TATradPlusSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5494552EDC3C507C0CB7F8E102FEBE /* TATradPlusSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B8252E316FF3141C7893058BF668BE1 /* TDCalibratedTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 060E8E7F46D6A264F968CB9D4CDD00BE /* TDCalibratedTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C175CDA36B965BE88CB899DB572089D /* TDToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E213AB8310B137B8DD32814BCC3285E /* TDToastView.m */; };
+		9EA1812C434F75C4F83AF2E1BDB484EE /* TDEventRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D567E4CA567376A94E8CFD3316B707C /* TDEventRecord.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A0992FD4C6AB1D764F7B434E9298DB45 /* TDPerformance.h in Headers */ = {isa = PBXBuildFile; fileRef = 38B114556A0D0CAAA418B8F27A61BEC4 /* TDPerformance.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A288267032B9EFDFED432B227CEDDA03 /* TABranchSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0859645A7E9EFDB3E53093F1DE825885 /* TABranchSyncData.m */; };
+		A3C58168AA6675C15DA2FEBEC0387620 /* TDNTPServer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C28394D7BF71EE497C782A14548CCC0 /* TDNTPServer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4D87FC33F7BEA9C53F47ED31977EEEE /* TDSecurityPolicy.h in Headers */ = {isa = PBXBuildFile; fileRef = 44CE98D771A30E4033D789A8EB3DDF9B /* TDSecurityPolicy.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A6637431FCCB5C9F0939FE2AD2724570 /* TATrackTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BDD483F8695588642CFA67B59E1E63 /* TATrackTimer.m */; };
+		A9603C48BD277F4A07CA5F8AC5135DB7 /* TDOSLog.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BC0DED5DE52C0163A334B2E171995C /* TDOSLog.m */; };
+		AAE10725F282D17350522FB5E57A87F9 /* TDStartTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C37E98E31BC15D596A9E9DBBD5B7F2A2 /* TDStartTracker.m */; };
+		ACC550CF5D5D00B4707FF0A0551DD651 /* TDFPSMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D280C731661E08C2558855DA18C1C95 /* TDFPSMonitor.m */; };
+		AD23A9C4C249E7DF8E8A19BD12457E91 /* TDPublicConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 3ECDD937D9127FAFC17FFC2EF8743FA8 /* TDPublicConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE479179F5276961534C2701D9891897 /* TDLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = AD05F7FD14894C33890DCE186E0EDE9C /* TDLogging.m */; };
+		B04DC4FBD0E2E7048F714E0EC79E0565 /* TDConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = D17C537E530DCBEB5E7263C5F19FBCA8 /* TDConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B0E28EEF7FFEEB8B536D036610D1E5FF /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AA6090391DC9D5CE1FD37BA2FEF15E /* CoreTelephony.framework */; };
+		B15A4CAC8D9E85E159B34E91DA9C2EE0 /* TABaseSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = 8630B711BB6648DE9D5D01286C556C7D /* TABaseSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B1D250A4B7CCDE1640A1FA7188CAFFA9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4315641307C6AE81DDDB63F7C01D8A84 /* CoreGraphics.framework */; };
+		B32CAFDAE6A060B588BCE48DF207F275 /* NSData+TDGzip.m in Sources */ = {isa = PBXBuildFile; fileRef = B24BBDD9993F7E080E50B25035C72F5B /* NSData+TDGzip.m */; };
+		B56A49F6AF6DC5320EEC19457E737C53 /* NSObject+TDSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = D159E58830FE1FDC7BAEC9C46FCD2876 /* NSObject+TDSwizzle.m */; };
+		B910F356657EC205781EF2DA77B850B1 /* TDKeychainHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E91856C0AAA3CF1A71CAD15B8F77BCA /* TDKeychainHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B9F32537640D9490B33CE6CC213104E2 /* ThinkingAnalyticsSDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 296010C9A66136B22F5E354AEB48F7E1 /* ThinkingAnalyticsSDK.m */; };
+		BA0F32C2FD639867C73F88410E58D8A7 /* TDJSONUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A302CE959D09BB395492F728499CB6C5 /* TDJSONUtil.m */; };
+		BA40CE50F0B8096842364437D5026237 /* TDEncryptProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = 95F355C0876F32DBBC42270739C4609B /* TDEncryptProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCA90731CD6347C79DDA53A68033789C /* TDRSAEncryptor.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE5EBF7F9161C96FB7C41790EBF6413 /* TDRSAEncryptor.m */; };
+		BD7431A734DD8BA9AD35FC832FA2D0F5 /* NSDictionary+TDJsonOutput.m in Sources */ = {isa = PBXBuildFile; fileRef = 45728E1E57CBDDA43B5CC3308EC84D88 /* NSDictionary+TDJsonOutput.m */; };
+		BDF5B45224CF52592A62BB1EE8C1DD73 /* TATrackTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF8C02683DD2BFA249A4101CA35D178 /* TATrackTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE4B9539B69A2B6CB9AFD39E8B1A1049 /* TDPresetProperties+TDDisProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = AE2DB3A3D101E1638F7F20D956DAB460 /* TDPresetProperties+TDDisProperties.m */; };
+		C10BC7AD3AD6AF2A4384B8032EB892CA /* ThinkingSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 461FF95FB1F1520F11DB0749B13173E1 /* ThinkingSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C3E8E1F0D514DF822B2EB4A78D4AF39C /* TANetwork.h in Headers */ = {isa = PBXBuildFile; fileRef = F5FFA776D9E33F145ECD01296B0EA3D6 /* TANetwork.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C66F0EAF0424D26420849D661861C022 /* UIApplication+AutoTrack.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B5066AA6FAFC6F7FC55B2B54228538B /* UIApplication+AutoTrack.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CB93C00634FB0C4DE321149AF60F1712 /* UIApplication+AutoTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = C40E4E87842A6866FC36F4EDD3035ED4 /* UIApplication+AutoTrack.m */; };
+		CCBFD16889D389D0B15A514208629AFB /* ThinkingSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E646A6325C64067FD9E957DD13AEFF49 /* ThinkingSDK-dummy.m */; };
+		CD751CDF9E51BFC4A84D510779228E7D /* TDFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0037D0CF9F7C8B258010E1F2676D48AD /* TDFile.m */; };
+		CE3D0B36BCE53B55E908DFA3D8D6BB64 /* TATopOnSyncData.m in Sources */ = {isa = PBXBuildFile; fileRef = CF372FA3774BF191D63C771A7B2D6593 /* TATopOnSyncData.m */; };
+		D4BBEDCF37F9885201AA2FC525559598 /* TAReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = B6AF364850B40B11CCC4C8D31C2B0880 /* TAReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D6FA49CFD1712FAB7FA2A8208556157B /* TDFirstEventModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 858FCAC8C2F99DBEDD2693C1D425FB88 /* TDFirstEventModel.m */; };
+		D96A1E5A5A4B6010F650AF9DFEFDB294 /* TDKeychainHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = D64DF27AA991A1CE4766DC36F795AFF7 /* TDKeychainHelper.m */; };
+		DA687C591A16FDD02A8A8C589F449250 /* TDSDKUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = F2ED51904B0EA75D50409EBC7AABFDE5 /* TDSDKUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DDA9B4C14FE45EB389FF11E743FF0445 /* TDEncryptManager.h in Headers */ = {isa = PBXBuildFile; fileRef = D7040A221F24A702A788D7C3B474818F /* TDEncryptManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE4068A48F2A44D1EF16F8F8541C875C /* TAReYunSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = F69DABFC961EA74BF3114ACB85A2BE40 /* TAReYunSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF999335C053B43913CD44E693B8597C /* TDSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0C611CE7569CDF08BA11168068A8C4 /* TDSecurityPolicy.m */; };
+		E086B659E05EA865815C97C904EF9A2A /* TDEncryptManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89CE93DF38E18962F377377820116018 /* TDEncryptManager.m */; };
+		E18D0306DB9FDE983538DA457EFFC772 /* TDSwizzler.h in Headers */ = {isa = PBXBuildFile; fileRef = 98E75FDD2F7C95CBAAB9F012D8FA7EFC /* TDSwizzler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E2608AC212286B7E335CCBC377EF7CC8 /* TDAppLaunchReason.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DCC8E528B740B3AED08DD6DE4ED64 /* TDAppLaunchReason.m */; };
+		E40D50476941595A51F526225F87F0CF /* TDRunTime.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D59E61649BC5E80853AA9AA8305D2AF /* TDRunTime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E44130923E0E29D51EF5F2B8AAFCC316 /* TDRSAEncryptor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4DDC2D56C43A1642FD8DA4B77AE695FD /* TDRSAEncryptor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4FB6B8BD7D6EC4314CAB3F99C7C60CA /* TDAutoTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = C128B892D3AF6249E7FC2B8FA9B7453C /* TDAutoTracker.m */; };
+		E8B51BB75F21C3ED6CF48EC068EADBC4 /* TANetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 341CF89E5757566457153BF1679DB591 /* TANetwork.m */; };
+		E9659A7B32453EBBF9E33BC1DE38B03C /* TDAppLaunchReason.h in Headers */ = {isa = PBXBuildFile; fileRef = 915123456670002B65992B92B21C66DD /* TDAppLaunchReason.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC6C70D4F6E0C85B22DF3E2100A1AE8D /* TDEventModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 8EDEEF2D96837E67BB929CC0DCFBD2B4 /* TDEventModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EED70C1679C28CE5532506DAD810ECCD /* ThinkingExceptionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = E4FDDE5F42640DD13A632C1A10384244 /* ThinkingExceptionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F173D761BC61102EA9139B76A0E0B374 /* TDSecretKey.h in Headers */ = {isa = PBXBuildFile; fileRef = 596CFB4B516DA7A50E240ED27BA1373B /* TDSecretKey.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7F10A58F5B3D9E7BCF61C91A38A1E4D /* TDSecretKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 09CC274A7D2C5E23DB1059A7F326A349 /* TDSecretKey.m */; };
+		F8362792637983EC894A8BC8E0615ED0 /* TDCalibratedTime.m in Sources */ = {isa = PBXBuildFile; fileRef = 2763E62819B3F7CEBF243CFBF944A5FE /* TDCalibratedTime.m */; };
+		FA4C7466E0C36D635205133EB1E9C253 /* TAAppsFlyerSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = 7F18847709054E20FE8FFE8BE47D7F6C /* TAAppsFlyerSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA737C340ADF81FCADD7390C8DC6A0A1 /* ThinkingExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 385AA88C7CA39FB5CC24FBD91019E03A /* ThinkingExceptionHandler.m */; };
+		FA85049AA6CB5B960140FA2858BDBDF4 /* TDAutoTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = D065BE0DAED0A98E8E2692066EA251BB /* TDAutoTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCA5ED2ED408742EFDF0FBCFE97F6222 /* TAAdjustSyncData.h in Headers */ = {isa = PBXBuildFile; fileRef = 9196CFC04309CDFCBF8529F393E17519 /* TAAdjustSyncData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FCAF4FE9955DF2A7E6C8273792FFAF45 /* TDDeviceInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A20A9455BD46A914CC45831610D6EE1 /* TDDeviceInfo.m */; };
+		FD6E384BAFCC2B0652C74C11530DC6E1 /* TDStartTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B9CA4A2FF38C9D2D440C3EEE308A10D /* TDStartTracker.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92E2941FADF1997B9AB6A4CB3B3DC192 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F36D5287A6A9A006C12C436E01420958;
+			remoteInfo = ThinkingSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0037D0CF9F7C8B258010E1F2676D48AD /* TDFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDFile.m; sourceTree = "<group>"; };
+		010C4EEB166130F649A676A017D8B6F1 /* TDPublicConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDPublicConfig.m; sourceTree = "<group>"; };
+		05314B400C548EE78B04A421A3030B5D /* TAAppExtensionAnalyticConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAAppExtensionAnalyticConfig.m; sourceTree = "<group>"; };
+		060E8E7F46D6A264F968CB9D4CDD00BE /* TDCalibratedTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDCalibratedTime.h; sourceTree = "<group>"; };
+		0859645A7E9EFDB3E53093F1DE825885 /* TABranchSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TABranchSyncData.m; sourceTree = "<group>"; };
+		09CC274A7D2C5E23DB1059A7F326A349 /* TDSecretKey.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDSecretKey.m; sourceTree = "<group>"; };
+		0A99945CFF4DFBF8A99F9B3D3C6858FA /* TABaseSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TABaseSyncData.m; sourceTree = "<group>"; };
+		0BBB4FBB4AFF4734118B6B525C1BB49A /* TDLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDLogging.h; sourceTree = "<group>"; };
+		0F6DBDD8F291B20D89EFC75F57F606B3 /* TDPresetProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDPresetProperties.m; sourceTree = "<group>"; };
+		12137D6125A493B089A0958A448BDAB9 /* NSString+TDString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+TDString.h"; sourceTree = "<group>"; };
+		13C8170CB5D45AFDDBA97767C7CD6C4E /* UIViewController+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AutoTrack.h"; sourceTree = "<group>"; };
+		164CA7FA3DA8DADE4A1D7529D168DE26 /* Pods-TATest_Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TATest_Swift-Info.plist"; sourceTree = "<group>"; };
+		1B0E1205FF2F07307C8B3014F4C5D4E7 /* TDInstallTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDInstallTracker.m; sourceTree = "<group>"; };
+		21DD4904A0DC493ED5ABAF8A28BECFF5 /* TDAppState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDAppState.m; sourceTree = "<group>"; };
+		23AFC2940DBEBD5C1A60541BA07623EA /* ThinkingAnalyticsSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ThinkingAnalyticsSDK.h; sourceTree = "<group>"; };
+		23B99AC68F4514C4DF583BFF8B06015F /* NSObject+TDUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TDUtil.m"; sourceTree = "<group>"; };
+		2763E62819B3F7CEBF243CFBF944A5FE /* TDCalibratedTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDCalibratedTime.m; sourceTree = "<group>"; };
+		276EBFFFCB35B35736769BA5FC530CFD /* TDAESEncryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDAESEncryptor.m; sourceTree = "<group>"; };
+		296010C9A66136B22F5E354AEB48F7E1 /* ThinkingAnalyticsSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ThinkingAnalyticsSDK.m; sourceTree = "<group>"; };
+		29870F901081617F99E2E773B912587F /* TAAppsFlyerSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAAppsFlyerSyncData.m; sourceTree = "<group>"; };
+		2C2A962E8F610E4117E35C386E538152 /* TDRSAEncryptorPlugin.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDRSAEncryptorPlugin.h; sourceTree = "<group>"; };
+		2D18DF0F47232F8BB73AEC39FB6D64EB /* ThinkingSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ThinkingSDK-umbrella.h"; sourceTree = "<group>"; };
+		3010FEC01C75C4C71AF715DC5B1F582D /* ThinkingSDK-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ThinkingSDK-Info.plist"; sourceTree = "<group>"; };
+		306DCC8E528B740B3AED08DD6DE4ED64 /* TDAppLaunchReason.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDAppLaunchReason.m; sourceTree = "<group>"; };
+		32AA6090391DC9D5CE1FD37BA2FEF15E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		33E358385DB2DB7A51A3D2F6393694E1 /* TDFirstEventModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDFirstEventModel.h; sourceTree = "<group>"; };
+		33E72A2EB49CDD0489DE2FA0B7E348CA /* TDAutoTrackManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDAutoTrackManager.h; sourceTree = "<group>"; };
+		341CF89E5757566457153BF1679DB591 /* TANetwork.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TANetwork.m; sourceTree = "<group>"; };
+		349813436F54D1129A05E54868729F75 /* TDEditableEventModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEditableEventModel.h; sourceTree = "<group>"; };
+		3500B9CF9416AD247D91F5FF8A296B29 /* TAIronSourceSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAIronSourceSyncData.m; sourceTree = "<group>"; };
+		383538CCB149D48142C59DBA077137D4 /* TDCheck.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDCheck.m; sourceTree = "<group>"; };
+		385AA88C7CA39FB5CC24FBD91019E03A /* ThinkingExceptionHandler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ThinkingExceptionHandler.m; sourceTree = "<group>"; };
+		3878814025B7E42EC7CC90C097153BA8 /* Pods-TATest_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TATest_Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		38B114556A0D0CAAA418B8F27A61BEC4 /* TDPerformance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDPerformance.h; sourceTree = "<group>"; };
+		3A20A9455BD46A914CC45831610D6EE1 /* TDDeviceInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDDeviceInfo.m; sourceTree = "<group>"; };
+		3B5066AA6FAFC6F7FC55B2B54228538B /* UIApplication+AutoTrack.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIApplication+AutoTrack.h"; sourceTree = "<group>"; };
+		3B5494552EDC3C507C0CB7F8E102FEBE /* TATradPlusSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TATradPlusSyncData.h; sourceTree = "<group>"; };
+		3BE2E998C7875FB57BE158EDEBEFE982 /* TDWeakProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDWeakProxy.m; sourceTree = "<group>"; };
+		3C311E0A3891D52FD6ED3391DCBB8493 /* Pods-TATest_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TATest_Swift.modulemap"; sourceTree = "<group>"; };
+		3D567E4CA567376A94E8CFD3316B707C /* TDEventRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEventRecord.h; sourceTree = "<group>"; };
+		3DF5080CBA5A0FC5C9DBB185BCEEFE2D /* TAAppExtensionAnalytic.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAAppExtensionAnalytic.m; sourceTree = "<group>"; };
+		3ECDD937D9127FAFC17FFC2EF8743FA8 /* TDPublicConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDPublicConfig.h; sourceTree = "<group>"; };
+		3EE571C28152F6E180F9B1E27C3F04B1 /* Pods-TATest_Swift-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TATest_Swift-acknowledgements.markdown"; sourceTree = "<group>"; };
+		4308478C77E298422BBE95F944A9C5F9 /* TDNTPTypes.c */ = {isa = PBXFileReference; includeInIndex = 1; path = TDNTPTypes.c; sourceTree = "<group>"; };
+		4315641307C6AE81DDDB63F7C01D8A84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		44CE98D771A30E4033D789A8EB3DDF9B /* TDSecurityPolicy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDSecurityPolicy.h; sourceTree = "<group>"; };
+		45728E1E57CBDDA43B5CC3308EC84D88 /* NSDictionary+TDJsonOutput.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TDJsonOutput.m"; sourceTree = "<group>"; };
+		461FF95FB1F1520F11DB0749B13173E1 /* ThinkingSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ThinkingSDK.h; sourceTree = "<group>"; };
+		465F4771C1FE32DEE66468D8A50DDD3B /* TDJSONUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDJSONUtil.h; sourceTree = "<group>"; };
+		4664028653B23EFAF425171F0A0561F0 /* TABranchSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TABranchSyncData.h; sourceTree = "<group>"; };
+		4CFE6142C00C8AF9A21EA048E2AAC184 /* TDCheck.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDCheck.h; sourceTree = "<group>"; };
+		4D59E61649BC5E80853AA9AA8305D2AF /* TDRunTime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDRunTime.h; sourceTree = "<group>"; };
+		4DD4B85FF2ADE1E3B8F59D52F866C707 /* TDOSLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDOSLog.h; sourceTree = "<group>"; };
+		4DDC2D56C43A1642FD8DA4B77AE695FD /* TDRSAEncryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDRSAEncryptor.h; sourceTree = "<group>"; };
+		50CAD7A2276725428CBE1D95722EE30B /* Pods-TATest_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TATest_Swift-umbrella.h"; sourceTree = "<group>"; };
+		521E0A9F7C708BA1D58C1B2D7A56ACF1 /* TATradPlusSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TATradPlusSyncData.m; sourceTree = "<group>"; };
+		53C88AE7CA5947A1027173C47CE9AC4D /* Pods-TATest_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TATest_Swift-dummy.m"; sourceTree = "<group>"; };
+		552F4848B10F5097795A77CFE1130A2D /* TDAutoTrackManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDAutoTrackManager.m; sourceTree = "<group>"; };
+		5597456097AFDE96D46E0B01985283F7 /* TAAppExtensionAnalytic.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAAppExtensionAnalytic.h; sourceTree = "<group>"; };
+		5826EDCA96F5BBD99DD2DA2D74304D48 /* NSData+TDGzip.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+TDGzip.h"; sourceTree = "<group>"; };
+		5859F19EA99892768A5CD86729704289 /* TDEncrypt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEncrypt.h; sourceTree = "<group>"; };
+		596C0BE75FB572840B96FE244CBD2F21 /* TDEncryptAlgorithm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEncryptAlgorithm.h; sourceTree = "<group>"; };
+		596CFB4B516DA7A50E240ED27BA1373B /* TDSecretKey.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDSecretKey.h; sourceTree = "<group>"; };
+		60B539D8A52A4B6B1CD0B1FCE796DCC6 /* TDRSAEncryptorPlugin.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDRSAEncryptorPlugin.m; sourceTree = "<group>"; };
+		627093A60ECA6FE036655D2431213078 /* TATopOnSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TATopOnSyncData.h; sourceTree = "<group>"; };
+		66457B81D7D4EAB4C9551CD5261482B0 /* ThinkingAnalyticsSDKPrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ThinkingAnalyticsSDKPrivate.h; sourceTree = "<group>"; };
+		684E5DFE99BA2827B0DA0B7051399956 /* TDPresetProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDPresetProperties.h; sourceTree = "<group>"; };
+		6A67F728E4E29264B13DD367616C177B /* TATrackTimerItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TATrackTimerItem.h; sourceTree = "<group>"; };
+		7467CE555FEEEC924591F46B93FB2327 /* TDNTPTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDNTPTypes.h; sourceTree = "<group>"; };
+		75E02960D4F926C52EC965BFC3C0F1A0 /* NSObject+TDSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+TDSwizzle.h"; sourceTree = "<group>"; };
+		7605831E67C6DDD890A778F52F4E7E3E /* ThinkingSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ThinkingSDK-prefix.pch"; sourceTree = "<group>"; };
+		79B08F5CB1F050BB05E7AC7B68B4FC4F /* TDCalibratedTimeWithNTP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDCalibratedTimeWithNTP.m; sourceTree = "<group>"; };
+		7D280C731661E08C2558855DA18C1C95 /* TDFPSMonitor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDFPSMonitor.m; sourceTree = "<group>"; };
+		7F18847709054E20FE8FFE8BE47D7F6C /* TAAppsFlyerSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAAppsFlyerSyncData.h; sourceTree = "<group>"; };
+		8002280AD0A6E0F81E0DBC4C36EF3B46 /* NSString+TDString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+TDString.m"; sourceTree = "<group>"; };
+		818D4476BDA940930F4BB82E10223D2E /* TDConstant.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDConstant.h; sourceTree = "<group>"; };
+		858FCAC8C2F99DBEDD2693C1D425FB88 /* TDFirstEventModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDFirstEventModel.m; sourceTree = "<group>"; };
+		8630B711BB6648DE9D5D01286C556C7D /* TABaseSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TABaseSyncData.h; sourceTree = "<group>"; };
+		872ECEC9FBD3F376B2D326E09A6170FB /* TDEditableEventModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDEditableEventModel.m; sourceTree = "<group>"; };
+		88161C126887BF44EE3DCB6E183FEE9A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		89CE93DF38E18962F377377820116018 /* TDEncryptManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDEncryptManager.m; sourceTree = "<group>"; };
+		8AF8C02683DD2BFA249A4101CA35D178 /* TATrackTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TATrackTimer.h; sourceTree = "<group>"; };
+		8B9CA4A2FF38C9D2D440C3EEE308A10D /* TDStartTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDStartTracker.h; sourceTree = "<group>"; };
+		8E213AB8310B137B8DD32814BCC3285E /* TDToastView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDToastView.m; sourceTree = "<group>"; };
+		8E91856C0AAA3CF1A71CAD15B8F77BCA /* TDKeychainHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDKeychainHelper.h; sourceTree = "<group>"; };
+		8EDEEF2D96837E67BB929CC0DCFBD2B4 /* TDEventModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEventModel.h; sourceTree = "<group>"; };
+		911438A79EC6B1666881CCCE162F18A4 /* TDFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDFile.h; sourceTree = "<group>"; };
+		915123456670002B65992B92B21C66DD /* TDAppLaunchReason.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDAppLaunchReason.h; sourceTree = "<group>"; };
+		9196CFC04309CDFCBF8529F393E17519 /* TAAdjustSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAAdjustSyncData.h; sourceTree = "<group>"; };
+		931B0F31DB8AF8936F8AAFC99C111ED4 /* ThinkingSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ThinkingSDK.release.xcconfig; sourceTree = "<group>"; };
+		95F355C0876F32DBBC42270739C4609B /* TDEncryptProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEncryptProtocol.h; sourceTree = "<group>"; };
+		98E75FDD2F7C95CBAAB9F012D8FA7EFC /* TDSwizzler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDSwizzler.h; sourceTree = "<group>"; };
+		99B32F353F82EB3B1CD5C8D89C7B33A2 /* TDThirdPartyProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDThirdPartyProtocol.h; sourceTree = "<group>"; };
+		9AB400861407EE54BF8F87B99A8DA22A /* NSObject+TDUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSObject+TDUtil.h"; sourceTree = "<group>"; };
+		9AD50F22DAFC013BD2779FE36AE65935 /* ThinkingSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ThinkingSDK.debug.xcconfig; sourceTree = "<group>"; };
+		9B2095C07B01F19CEB157540F081C4F5 /* TDCommonUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDCommonUtil.h; sourceTree = "<group>"; };
+		9C28394D7BF71EE497C782A14548CCC0 /* TDNTPServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDNTPServer.h; sourceTree = "<group>"; };
+		9D490A5AF81A2D7477836C39279F3CD4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FD052FD8DD85BB39FDDB87B102056D3 /* UIViewController+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AutoTrack.m"; sourceTree = "<group>"; };
+		A0E1892FBFC77E7284380BEC77EECD67 /* TDCalibratedTimeWithNTP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDCalibratedTimeWithNTP.h; sourceTree = "<group>"; };
+		A1CDDE4C4B84F6C1D212DFF37C563F1D /* Pods-TATest_Swift-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TATest_Swift-frameworks.sh"; sourceTree = "<group>"; };
+		A29C497E66BA784FBB4CD09A84671655 /* TAIronSourceSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAIronSourceSyncData.h; sourceTree = "<group>"; };
+		A302CE959D09BB395492F728499CB6C5 /* TDJSONUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDJSONUtil.m; sourceTree = "<group>"; };
+		A579E667611E62CBDD8377C7B6B88DDC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		A7181B1328B2CBCA9483FF6136FA66EA /* TAThirdPartyManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAThirdPartyManager.m; sourceTree = "<group>"; };
+		A87034266BB6751E8BFD69CBED332F2B /* Pods-TATest_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TATest_Swift.release.xcconfig"; sourceTree = "<group>"; };
+		AAE5EBF7F9161C96FB7C41790EBF6413 /* TDRSAEncryptor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDRSAEncryptor.m; sourceTree = "<group>"; };
+		AAEA87C935C8D05125C613417B2244D0 /* ThinkingSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ThinkingSDK.modulemap; sourceTree = "<group>"; };
+		AB2A3226C5AC9EFB539379B336D5F5A5 /* TDRunTime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDRunTime.m; sourceTree = "<group>"; };
+		AC63404EA34935CD7715CB64B205E207 /* TDFPSMonitor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDFPSMonitor.h; sourceTree = "<group>"; };
+		AD05F7FD14894C33890DCE186E0EDE9C /* TDLogging.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDLogging.m; sourceTree = "<group>"; };
+		AE2DB3A3D101E1638F7F20D956DAB460 /* TDPresetProperties+TDDisProperties.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TDPresetProperties+TDDisProperties.m"; sourceTree = "<group>"; };
+		B24BBDD9993F7E080E50B25035C72F5B /* NSData+TDGzip.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+TDGzip.m"; sourceTree = "<group>"; };
+		B44866976C20876182869309337D4953 /* TDToastView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDToastView.h; sourceTree = "<group>"; };
+		B5F221D8E2A1C18D0D2D0CC0E704B874 /* TDSqliteDataQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDSqliteDataQueue.m; sourceTree = "<group>"; };
+		B620F68B4FB9F30D2E5E1C0031D8B0F3 /* Pods-TATest_Swift */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-TATest_Swift"; path = Pods_TATest_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B6AF364850B40B11CCC4C8D31C2B0880 /* TAReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAReachability.h; sourceTree = "<group>"; };
+		B91FCB0BD02C8435BDC1848C2A15914D /* TDPerformance.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDPerformance.m; sourceTree = "<group>"; };
+		BE79A91003246D31F748CA552040F05A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C128B892D3AF6249E7FC2B8FA9B7453C /* TDAutoTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDAutoTracker.m; sourceTree = "<group>"; };
+		C37E98E31BC15D596A9E9DBBD5B7F2A2 /* TDStartTracker.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDStartTracker.m; sourceTree = "<group>"; };
+		C3A4FDB7E40EF45E6640FCFA0B317C8D /* TDWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDWeakProxy.h; sourceTree = "<group>"; };
+		C40E4E87842A6866FC36F4EDD3035ED4 /* UIApplication+AutoTrack.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIApplication+AutoTrack.m"; sourceTree = "<group>"; };
+		C4757AAE7B1951E386937B588A4E8D60 /* TAReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAReachability.m; sourceTree = "<group>"; };
+		C81662D81B2633B52E8DF3CB944E4E82 /* TAThirdPartySyncProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAThirdPartySyncProtocol.h; sourceTree = "<group>"; };
+		C876F727B610BEABDB2EB347B8B5A0C2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		C8A77C9508346F05AAC8166F9DBA5062 /* TDCommonUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDCommonUtil.m; sourceTree = "<group>"; };
+		C9B38A6DEE73E2FDE9473F7B60118AF3 /* TDPresetProperties+TDDisProperties.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TDPresetProperties+TDDisProperties.h"; sourceTree = "<group>"; };
+		CB3EB21D72EBAA75AF699D870D02B681 /* TAAppExtensionAnalyticConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAAppExtensionAnalyticConfig.h; sourceTree = "<group>"; };
+		CEDCE72389BFA6D2AA039E8D264F1DA7 /* TDEventModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDEventModel.m; sourceTree = "<group>"; };
+		CF372FA3774BF191D63C771A7B2D6593 /* TATopOnSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TATopOnSyncData.m; sourceTree = "<group>"; };
+		D065BE0DAED0A98E8E2692066EA251BB /* TDAutoTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDAutoTracker.h; sourceTree = "<group>"; };
+		D159E58830FE1FDC7BAEC9C46FCD2876 /* NSObject+TDSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSObject+TDSwizzle.m"; sourceTree = "<group>"; };
+		D17C537E530DCBEB5E7263C5F19FBCA8 /* TDConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDConfig.h; sourceTree = "<group>"; };
+		D64DF27AA991A1CE4766DC36F795AFF7 /* TDKeychainHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDKeychainHelper.m; sourceTree = "<group>"; };
+		D6BDD483F8695588642CFA67B59E1E63 /* TATrackTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TATrackTimer.m; sourceTree = "<group>"; };
+		D7040A221F24A702A788D7C3B474818F /* TDEncryptManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDEncryptManager.h; sourceTree = "<group>"; };
+		D8561C614CD2DECE8448DBA7313A007A /* NSDictionary+TDJsonOutput.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TDJsonOutput.h"; sourceTree = "<group>"; };
+		DBD880C14FAD3144711FC54573D57D06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DCDC814E268D73ABC9E44E90406D19AB /* TDAppState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDAppState.h; sourceTree = "<group>"; };
+		DD7D95B3E55B116CC6CA56D1C0A96000 /* TDSDKUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDSDKUtil.m; sourceTree = "<group>"; };
+		DD965B803902F5108D773862C129D218 /* TDSqliteDataQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDSqliteDataQueue.h; sourceTree = "<group>"; };
+		E10E3B34134EE35132B62935C623FFBB /* ThinkingSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ThinkingSDK.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		E3C523DB22F451EF1197CB0602EE3837 /* TDInstallTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDInstallTracker.h; sourceTree = "<group>"; };
+		E456E74EA8EC2E29D0948C2C1A50EE08 /* TDSwizzler.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDSwizzler.m; sourceTree = "<group>"; };
+		E4FDDE5F42640DD13A632C1A10384244 /* ThinkingExceptionHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ThinkingExceptionHandler.h; sourceTree = "<group>"; };
+		E5BC0DED5DE52C0163A334B2E171995C /* TDOSLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDOSLog.m; sourceTree = "<group>"; };
+		E646A6325C64067FD9E957DD13AEFF49 /* ThinkingSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ThinkingSDK-dummy.m"; sourceTree = "<group>"; };
+		E9281514621DDC7F7B07F1A4982219B5 /* TDAESEncryptor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDAESEncryptor.h; sourceTree = "<group>"; };
+		EC935DD307A3360A4A2B2B65DDD8FBC6 /* TDConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDConfig.m; sourceTree = "<group>"; };
+		ED0C611CE7569CDF08BA11168068A8C4 /* TDSecurityPolicy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDSecurityPolicy.m; sourceTree = "<group>"; };
+		EF1C67B22616E2CAB0BB51ACF5DCA89D /* TATrackTimerItem.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TATrackTimerItem.m; sourceTree = "<group>"; };
+		F01C7E28FA0AF55E9A399CAD098AF2B9 /* ThinkingSDK */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ThinkingSDK; path = ThinkingSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2ED51904B0EA75D50409EBC7AABFDE5 /* TDSDKUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDSDKUtil.h; sourceTree = "<group>"; };
+		F3148ACFAD1F0F1071D9A16E11F192C4 /* Pods-TATest_Swift-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TATest_Swift-acknowledgements.plist"; sourceTree = "<group>"; };
+		F44A5097893AF90A05DE09178FE38A35 /* TAThirdPartyManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAThirdPartyManager.h; sourceTree = "<group>"; };
+		F5FFA776D9E33F145ECD01296B0EA3D6 /* TANetwork.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TANetwork.h; sourceTree = "<group>"; };
+		F6258846992DD442F76DB7EABBBF2AB2 /* TDDeviceInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TDDeviceInfo.h; sourceTree = "<group>"; };
+		F69DABFC961EA74BF3114ACB85A2BE40 /* TAReYunSyncData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = TAReYunSyncData.h; sourceTree = "<group>"; };
+		FB79CB6E8D6F62D5523E3F9DC032BCBB /* LightThinkingAnalyticsSDK.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = LightThinkingAnalyticsSDK.m; sourceTree = "<group>"; };
+		FC39793C991CA6E15B14D0B141BD2BB9 /* TAAdjustSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAAdjustSyncData.m; sourceTree = "<group>"; };
+		FC8A7D1B88DAD6711D4C7E30B3B52A04 /* TDNTPServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDNTPServer.m; sourceTree = "<group>"; };
+		FD470D5347A0894188B786BB0624ECF3 /* TDEventRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TDEventRecord.m; sourceTree = "<group>"; };
+		FD6FBD1C38D187282285518EE8F00B44 /* TAReYunSyncData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = TAReYunSyncData.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		59BB36D97051614BFF2E5D950FA9C80F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E31FC5622879C19B98C367122D6E029 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D384305810DDB8C4C5735749D8676C2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1D250A4B7CCDE1640A1FA7188CAFFA9 /* CoreGraphics.framework in Frameworks */,
+				B0E28EEF7FFEEB8B536D036610D1E5FF /* CoreTelephony.framework in Frameworks */,
+				2F6CA45D1DC8F50BDDF632D9E69CE70D /* Foundation.framework in Frameworks */,
+				7AAE6DCEB5687405975A1A13428D213F /* Security.framework in Frameworks */,
+				7BC22D3BEF99ACC40CB6C574A430AA03 /* SystemConfiguration.framework in Frameworks */,
+				7EA817FBAFA227F285FB3D7173A0ED59 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		10F64DE4A6B9F90D111BEEA7C6AA157D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4315641307C6AE81DDDB63F7C01D8A84 /* CoreGraphics.framework */,
+				32AA6090391DC9D5CE1FD37BA2FEF15E /* CoreTelephony.framework */,
+				DBD880C14FAD3144711FC54573D57D06 /* Foundation.framework */,
+				9D490A5AF81A2D7477836C39279F3CD4 /* Security.framework */,
+				88161C126887BF44EE3DCB6E183FEE9A /* SystemConfiguration.framework */,
+				A579E667611E62CBDD8377C7B6B88DDC /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		126DFCF5E409DA9254D9234092CDACC7 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				627E0DAF5F0D22CABB8AF54D40563C53 /* ThinkingSDK */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		1B364BE064FF69F4C2E07C0312CB4632 /* ThirdPartyIntegration */ = {
+			isa = PBXGroup;
+			children = (
+				9196CFC04309CDFCBF8529F393E17519 /* TAAdjustSyncData.h */,
+				FC39793C991CA6E15B14D0B141BD2BB9 /* TAAdjustSyncData.m */,
+				7F18847709054E20FE8FFE8BE47D7F6C /* TAAppsFlyerSyncData.h */,
+				29870F901081617F99E2E773B912587F /* TAAppsFlyerSyncData.m */,
+				8630B711BB6648DE9D5D01286C556C7D /* TABaseSyncData.h */,
+				0A99945CFF4DFBF8A99F9B3D3C6858FA /* TABaseSyncData.m */,
+				4664028653B23EFAF425171F0A0561F0 /* TABranchSyncData.h */,
+				0859645A7E9EFDB3E53093F1DE825885 /* TABranchSyncData.m */,
+				A29C497E66BA784FBB4CD09A84671655 /* TAIronSourceSyncData.h */,
+				3500B9CF9416AD247D91F5FF8A296B29 /* TAIronSourceSyncData.m */,
+				F69DABFC961EA74BF3114ACB85A2BE40 /* TAReYunSyncData.h */,
+				FD6FBD1C38D187282285518EE8F00B44 /* TAReYunSyncData.m */,
+				F44A5097893AF90A05DE09178FE38A35 /* TAThirdPartyManager.h */,
+				A7181B1328B2CBCA9483FF6136FA66EA /* TAThirdPartyManager.m */,
+				C81662D81B2633B52E8DF3CB944E4E82 /* TAThirdPartySyncProtocol.h */,
+				627093A60ECA6FE036655D2431213078 /* TATopOnSyncData.h */,
+				CF372FA3774BF191D63C771A7B2D6593 /* TATopOnSyncData.m */,
+				3B5494552EDC3C507C0CB7F8E102FEBE /* TATradPlusSyncData.h */,
+				521E0A9F7C708BA1D58C1B2D7A56ACF1 /* TATradPlusSyncData.m */,
+			);
+			name = ThirdPartyIntegration;
+			path = ThinkingSDK/Source/ThirdPartyIntegration;
+			sourceTree = "<group>";
+		};
+		2413B9B4A54D268660B70AA86306C1C3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D17C537E530DCBEB5E7263C5F19FBCA8 /* TDConfig.h */,
+				EC935DD307A3360A4A2B2B65DDD8FBC6 /* TDConfig.m */,
+				818D4476BDA940930F4BB82E10223D2E /* TDConstant.h */,
+				3ECDD937D9127FAFC17FFC2EF8743FA8 /* TDPublicConfig.h */,
+				010C4EEB166130F649A676A017D8B6F1 /* TDPublicConfig.m */,
+			);
+			name = Config;
+			path = ThinkingSDK/Source/Config;
+			sourceTree = "<group>";
+		};
+		3A65390FC52ADF16F83FD6A731BFC8A5 /* Logger */ = {
+			isa = PBXGroup;
+			children = (
+				0BBB4FBB4AFF4734118B6B525C1BB49A /* TDLogging.h */,
+				AD05F7FD14894C33890DCE186E0EDE9C /* TDLogging.m */,
+				4DD4B85FF2ADE1E3B8F59D52F866C707 /* TDOSLog.h */,
+				E5BC0DED5DE52C0163A334B2E171995C /* TDOSLog.m */,
+			);
+			name = Logger;
+			path = ThinkingSDK/Source/Logger;
+			sourceTree = "<group>";
+		};
+		44FFDEE8CDF64C8B6F60B05B698B0327 /* TDRuntime */ = {
+			isa = PBXGroup;
+			children = (
+				4D59E61649BC5E80853AA9AA8305D2AF /* TDRunTime.h */,
+				AB2A3226C5AC9EFB539379B336D5F5A5 /* TDRunTime.m */,
+			);
+			name = TDRuntime;
+			path = TDRuntime;
+			sourceTree = "<group>";
+		};
+		53E4961F8A64DC4E5DEB827EA727FAF7 /* Pods-TATest_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				3C311E0A3891D52FD6ED3391DCBB8493 /* Pods-TATest_Swift.modulemap */,
+				3EE571C28152F6E180F9B1E27C3F04B1 /* Pods-TATest_Swift-acknowledgements.markdown */,
+				F3148ACFAD1F0F1071D9A16E11F192C4 /* Pods-TATest_Swift-acknowledgements.plist */,
+				53C88AE7CA5947A1027173C47CE9AC4D /* Pods-TATest_Swift-dummy.m */,
+				A1CDDE4C4B84F6C1D212DFF37C563F1D /* Pods-TATest_Swift-frameworks.sh */,
+				164CA7FA3DA8DADE4A1D7529D168DE26 /* Pods-TATest_Swift-Info.plist */,
+				50CAD7A2276725428CBE1D95722EE30B /* Pods-TATest_Swift-umbrella.h */,
+				3878814025B7E42EC7CC90C097153BA8 /* Pods-TATest_Swift.debug.xcconfig */,
+				A87034266BB6751E8BFD69CBED332F2B /* Pods-TATest_Swift.release.xcconfig */,
+			);
+			name = "Pods-TATest_Swift";
+			path = "Target Support Files/Pods-TATest_Swift";
+			sourceTree = "<group>";
+		};
+		6231367839378DFCAC9D68572B6981EE /* model */ = {
+			isa = PBXGroup;
+			children = (
+				75E02960D4F926C52EC965BFC3C0F1A0 /* NSObject+TDSwizzle.h */,
+				D159E58830FE1FDC7BAEC9C46FCD2876 /* NSObject+TDSwizzle.m */,
+				D065BE0DAED0A98E8E2692066EA251BB /* TDAutoTracker.h */,
+				C128B892D3AF6249E7FC2B8FA9B7453C /* TDAutoTracker.m */,
+				33E72A2EB49CDD0489DE2FA0B7E348CA /* TDAutoTrackManager.h */,
+				552F4848B10F5097795A77CFE1130A2D /* TDAutoTrackManager.m */,
+				E3C523DB22F451EF1197CB0602EE3837 /* TDInstallTracker.h */,
+				1B0E1205FF2F07307C8B3014F4C5D4E7 /* TDInstallTracker.m */,
+				8B9CA4A2FF38C9D2D440C3EEE308A10D /* TDStartTracker.h */,
+				C37E98E31BC15D596A9E9DBBD5B7F2A2 /* TDStartTracker.m */,
+				98E75FDD2F7C95CBAAB9F012D8FA7EFC /* TDSwizzler.h */,
+				E456E74EA8EC2E29D0948C2C1A50EE08 /* TDSwizzler.m */,
+			);
+			name = model;
+			path = model;
+			sourceTree = "<group>";
+		};
+		627BD9B4690F4BFC0A895724F6BAF718 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				FB79CB6E8D6F62D5523E3F9DC032BCBB /* LightThinkingAnalyticsSDK.m */,
+				3D567E4CA567376A94E8CFD3316B707C /* TDEventRecord.h */,
+				FD470D5347A0894188B786BB0624ECF3 /* TDEventRecord.m */,
+				23AFC2940DBEBD5C1A60541BA07623EA /* ThinkingAnalyticsSDK.h */,
+				296010C9A66136B22F5E354AEB48F7E1 /* ThinkingAnalyticsSDK.m */,
+				66457B81D7D4EAB4C9551CD5261482B0 /* ThinkingAnalyticsSDKPrivate.h */,
+				461FF95FB1F1520F11DB0749B13173E1 /* ThinkingSDK.h */,
+			);
+			name = main;
+			path = ThinkingSDK/Source/main;
+			sourceTree = "<group>";
+		};
+		627E0DAF5F0D22CABB8AF54D40563C53 /* ThinkingSDK */ = {
+			isa = PBXGroup;
+			children = (
+				72E11567C27BD7438D8B876453CB64A6 /* AppLaunch */,
+				E733ECD7AB2687145FA0C8717585A346 /* AutoTrack */,
+				85C4F43F5FBA508426BE412AFFF52F02 /* CalibratedTime */,
+				86892D44594CB4E762ACDC7D4D245CE6 /* common */,
+				2413B9B4A54D268660B70AA86306C1C3 /* Config */,
+				92E974576B7930E6E738BA2292FEC4C7 /* Core */,
+				C2ECD9BD88545C7AB1F97B2138F25273 /* Encrypt */,
+				95A19FCBDC20D8AC4CF20B283B8191B2 /* EventModel */,
+				E0F92E126A7F558F1A145FA147F31566 /* Exception */,
+				C1998F79244DF53F9BA3B442EFB99DCE /* Extension */,
+				3A65390FC52ADF16F83FD6A731BFC8A5 /* Logger */,
+				627BD9B4690F4BFC0A895724F6BAF718 /* main */,
+				A99EDCDCEB68E39B4A162966D3349378 /* Network */,
+				7D99CF2373EE6CB149C7413C04FF225A /* Performance */,
+				AF689C2412F48CBA2D3A6F754E6B2CBC /* Pod */,
+				EC7BCDC0EB7195C4C76B7BDF573CC1EC /* Store */,
+				CA792FF2C2924B5E019AAE6BC3E19C73 /* Support Files */,
+				1B364BE064FF69F4C2E07C0312CB4632 /* ThirdPartyIntegration */,
+				C71F6A3A22DACFE95E2236A02EFBAD13 /* TrackDuration */,
+			);
+			name = ThinkingSDK;
+			path = "../../../ios-sdk";
+			sourceTree = "<group>";
+		};
+		69169514EE38D6DC6E7D780C5A667008 /* plugin */ = {
+			isa = PBXGroup;
+			children = (
+				E9281514621DDC7F7B07F1A4982219B5 /* TDAESEncryptor.h */,
+				276EBFFFCB35B35736769BA5FC530CFD /* TDAESEncryptor.m */,
+				4DDC2D56C43A1642FD8DA4B77AE695FD /* TDRSAEncryptor.h */,
+				AAE5EBF7F9161C96FB7C41790EBF6413 /* TDRSAEncryptor.m */,
+				2C2A962E8F610E4117E35C386E538152 /* TDRSAEncryptorPlugin.h */,
+				60B539D8A52A4B6B1CD0B1FCE796DCC6 /* TDRSAEncryptorPlugin.m */,
+			);
+			name = plugin;
+			path = plugin;
+			sourceTree = "<group>";
+		};
+		72E11567C27BD7438D8B876453CB64A6 /* AppLaunch */ = {
+			isa = PBXGroup;
+			children = (
+				9AB400861407EE54BF8F87B99A8DA22A /* NSObject+TDUtil.h */,
+				23B99AC68F4514C4DF583BFF8B06015F /* NSObject+TDUtil.m */,
+				915123456670002B65992B92B21C66DD /* TDAppLaunchReason.h */,
+				306DCC8E528B740B3AED08DD6DE4ED64 /* TDAppLaunchReason.m */,
+				9B2095C07B01F19CEB157540F081C4F5 /* TDCommonUtil.h */,
+				C8A77C9508346F05AAC8166F9DBA5062 /* TDCommonUtil.m */,
+			);
+			name = AppLaunch;
+			path = ThinkingSDK/Source/AppLaunch;
+			sourceTree = "<group>";
+		};
+		7D99CF2373EE6CB149C7413C04FF225A /* Performance */ = {
+			isa = PBXGroup;
+			children = (
+				AC63404EA34935CD7715CB64B205E207 /* TDFPSMonitor.h */,
+				7D280C731661E08C2558855DA18C1C95 /* TDFPSMonitor.m */,
+				38B114556A0D0CAAA418B8F27A61BEC4 /* TDPerformance.h */,
+				B91FCB0BD02C8435BDC1848C2A15914D /* TDPerformance.m */,
+			);
+			name = Performance;
+			path = ThinkingSDK/Source/Performance;
+			sourceTree = "<group>";
+		};
+		81463DDC8F9A3A94D2AEF6778B6EE434 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				3B5066AA6FAFC6F7FC55B2B54228538B /* UIApplication+AutoTrack.h */,
+				C40E4E87842A6866FC36F4EDD3035ED4 /* UIApplication+AutoTrack.m */,
+			);
+			name = view;
+			path = view;
+			sourceTree = "<group>";
+		};
+		85C4F43F5FBA508426BE412AFFF52F02 /* CalibratedTime */ = {
+			isa = PBXGroup;
+			children = (
+				060E8E7F46D6A264F968CB9D4CDD00BE /* TDCalibratedTime.h */,
+				2763E62819B3F7CEBF243CFBF944A5FE /* TDCalibratedTime.m */,
+				A0E1892FBFC77E7284380BEC77EECD67 /* TDCalibratedTimeWithNTP.h */,
+				79B08F5CB1F050BB05E7AC7B68B4FC4F /* TDCalibratedTimeWithNTP.m */,
+				9C28394D7BF71EE497C782A14548CCC0 /* TDNTPServer.h */,
+				FC8A7D1B88DAD6711D4C7E30B3B52A04 /* TDNTPServer.m */,
+				4308478C77E298422BBE95F944A9C5F9 /* TDNTPTypes.c */,
+				7467CE555FEEEC924591F46B93FB2327 /* TDNTPTypes.h */,
+			);
+			name = CalibratedTime;
+			path = ThinkingSDK/Source/CalibratedTime;
+			sourceTree = "<group>";
+		};
+		86892D44594CB4E762ACDC7D4D245CE6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F6258846992DD442F76DB7EABBBF2AB2 /* TDDeviceInfo.h */,
+				3A20A9455BD46A914CC45831610D6EE1 /* TDDeviceInfo.m */,
+				684E5DFE99BA2827B0DA0B7051399956 /* TDPresetProperties.h */,
+				0F6DBDD8F291B20D89EFC75F57F606B3 /* TDPresetProperties.m */,
+				C9B38A6DEE73E2FDE9473F7B60118AF3 /* TDPresetProperties+TDDisProperties.h */,
+				AE2DB3A3D101E1638F7F20D956DAB460 /* TDPresetProperties+TDDisProperties.m */,
+				B44866976C20876182869309337D4953 /* TDToastView.h */,
+				8E213AB8310B137B8DD32814BCC3285E /* TDToastView.m */,
+				90FA184B6B8B5E72BF13C77C45C61606 /* category */,
+				A707BCB1D994DA0EEB5525CC738A4406 /* util */,
+			);
+			name = common;
+			path = ThinkingSDK/Source/common;
+			sourceTree = "<group>";
+		};
+		90FA184B6B8B5E72BF13C77C45C61606 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				5826EDCA96F5BBD99DD2DA2D74304D48 /* NSData+TDGzip.h */,
+				B24BBDD9993F7E080E50B25035C72F5B /* NSData+TDGzip.m */,
+				D8561C614CD2DECE8448DBA7313A007A /* NSDictionary+TDJsonOutput.h */,
+				45728E1E57CBDDA43B5CC3308EC84D88 /* NSDictionary+TDJsonOutput.m */,
+				12137D6125A493B089A0958A448BDAB9 /* NSString+TDString.h */,
+				8002280AD0A6E0F81E0DBC4C36EF3B46 /* NSString+TDString.m */,
+			);
+			name = category;
+			path = category;
+			sourceTree = "<group>";
+		};
+		92E974576B7930E6E738BA2292FEC4C7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				99B32F353F82EB3B1CD5C8D89C7B33A2 /* TDThirdPartyProtocol.h */,
+				EF119EBF08567CF3E949A3D7FA9D4C9D /* AppState */,
+				44FFDEE8CDF64C8B6F60B05B698B0327 /* TDRuntime */,
+			);
+			name = Core;
+			path = ThinkingSDK/Source/Core;
+			sourceTree = "<group>";
+		};
+		95A19FCBDC20D8AC4CF20B283B8191B2 /* EventModel */ = {
+			isa = PBXGroup;
+			children = (
+				349813436F54D1129A05E54868729F75 /* TDEditableEventModel.h */,
+				872ECEC9FBD3F376B2D326E09A6170FB /* TDEditableEventModel.m */,
+				8EDEEF2D96837E67BB929CC0DCFBD2B4 /* TDEventModel.h */,
+				CEDCE72389BFA6D2AA039E8D264F1DA7 /* TDEventModel.m */,
+				33E358385DB2DB7A51A3D2F6393694E1 /* TDFirstEventModel.h */,
+				858FCAC8C2F99DBEDD2693C1D425FB88 /* TDFirstEventModel.m */,
+			);
+			name = EventModel;
+			path = ThinkingSDK/Source/EventModel;
+			sourceTree = "<group>";
+		};
+		963526454E9C9F0CED1F013E55BDC7E7 /* vc */ = {
+			isa = PBXGroup;
+			children = (
+				13C8170CB5D45AFDDBA97767C7CD6C4E /* UIViewController+AutoTrack.h */,
+				9FD052FD8DD85BB39FDDB87B102056D3 /* UIViewController+AutoTrack.m */,
+			);
+			name = vc;
+			path = vc;
+			sourceTree = "<group>";
+		};
+		A707BCB1D994DA0EEB5525CC738A4406 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4CFE6142C00C8AF9A21EA048E2AAC184 /* TDCheck.h */,
+				383538CCB149D48142C59DBA077137D4 /* TDCheck.m */,
+				465F4771C1FE32DEE66468D8A50DDD3B /* TDJSONUtil.h */,
+				A302CE959D09BB395492F728499CB6C5 /* TDJSONUtil.m */,
+				F2ED51904B0EA75D50409EBC7AABFDE5 /* TDSDKUtil.h */,
+				DD7D95B3E55B116CC6CA56D1C0A96000 /* TDSDKUtil.m */,
+				C3A4FDB7E40EF45E6640FCFA0B317C8D /* TDWeakProxy.h */,
+				3BE2E998C7875FB57BE158EDEBEFE982 /* TDWeakProxy.m */,
+			);
+			name = util;
+			path = util;
+			sourceTree = "<group>";
+		};
+		A99EDCDCEB68E39B4A162966D3349378 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F5FFA776D9E33F145ECD01296B0EA3D6 /* TANetwork.h */,
+				341CF89E5757566457153BF1679DB591 /* TANetwork.m */,
+				B6AF364850B40B11CCC4C8D31C2B0880 /* TAReachability.h */,
+				C4757AAE7B1951E386937B588A4E8D60 /* TAReachability.m */,
+				44CE98D771A30E4033D789A8EB3DDF9B /* TDSecurityPolicy.h */,
+				ED0C611CE7569CDF08BA11168068A8C4 /* TDSecurityPolicy.m */,
+			);
+			name = Network;
+			path = ThinkingSDK/Source/Network;
+			sourceTree = "<group>";
+		};
+		AF689C2412F48CBA2D3A6F754E6B2CBC /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				BE79A91003246D31F748CA552040F05A /* LICENSE */,
+				C876F727B610BEABDB2EB347B8B5A0C2 /* README.md */,
+				E10E3B34134EE35132B62935C623FFBB /* ThinkingSDK.podspec */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		B3ABC3BF46CF2E0C38A91382BBA230D9 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				53E4961F8A64DC4E5DEB827EA727FAF7 /* Pods-TATest_Swift */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C1998F79244DF53F9BA3B442EFB99DCE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				5597456097AFDE96D46E0B01985283F7 /* TAAppExtensionAnalytic.h */,
+				3DF5080CBA5A0FC5C9DBB185BCEEFE2D /* TAAppExtensionAnalytic.m */,
+				CB3EB21D72EBAA75AF699D870D02B681 /* TAAppExtensionAnalyticConfig.h */,
+				05314B400C548EE78B04A421A3030B5D /* TAAppExtensionAnalyticConfig.m */,
+			);
+			name = Extension;
+			path = ThinkingSDK/Source/Extension;
+			sourceTree = "<group>";
+		};
+		C2ECD9BD88545C7AB1F97B2138F25273 /* Encrypt */ = {
+			isa = PBXGroup;
+			children = (
+				5859F19EA99892768A5CD86729704289 /* TDEncrypt.h */,
+				596C0BE75FB572840B96FE244CBD2F21 /* TDEncryptAlgorithm.h */,
+				D7040A221F24A702A788D7C3B474818F /* TDEncryptManager.h */,
+				89CE93DF38E18962F377377820116018 /* TDEncryptManager.m */,
+				95F355C0876F32DBBC42270739C4609B /* TDEncryptProtocol.h */,
+				596CFB4B516DA7A50E240ED27BA1373B /* TDSecretKey.h */,
+				09CC274A7D2C5E23DB1059A7F326A349 /* TDSecretKey.m */,
+				69169514EE38D6DC6E7D780C5A667008 /* plugin */,
+			);
+			name = Encrypt;
+			path = ThinkingSDK/Source/Encrypt;
+			sourceTree = "<group>";
+		};
+		C71F6A3A22DACFE95E2236A02EFBAD13 /* TrackDuration */ = {
+			isa = PBXGroup;
+			children = (
+				8AF8C02683DD2BFA249A4101CA35D178 /* TATrackTimer.h */,
+				D6BDD483F8695588642CFA67B59E1E63 /* TATrackTimer.m */,
+				6A67F728E4E29264B13DD367616C177B /* TATrackTimerItem.h */,
+				EF1C67B22616E2CAB0BB51ACF5DCA89D /* TATrackTimerItem.m */,
+			);
+			name = TrackDuration;
+			path = ThinkingSDK/Source/TrackDuration;
+			sourceTree = "<group>";
+		};
+		CA792FF2C2924B5E019AAE6BC3E19C73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AAEA87C935C8D05125C613417B2244D0 /* ThinkingSDK.modulemap */,
+				E646A6325C64067FD9E957DD13AEFF49 /* ThinkingSDK-dummy.m */,
+				3010FEC01C75C4C71AF715DC5B1F582D /* ThinkingSDK-Info.plist */,
+				7605831E67C6DDD890A778F52F4E7E3E /* ThinkingSDK-prefix.pch */,
+				2D18DF0F47232F8BB73AEC39FB6D64EB /* ThinkingSDK-umbrella.h */,
+				9AD50F22DAFC013BD2779FE36AE65935 /* ThinkingSDK.debug.xcconfig */,
+				931B0F31DB8AF8936F8AAFC99C111ED4 /* ThinkingSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../TATest/TATest_Swift/Pods/Target Support Files/ThinkingSDK";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				126DFCF5E409DA9254D9234092CDACC7 /* Development Pods */,
+				D68CA58901FBF589D75F5E40F1EAF5BA /* Frameworks */,
+				F307B61A25281CCB3F3369AAF0E1E85F /* Products */,
+				B3ABC3BF46CF2E0C38A91382BBA230D9 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D68CA58901FBF589D75F5E40F1EAF5BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				10F64DE4A6B9F90D111BEEA7C6AA157D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E0F92E126A7F558F1A145FA147F31566 /* Exception */ = {
+			isa = PBXGroup;
+			children = (
+				E4FDDE5F42640DD13A632C1A10384244 /* ThinkingExceptionHandler.h */,
+				385AA88C7CA39FB5CC24FBD91019E03A /* ThinkingExceptionHandler.m */,
+			);
+			name = Exception;
+			path = ThinkingSDK/Source/Exception;
+			sourceTree = "<group>";
+		};
+		E733ECD7AB2687145FA0C8717585A346 /* AutoTrack */ = {
+			isa = PBXGroup;
+			children = (
+				6231367839378DFCAC9D68572B6981EE /* model */,
+				963526454E9C9F0CED1F013E55BDC7E7 /* vc */,
+				81463DDC8F9A3A94D2AEF6778B6EE434 /* view */,
+			);
+			name = AutoTrack;
+			path = ThinkingSDK/Source/AutoTrack;
+			sourceTree = "<group>";
+		};
+		EC7BCDC0EB7195C4C76B7BDF573CC1EC /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				911438A79EC6B1666881CCCE162F18A4 /* TDFile.h */,
+				0037D0CF9F7C8B258010E1F2676D48AD /* TDFile.m */,
+				8E91856C0AAA3CF1A71CAD15B8F77BCA /* TDKeychainHelper.h */,
+				D64DF27AA991A1CE4766DC36F795AFF7 /* TDKeychainHelper.m */,
+				DD965B803902F5108D773862C129D218 /* TDSqliteDataQueue.h */,
+				B5F221D8E2A1C18D0D2D0CC0E704B874 /* TDSqliteDataQueue.m */,
+			);
+			name = Store;
+			path = ThinkingSDK/Source/Store;
+			sourceTree = "<group>";
+		};
+		EF119EBF08567CF3E949A3D7FA9D4C9D /* AppState */ = {
+			isa = PBXGroup;
+			children = (
+				DCDC814E268D73ABC9E44E90406D19AB /* TDAppState.h */,
+				21DD4904A0DC493ED5ABAF8A28BECFF5 /* TDAppState.m */,
+			);
+			name = AppState;
+			path = AppState;
+			sourceTree = "<group>";
+		};
+		F307B61A25281CCB3F3369AAF0E1E85F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B620F68B4FB9F30D2E5E1C0031D8B0F3 /* Pods-TATest_Swift */,
+				F01C7E28FA0AF55E9A399CAD098AF2B9 /* ThinkingSDK */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		01FCC34FC1B1A46966160C175254C7AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72E9C1271C141A0FDCDC0A9D61FA32C3 /* NSData+TDGzip.h in Headers */,
+				7CB56F682E2ABD43A40919A94EBE7111 /* NSDictionary+TDJsonOutput.h in Headers */,
+				1DB5822DDCA171C490E81C34236F3319 /* NSObject+TDSwizzle.h in Headers */,
+				14175AE1552FF2AB1E95CA741404F6E5 /* NSObject+TDUtil.h in Headers */,
+				74CD033959F7CE7A0C2E98366F0C7936 /* NSString+TDString.h in Headers */,
+				FCA5ED2ED408742EFDF0FBCFE97F6222 /* TAAdjustSyncData.h in Headers */,
+				7FD33940423BF33BAD14A0138F6B77C1 /* TAAppExtensionAnalytic.h in Headers */,
+				0D172A69AA33EBC2A2F6D3BBC2734E89 /* TAAppExtensionAnalyticConfig.h in Headers */,
+				FA4C7466E0C36D635205133EB1E9C253 /* TAAppsFlyerSyncData.h in Headers */,
+				B15A4CAC8D9E85E159B34E91DA9C2EE0 /* TABaseSyncData.h in Headers */,
+				8DEF17D0AE2B7B6E4B1EDD3615160D18 /* TABranchSyncData.h in Headers */,
+				8E2D8121864F2F44DDC533F4FF9EBED1 /* TAIronSourceSyncData.h in Headers */,
+				C3E8E1F0D514DF822B2EB4A78D4AF39C /* TANetwork.h in Headers */,
+				D4BBEDCF37F9885201AA2FC525559598 /* TAReachability.h in Headers */,
+				DE4068A48F2A44D1EF16F8F8541C875C /* TAReYunSyncData.h in Headers */,
+				90CE33F1B3C4F2420B42D106A07F456E /* TAThirdPartyManager.h in Headers */,
+				6858DEB7D00C846FA5A07618BFDFFAD3 /* TAThirdPartySyncProtocol.h in Headers */,
+				66211F7188D481339D8F87803177115D /* TATopOnSyncData.h in Headers */,
+				BDF5B45224CF52592A62BB1EE8C1DD73 /* TATrackTimer.h in Headers */,
+				3F67289A3CE56B036907B673267EF63D /* TATrackTimerItem.h in Headers */,
+				9788B84666F6A859DC7653D247ED7817 /* TATradPlusSyncData.h in Headers */,
+				28FF07EDEFCE58A0BF60EE6236798924 /* TDAESEncryptor.h in Headers */,
+				E9659A7B32453EBBF9E33BC1DE38B03C /* TDAppLaunchReason.h in Headers */,
+				45A0313E805A20601F9E1F86D8920780 /* TDAppState.h in Headers */,
+				FA85049AA6CB5B960140FA2858BDBDF4 /* TDAutoTracker.h in Headers */,
+				1702B54FB8CBEE9768F82FDEBDEBAAD1 /* TDAutoTrackManager.h in Headers */,
+				9B8252E316FF3141C7893058BF668BE1 /* TDCalibratedTime.h in Headers */,
+				95C99CB70B2515DFFC1487102DA638E0 /* TDCalibratedTimeWithNTP.h in Headers */,
+				530EE63B7D0579A0B1B9DA2FE19275DE /* TDCheck.h in Headers */,
+				82E754A23E0AE31BF7BF89E63D242EB9 /* TDCommonUtil.h in Headers */,
+				B04DC4FBD0E2E7048F714E0EC79E0565 /* TDConfig.h in Headers */,
+				2209F16B8EEFA51754A46690BF57771E /* TDConstant.h in Headers */,
+				2DDE941EFB7E77EE9F502F5B95021692 /* TDDeviceInfo.h in Headers */,
+				54FA5CD649B24F188D8DDE86CE08DBD8 /* TDEditableEventModel.h in Headers */,
+				62B31C84F3F9EC0F5FEBA54164F363EC /* TDEncrypt.h in Headers */,
+				8905C660C01B237FC841BFC982C9A3B2 /* TDEncryptAlgorithm.h in Headers */,
+				DDA9B4C14FE45EB389FF11E743FF0445 /* TDEncryptManager.h in Headers */,
+				BA40CE50F0B8096842364437D5026237 /* TDEncryptProtocol.h in Headers */,
+				EC6C70D4F6E0C85B22DF3E2100A1AE8D /* TDEventModel.h in Headers */,
+				9EA1812C434F75C4F83AF2E1BDB484EE /* TDEventRecord.h in Headers */,
+				74E0DD6B7C855C328DD7AF9481B22201 /* TDFile.h in Headers */,
+				827A070BDCA7FE14F8011F36910A13E5 /* TDFirstEventModel.h in Headers */,
+				39F3A99E383FA6536C2FBFB02DF54E08 /* TDFPSMonitor.h in Headers */,
+				5CD7186F9E5D663D0F4B2E78D027640A /* TDInstallTracker.h in Headers */,
+				07A81F0B52E226FA44900D0527A95399 /* TDJSONUtil.h in Headers */,
+				B910F356657EC205781EF2DA77B850B1 /* TDKeychainHelper.h in Headers */,
+				667995A17B6CA9E8550F92315CDFFA50 /* TDLogging.h in Headers */,
+				A3C58168AA6675C15DA2FEBEC0387620 /* TDNTPServer.h in Headers */,
+				8A545B2DCE107FFD6B2E2BD2022A5839 /* TDNTPTypes.h in Headers */,
+				96BE8E9A21C44672D03557FE5C7DD261 /* TDOSLog.h in Headers */,
+				A0992FD4C6AB1D764F7B434E9298DB45 /* TDPerformance.h in Headers */,
+				0B1B08676D98D6F68F316EDEAE0CB11E /* TDPresetProperties.h in Headers */,
+				54F6C937E58BA694AAEC8213D8644297 /* TDPresetProperties+TDDisProperties.h in Headers */,
+				AD23A9C4C249E7DF8E8A19BD12457E91 /* TDPublicConfig.h in Headers */,
+				E44130923E0E29D51EF5F2B8AAFCC316 /* TDRSAEncryptor.h in Headers */,
+				604B04845FF5E6B59441B20D55CAD4A5 /* TDRSAEncryptorPlugin.h in Headers */,
+				E40D50476941595A51F526225F87F0CF /* TDRunTime.h in Headers */,
+				DA687C591A16FDD02A8A8C589F449250 /* TDSDKUtil.h in Headers */,
+				F173D761BC61102EA9139B76A0E0B374 /* TDSecretKey.h in Headers */,
+				A4D87FC33F7BEA9C53F47ED31977EEEE /* TDSecurityPolicy.h in Headers */,
+				6094B7279708EDA087164307492872EB /* TDSqliteDataQueue.h in Headers */,
+				FD6E384BAFCC2B0652C74C11530DC6E1 /* TDStartTracker.h in Headers */,
+				E18D0306DB9FDE983538DA457EFFC772 /* TDSwizzler.h in Headers */,
+				7504AC94FF1AC92E27B4C8E3A1C8E0AE /* TDThirdPartyProtocol.h in Headers */,
+				136992F946DB4E28B0EEC250FD95D06C /* TDToastView.h in Headers */,
+				176750DD6DA67C496816587D54A58D4E /* TDWeakProxy.h in Headers */,
+				0FB7F0703141B4EC1D31A15249899D84 /* ThinkingAnalyticsSDK.h in Headers */,
+				360C477C810659D4BCAACA02A26D1CB5 /* ThinkingAnalyticsSDKPrivate.h in Headers */,
+				EED70C1679C28CE5532506DAD810ECCD /* ThinkingExceptionHandler.h in Headers */,
+				C10BC7AD3AD6AF2A4384B8032EB892CA /* ThinkingSDK.h in Headers */,
+				08891E5B38651CBAC4CC224379BECD1F /* ThinkingSDK-umbrella.h in Headers */,
+				C66F0EAF0424D26420849D661861C022 /* UIApplication+AutoTrack.h in Headers */,
+				52713AAEE4200532AD5B15B3E5C8A3E0 /* UIViewController+AutoTrack.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA6D2B35040FD1ADC0611C6998613BB8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F6317589DC12676E393BD553D3B3E09 /* Pods-TATest_Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		219619A364BD6648D948293C835A6269 /* Pods-TATest_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38CEE2BAA8071EB82892C611B1F7EF10 /* Build configuration list for PBXNativeTarget "Pods-TATest_Swift" */;
+			buildPhases = (
+				AA6D2B35040FD1ADC0611C6998613BB8 /* Headers */,
+				1916CE308BF4AFAA929C01AE166029AE /* Sources */,
+				59BB36D97051614BFF2E5D950FA9C80F /* Frameworks */,
+				B846F58BECCD1620CFD93A2E0CE4290B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2369A4870E28C01DA4DC3C2AB4B6B401 /* PBXTargetDependency */,
+			);
+			name = "Pods-TATest_Swift";
+			productName = Pods_TATest_Swift;
+			productReference = B620F68B4FB9F30D2E5E1C0031D8B0F3 /* Pods-TATest_Swift */;
+			productType = "com.apple.product-type.framework";
+		};
+		F36D5287A6A9A006C12C436E01420958 /* ThinkingSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0085FA28EF43AB49510511028C9BCFA2 /* Build configuration list for PBXNativeTarget "ThinkingSDK" */;
+			buildPhases = (
+				01FCC34FC1B1A46966160C175254C7AB /* Headers */,
+				40C56B6468016B63D0BB0723D6077D6D /* Sources */,
+				D384305810DDB8C4C5735749D8676C2B /* Frameworks */,
+				3D0AFB11F2E07FEF5DC06D48E9F21BAA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ThinkingSDK;
+			productName = ThinkingSDK;
+			productReference = F01C7E28FA0AF55E9A399CAD098AF2B9 /* ThinkingSDK */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = F307B61A25281CCB3F3369AAF0E1E85F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				219619A364BD6648D948293C835A6269 /* Pods-TATest_Swift */,
+				F36D5287A6A9A006C12C436E01420958 /* ThinkingSDK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3D0AFB11F2E07FEF5DC06D48E9F21BAA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B846F58BECCD1620CFD93A2E0CE4290B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1916CE308BF4AFAA929C01AE166029AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3241E0E243F4A450CFF5ED519ABEA840 /* Pods-TATest_Swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		40C56B6468016B63D0BB0723D6077D6D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5532E762B8197AE2EDB75A84BFECE2B0 /* LightThinkingAnalyticsSDK.m in Sources */,
+				B32CAFDAE6A060B588BCE48DF207F275 /* NSData+TDGzip.m in Sources */,
+				BD7431A734DD8BA9AD35FC832FA2D0F5 /* NSDictionary+TDJsonOutput.m in Sources */,
+				B56A49F6AF6DC5320EEC19457E737C53 /* NSObject+TDSwizzle.m in Sources */,
+				0890AAC7B6BF869078AFB461E8703B51 /* NSObject+TDUtil.m in Sources */,
+				4C337DA1CCA2AFD7EC67E89432FECC01 /* NSString+TDString.m in Sources */,
+				09EA3134AA15DEBD996C48DD5B3BB1B3 /* TAAdjustSyncData.m in Sources */,
+				659E87A592A8A447BCB33DA4FCEF2AF0 /* TAAppExtensionAnalytic.m in Sources */,
+				0D9F91C13FD39A2BC591D136A3E7A7C2 /* TAAppExtensionAnalyticConfig.m in Sources */,
+				2588DCA81E4485C695C15B1584EB19DE /* TAAppsFlyerSyncData.m in Sources */,
+				9203777F921357BE58D7D5160B2090CE /* TABaseSyncData.m in Sources */,
+				A288267032B9EFDFED432B227CEDDA03 /* TABranchSyncData.m in Sources */,
+				79ABE85A5C0B76133CDF01917E18B068 /* TAIronSourceSyncData.m in Sources */,
+				E8B51BB75F21C3ED6CF48EC068EADBC4 /* TANetwork.m in Sources */,
+				0FCD045C13B774B1D60566121AC29946 /* TAReachability.m in Sources */,
+				2DAEFB39DC3C15F8EEAB77A240E3D58D /* TAReYunSyncData.m in Sources */,
+				50BB11792D8C02D978EA00B8FF03A3F7 /* TAThirdPartyManager.m in Sources */,
+				CE3D0B36BCE53B55E908DFA3D8D6BB64 /* TATopOnSyncData.m in Sources */,
+				A6637431FCCB5C9F0939FE2AD2724570 /* TATrackTimer.m in Sources */,
+				43E9845BE8C12B97BB291AC8269CD073 /* TATrackTimerItem.m in Sources */,
+				4FED623122AD05123F091ED91A502A1D /* TATradPlusSyncData.m in Sources */,
+				95D083CEF0A2A0E21EFC923E9AA855B6 /* TDAESEncryptor.m in Sources */,
+				E2608AC212286B7E335CCBC377EF7CC8 /* TDAppLaunchReason.m in Sources */,
+				581167A4F9001DCCE54722FFECC7C692 /* TDAppState.m in Sources */,
+				E4FB6B8BD7D6EC4314CAB3F99C7C60CA /* TDAutoTracker.m in Sources */,
+				8513AE050E67D3A7A97F0B2BD02762EF /* TDAutoTrackManager.m in Sources */,
+				F8362792637983EC894A8BC8E0615ED0 /* TDCalibratedTime.m in Sources */,
+				24B4C9F78ED47B6347969F667805D2CE /* TDCalibratedTimeWithNTP.m in Sources */,
+				88F1B03436CD51F1B9B38BE95126E090 /* TDCheck.m in Sources */,
+				219B44FA7D4BC78553B5BE51B90F05A2 /* TDCommonUtil.m in Sources */,
+				7C1660B06D21B70B0A811D21EB402EDD /* TDConfig.m in Sources */,
+				FCAF4FE9955DF2A7E6C8273792FFAF45 /* TDDeviceInfo.m in Sources */,
+				3E3942D31B3446FBF2ACD4E1C6D6F267 /* TDEditableEventModel.m in Sources */,
+				E086B659E05EA865815C97C904EF9A2A /* TDEncryptManager.m in Sources */,
+				7FA555284FE64AE4A82913958B76D88A /* TDEventModel.m in Sources */,
+				2A2B9533CC93933389DD925F4316AC12 /* TDEventRecord.m in Sources */,
+				CD751CDF9E51BFC4A84D510779228E7D /* TDFile.m in Sources */,
+				D6FA49CFD1712FAB7FA2A8208556157B /* TDFirstEventModel.m in Sources */,
+				ACC550CF5D5D00B4707FF0A0551DD651 /* TDFPSMonitor.m in Sources */,
+				1607FF28190034C72DBB16245045501B /* TDInstallTracker.m in Sources */,
+				BA0F32C2FD639867C73F88410E58D8A7 /* TDJSONUtil.m in Sources */,
+				D96A1E5A5A4B6010F650AF9DFEFDB294 /* TDKeychainHelper.m in Sources */,
+				AE479179F5276961534C2701D9891897 /* TDLogging.m in Sources */,
+				709C3A173B9AC1780B1145841FA40153 /* TDNTPServer.m in Sources */,
+				8FCF2BCB61885A0150D2F065A1D28419 /* TDNTPTypes.c in Sources */,
+				A9603C48BD277F4A07CA5F8AC5135DB7 /* TDOSLog.m in Sources */,
+				0990F5FDC58B810DFC80582B04DB7689 /* TDPerformance.m in Sources */,
+				72B9144ECDDCD5879D482C9245F509D2 /* TDPresetProperties.m in Sources */,
+				BE4B9539B69A2B6CB9AFD39E8B1A1049 /* TDPresetProperties+TDDisProperties.m in Sources */,
+				411DC3B54DB03576BDD7C94392B2E6DB /* TDPublicConfig.m in Sources */,
+				BCA90731CD6347C79DDA53A68033789C /* TDRSAEncryptor.m in Sources */,
+				3161EC00A6D329CE39880D6DEBB450EB /* TDRSAEncryptorPlugin.m in Sources */,
+				167BF0384DCE71DF7A24E1B3B497D2B3 /* TDRunTime.m in Sources */,
+				167B4C7877E4E0B4D4BA827BE6114806 /* TDSDKUtil.m in Sources */,
+				F7F10A58F5B3D9E7BCF61C91A38A1E4D /* TDSecretKey.m in Sources */,
+				DF999335C053B43913CD44E693B8597C /* TDSecurityPolicy.m in Sources */,
+				418301B877A92064BEC3E2C08A690152 /* TDSqliteDataQueue.m in Sources */,
+				AAE10725F282D17350522FB5E57A87F9 /* TDStartTracker.m in Sources */,
+				043ED1CD6635A03A6AB95EED09112985 /* TDSwizzler.m in Sources */,
+				9C175CDA36B965BE88CB899DB572089D /* TDToastView.m in Sources */,
+				3CF62FD2014246D75C75F055BF3224F2 /* TDWeakProxy.m in Sources */,
+				B9F32537640D9490B33CE6CC213104E2 /* ThinkingAnalyticsSDK.m in Sources */,
+				FA737C340ADF81FCADD7390C8DC6A0A1 /* ThinkingExceptionHandler.m in Sources */,
+				CCBFD16889D389D0B15A514208629AFB /* ThinkingSDK-dummy.m in Sources */,
+				CB93C00634FB0C4DE321149AF60F1712 /* UIApplication+AutoTrack.m in Sources */,
+				457CDB67468F4597C5682133F48D4BB2 /* UIViewController+AutoTrack.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2369A4870E28C01DA4DC3C2AB4B6B401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ThinkingSDK;
+			target = F36D5287A6A9A006C12C436E01420958 /* ThinkingSDK */;
+			targetProxy = 92E2941FADF1997B9AB6A4CB3B3DC192 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		5418F7BA375B80C52592A61ECDD0029F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3878814025B7E42EC7CC90C097153BA8 /* Pods-TATest_Swift.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TATest_Swift/Pods-TATest_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TATest_Swift/Pods-TATest_Swift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		929D50159BA80BC67619DD8DC1DD203D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 931B0F31DB8AF8936F8AAFC99C111ED4 /* ThinkingSDK.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ThinkingSDK/ThinkingSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ThinkingSDK/ThinkingSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ThinkingSDK/ThinkingSDK.modulemap";
+				PRODUCT_MODULE_NAME = ThinkingSDK;
+				PRODUCT_NAME = ThinkingSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		CFFDE2EEC95189A850680C8DD7D400C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9AD50F22DAFC013BD2779FE36AE65935 /* ThinkingSDK.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ThinkingSDK/ThinkingSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ThinkingSDK/ThinkingSDK-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ThinkingSDK/ThinkingSDK.modulemap";
+				PRODUCT_MODULE_NAME = ThinkingSDK;
+				PRODUCT_NAME = ThinkingSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D6E6BBFDC3FA1640CDCBBDEAF523B609 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87034266BB6751E8BFD69CBED332F2B /* Pods-TATest_Swift.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-TATest_Swift/Pods-TATest_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-TATest_Swift/Pods-TATest_Swift.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0085FA28EF43AB49510511028C9BCFA2 /* Build configuration list for PBXNativeTarget "ThinkingSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CFFDE2EEC95189A850680C8DD7D400C1 /* Debug */,
+				929D50159BA80BC67619DD8DC1DD203D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38CEE2BAA8071EB82892C611B1F7EF10 /* Build configuration list for PBXNativeTarget "Pods-TATest_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5418F7BA375B80C52592A61ECDD0029F /* Debug */,
+				D6E6BBFDC3FA1640CDCBBDEAF523B609 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
