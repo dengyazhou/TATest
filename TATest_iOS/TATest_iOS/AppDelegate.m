@@ -7,9 +7,10 @@
 
 #import "AppDelegate.h"
 #import <ThinkingSDK/ThinkingSDK.h>
+//#import <ThinkingSDK/TDDeviceInfo.h>
 
-static NSString *APP_ID = @"a5bf4fc2f8a248a7a02b9a62a58bf1e9";
-static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
+static NSString *APP_ID = @"9ea29e5b57e6440381454bb6681b5e84";
+static NSString *SERVER_URL = @"https://receiver-ta-dev.thinkingdata.cn";
 
 @interface AppDelegate ()
 
@@ -44,26 +45,26 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
 //    [[ThinkingAnalyticsSDK sharedInstance] track:@"event_name" properties:eventProperties];
     
     // v2.7.2版本以后为实例设置 name
-//    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
 //    config.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    config.uploadSize = @10;
 //    config.uploadInterval = @3600;
-//    config.name = @"SS_TADemo";
-//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+//    config.name = @"Монгол 13";
+    config.debugMode = ThinkingAnalyticsDebug;
+    config.launchOptions = launchOptions;
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
 //
 //    // 根据name获取实例
-//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"SS_TADemo"];
+//    ThinkingAnalyticsSDK *ta = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"Монгол 13"];
 
-//    [instance track:@"iOS_event20"];
+    [instance track:@"iOS_event24"];
  
     
 #pragma mark 1.4 后台自启事件说明
-    TDConfig *config = [[TDConfig alloc] init];
+//    TDConfig *config = [[TDConfig alloc] init];
 //    config.launchOptions = launchOptions;
 //    config.trackRelaunchedInBackgroundEvents = YES;
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL withConfig:config];
-    
-    [instance track:@"event13" properties:@{@"age1":@12,@"age":@"12"}];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL withConfig:config];
     
 #pragma mark 1.5 开启与 H5 页面的打通
 //    [instance addWebViewUserAgent];
@@ -242,7 +243,7 @@ static NSString *SERVER_URL = @"http://ta_test.receiver.thinkingdata.cn";
     
 #pragma mark 6.7 开启 Debug 模式
 //    TDConfig *config = [[TDConfig alloc] init];
-//    config.debugMode = ThinkingAnalyticsDebugOff;
+//    config.debugMode = ThinkingAnalyticsDebug;
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL withConfig:config];
     
 #pragma mark 6.8 校准时间

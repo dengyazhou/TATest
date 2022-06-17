@@ -11,6 +11,10 @@
 #import "AutoTracker/AppClickTableViewVC.h"
 #import "AutoTracker/IgnoredViewController.h"
 
+#import <ThinkingSDK/ThinkingSDK.h>
+
+static NSString *APP_ID = @"a5bf4fc2f8a248a7a02b9a62a58bf1e9";
+
 @interface HomeViewController ()
 
 @end
@@ -25,6 +29,12 @@
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    NSLog(@"====>>>touchesBegan 开始");
+#pragma mark
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:APP_ID];
+//    [instance track:@"event_3"];
+//    cn.thinkingdata.analytics.log
+    //TATest_iOS
     
 #pragma mark APP 安装事件 ta_app_install
     
@@ -44,14 +54,16 @@
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark APP 崩溃事件 ta_app_crash
-    NSArray *array = @[@"str1",@"sr2",@"str3"];
-    NSString *str = array[3];
+//    NSArray *array = @[@"str1",@"sr2",@"str3"];
+//    NSString *str = array[3];
     
 #pragma mark 忽略自动采集事件
 //    IgnoredViewController *vc = [[IgnoredViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark 自动采集事件设置自定义属性
+    
+    NSLog(@"====>>>touchesBegan 结束");
 }
 
 
