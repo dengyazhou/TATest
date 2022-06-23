@@ -9,8 +9,8 @@
 #import <ThinkingSDK/ThinkingSDK.h>
 //#import <ThinkingSDK/TDDeviceInfo.h>
 
-static NSString *APP_ID = @"9ea29e5b57e6440381454bb6681b5e84";
-static NSString *SERVER_URL = @"https://receiver-ta-dev.thinkingdata.cn";
+static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
+static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 
 @interface AppDelegate ()
 
@@ -44,21 +44,35 @@ static NSString *SERVER_URL = @"https://receiver-ta-dev.thinkingdata.cn";
 //    // v1.2.0版本之前，或者单实例可使用下列使用 SDK
 //    [[ThinkingAnalyticsSDK sharedInstance] track:@"event_name" properties:eventProperties];
     
+//    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];//验证成功
+    
     // v2.7.2版本以后为实例设置 name
     TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
 //    config.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    config.uploadSize = @10;
 //    config.uploadInterval = @3600;
 //    config.name = @"Монгол 13";
-    config.debugMode = ThinkingAnalyticsDebug;
-    config.launchOptions = launchOptions;
+//    config.debugMode = ThinkingAnalyticsDebug;
+//    config.launchOptions = launchOptions;
     ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
 //
 //    // 根据name获取实例
 //    ThinkingAnalyticsSDK *ta = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"Монгол 13"];
-
-    [instance track:@"iOS_event24"];
+//    [instance logout];
+    
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
+//    [instance track:@"iOS_EVENT" properties:@{@"ios_age":@"12",@"iOS_name":@"数数科技3"}];
+//    [instance track:@"t000_match_getmatchs"];
+//    [instance track:@"t000_match_getmatchs_succeed"];
+    
+//    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"没传channel字段"}];// (null)
+//    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为空字符串",@"channel":@""}];// -
+//    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为空格字符串",@"channel":@" "}]; // 空
+//    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为空1",@"channel":@" 1"}]; // 空1
+//    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为1",@"channel":@"1"}];// 1
+//    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为-",@"channel":@"-"}];// -
  
+//    [instance flush];
     
 #pragma mark 1.4 后台自启事件说明
 //    TDConfig *config = [[TDConfig alloc] init];

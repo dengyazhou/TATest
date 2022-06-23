@@ -8,8 +8,8 @@
 <script>
     // 创建 SDK 配置对象
     var config = {
-        appId: '9ea29e5b57e6440381454bb6681b5e84',
-        serverUrl: 'https://receiver-ta-dev.thinkingdata.cn',
+        appId: 'a5bf4fc2f8a248a7a02b9a62a58bf1e9',
+        serverUrl: 'http://ta_test.receiver.thinkingdata.cn',
     };
     // 将 SDK 实例赋给全局变量 ta，或者其他您指定的变量
     window.ta = thinkingdata;
@@ -18,7 +18,7 @@
     ta.init(config);
 
     // 之后您就可以使用 ta 来上报事件了
-    // ta.track('test_event_JS_V3');
+    // ta.track('test_event_JS_V2');
 
     // 2.1 设置访客 ID（可选）
     // ta.identify("123yazhou.deng");
@@ -83,8 +83,9 @@
     
     function track() {
         // document.write("<h1>这是一个标题129</h1>"); 
-        // ta.track('test_event_JS_V3');
-        console.log(navigator.userAgent);
+        console.log("点击了");
+        ta.track('test_event_JS_V4');
+        // console.log(navigator.userAgent);
         // console.log('test_event_JS_V10');
 
         // document.getElementById("id1").innerHTML = "你好";

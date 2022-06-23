@@ -45,6 +45,5 @@ instance.track("some_event");
 ## 感谢
 
 - [mixpanel-ios](https://github.com/mixpanel/mixpanel-iphone.git)
-- [sa-sdk-ios](https://github.com/sensorsdata/sa-sdk-ios)
 
 

@@ -5,8 +5,8 @@ var ThinkingAnalyticsAPI = require("./thinkingdata.wx.min.js");
 
 // TA SDK 配置对象
 var config = {
-  appid: "9ea29e5b57e6440381454bb6681b5e84",
-  serverUrl: "https://receiver-ta-dev.thinkingdata.cn",
+  appid: "a5bf4fc2f8a248a7a02b9a62a58bf1e9",
+  serverUrl: "http://ta_test.receiver.thinkingdata.cn",
   // autoTrack: {
   //   appLaunch: true, // 自动采集 ta_mp_launch
   //   appShow: true, // 自动采集 ta_mp_show
@@ -56,8 +56,8 @@ App({
         // });
 
         // 上报一条数据
-        // ta.track("test_event_14");
-        console.log(ta.getDeviceId());
+        ta.track("test_event_1");
+        // console.log(ta.getDeviceId());
       }
     })
   },

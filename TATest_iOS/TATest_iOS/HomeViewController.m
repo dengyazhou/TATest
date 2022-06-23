@@ -13,7 +13,7 @@
 
 #import <ThinkingSDK/ThinkingSDK.h>
 
-static NSString *APP_ID = @"a5bf4fc2f8a248a7a02b9a62a58bf1e9";
+static NSString *APP_ID = @"9ea29e5b57e6440381454bb6681b5e84";
 
 @interface HomeViewController ()
 
@@ -32,7 +32,7 @@ static NSString *APP_ID = @"a5bf4fc2f8a248a7a02b9a62a58bf1e9";
     NSLog(@"====>>>touchesBegan 开始");
 #pragma mark
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:APP_ID];
-//    [instance track:@"event_3"];
+//    [instance track:@"event_6" properties:@{@"name1":@"莫斯科时间 对时成功 之后"}];
 //    cn.thinkingdata.analytics.log
     //TATest_iOS
     
@@ -54,8 +54,8 @@ static NSString *APP_ID = @"a5bf4fc2f8a248a7a02b9a62a58bf1e9";
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark APP 崩溃事件 ta_app_crash
-//    NSArray *array = @[@"str1",@"sr2",@"str3"];
-//    NSString *str = array[3];
+    NSArray *array = @[@"str1",@"sr2",@"str3"];
+    NSString *str = array[3];
     
 #pragma mark 忽略自动采集事件
 //    IgnoredViewController *vc = [[IgnoredViewController alloc] init];
