@@ -15,13 +15,15 @@ import cn.thinkingdata.android.ThinkingAnalyticsSDK;
 
 public class MainActivity extends AppCompatActivity {
 
-    static String TA_APP_ID = "a5bf4fc2f8a248a7a02b9a62a58bf1e9";
-    static String SERVER_URL = "http://ta_test.receiver.thinkingdata.cn";
+    static String TA_APP_ID = "af6861d085e14b5c948662e1fcdce6ef";
+    static String SERVER_URL = "https://receiver-ta-demo.thinkingdata.cn";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        ThinkingAnalyticsSDK.enableTrackLog(true);
 
         // 1.3 初始化 SDK
         // 在主线程中初始化 SDK
@@ -31,12 +33,12 @@ public class MainActivity extends AppCompatActivity {
 //        ThinkingAnalyticsSDK.sharedInstance(this, TA_APP_ID).track("some_event");
 
         // 获取 TDConfig 实例
-//        TDConfig config = TDConfig.getInstance(this,TA_APP_ID,SERVER_URL);
+        TDConfig config = TDConfig.getInstance(this,TA_APP_ID,SERVER_URL);
         // 获取 TDConfig 实例, 传入NAME
 //        TDConfig config = TDConfig.getInstance(this, TA_APP_ID, SERVER_URL, "实例1");
         // 初始化 SDK
-//        ThinkingAnalyticsSDK instance = ThinkingAnalyticsSDK.sharedInstance(config);
-//        instance.track("some_event_V3");
+        ThinkingAnalyticsSDK instance = ThinkingAnalyticsSDK.sharedInstance(config);
+        instance.track("some_event_V1");
 
 
         // 1.4 开启与 H5 页面的打通（可选）
@@ -59,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // 三、发送事件
-        ThinkingAnalyticsSDK instance = ThinkingAnalyticsSDK.sharedInstance(this, TA_APP_ID, SERVER_URL);
+//        ThinkingAnalyticsSDK instance = ThinkingAnalyticsSDK.sharedInstance(this, TA_APP_ID, SERVER_URL);
         // 3.1 发送事件
         // 商店购买事件
 //        try {
@@ -75,30 +77,30 @@ public class MainActivity extends AppCompatActivity {
 //        }
         // 3.2 设置公共事件属性
         // 设置公共事件属性
-        try {
-            JSONObject superProperties = new JSONObject();
-            superProperties.put("vip_level", 2);
-            superProperties.put("Channel", "A1");
-            instance.setSuperProperties(superProperties);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        // 使用track上传事件，此时事件中会带有公共事件属性
-        try {
-            JSONObject properties = new JSONObject();
-            properties.put("product_id","A1234");
-            instance.track("product_pay", properties);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        // 清除一条公共事件属性，比如将之前设置 "Channel" 属性清除，之后的数据将不会该属性
-//        instance.unsetSuperProperty("Channel");
-        // 清除所有公共事件属性
-//        instance.clearSuperProperties();
-        // 获取所有公共事件属性
-        JSONObject object = instance.getSuperProperties();
-        System.out.println(object);
-        System.out.println("你好世界！！！！");
+//        try {
+//            JSONObject superProperties = new JSONObject();
+//            superProperties.put("vip_level", 2);
+//            superProperties.put("Channel", "A1");
+//            instance.setSuperProperties(superProperties);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//        // 使用track上传事件，此时事件中会带有公共事件属性
+//        try {
+//            JSONObject properties = new JSONObject();
+//            properties.put("product_id","A1234");
+//            instance.track("product_pay", properties);
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//        // 清除一条公共事件属性，比如将之前设置 "Channel" 属性清除，之后的数据将不会该属性
+////        instance.unsetSuperProperty("Channel");
+//        // 清除所有公共事件属性
+////        instance.clearSuperProperties();
+//        // 获取所有公共事件属性
+//        JSONObject object = instance.getSuperProperties();
+//        System.out.println(object);
+//        System.out.println("你好世界！！！！");
 
 
 
