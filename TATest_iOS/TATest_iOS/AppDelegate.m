@@ -22,6 +22,17 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+////    dic = nil;
+////    dic[@"name1"] = @"11";
+//    id value = [dic objectForKeyedSubscript:@"name1"];
+////    BOOL isFlag = ([dic objectForKeyedSubscript:@"name1"] != nil);
+//    if (dic[@"name1"] != nil) {
+//
+//    }
+
+//    [dic objectForKeyedSubscript:@""];
+    
 #pragma mark 1.3 初始化
     [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
 
@@ -55,6 +66,8 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    config.debugMode = ThinkingAnalyticsDebug;
 //    config.launchOptions = launchOptions;
     ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+    
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
 //
 //    // 根据name获取实例
 //    ThinkingAnalyticsSDK *ta = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"Монгол 13"];
@@ -62,8 +75,12 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
 //    [instance track:@"iOS_EVENT" properties:@{@"ios_age":@"12",@"iOS_name":@"数数科技3"}];
-//    [instance track:@"t000_match_getmatchs"];
+//    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name":@"1&33334"}];
+//    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name&1":@"1&444"}];
 //    [instance track:@"t000_match_getmatchs_succeed"];
+    
+//    [instance user_append:@{@"product_buy":@[@"product_name1",@"product_name2",@"product_name2"]}];
+//    [instance user_uniqAppend:@{@"product_buy":@[@"product_name1",@"product_name2",@"product_name2"]}];
     
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"没传channel字段"}];// (null)
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为空字符串",@"channel":@""}];// -
@@ -71,6 +88,12 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为空1",@"channel":@" 1"}]; // 空1
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为1",@"channel":@"1"}];// 1
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为-",@"channel":@"-"}];// -
+    
+//    [instance login:@"dengauzhou_num2"];
+//    [instance logout];
+//    [instance identify:@"identify_num2"];
+////    [instance logout];
+    [instance track:@"iOS_E_V4"];
  
 //    [instance flush];
     

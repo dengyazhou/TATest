@@ -13,7 +13,7 @@
 
 #import <ThinkingSDK/ThinkingSDK.h>
 
-static NSString *APP_ID = @"9ea29e5b57e6440381454bb6681b5e84";
+static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
 
 @interface HomeViewController ()
 
