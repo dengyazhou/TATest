@@ -12,6 +12,9 @@ target 'TATest_iOS' do
   pod 'Masonry' #不需要打开 source 'https://github.com/CocoaPods/Specs.git'
 #  pod 'TATool'
 
+  pod 'AFNetworking'
+  pod 'MJExtension'
+
   ENV["ThinkingSDK_source"] = '1'
   pod 'ThinkingSDK', :path => '../../ios-sdk'
 

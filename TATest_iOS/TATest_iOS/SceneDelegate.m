@@ -53,5 +53,17 @@
     // to restore the scene back to its current state.
 }
 
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
+    
+    UIOpenURLContext *context = URLContexts.anyObject;
+    if (context.URL) {
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"你被唤醒了" message:@"你好" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//        }];
+//        [alertController addAction:action];
+//        [[UIApplication sharedApplication].windows.firstObject.rootViewController presentViewController:alertController animated:YES completion:nil];
+    }
+}
 
 @end

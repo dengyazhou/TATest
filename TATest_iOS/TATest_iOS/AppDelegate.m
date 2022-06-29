@@ -33,8 +33,50 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 
 //    [dic objectForKeyedSubscript:@""];
     
+//    //获取外层数据
+//    NSMutableDictionary *dict = [self getBaseDataWithEvent:@"interface_ltsdk" withType:@"track"];
+//
+//        //获取属性
+//    NSMutableDictionary *eventProperties = [self getBaseProperties];
+//
+//        //接口名
+//    [eventProperties setValue:name forKey:@"interface_name"];
+//    [eventProperties setValue:param forKey:@"param"];
+//
+//
+//    [dict setObject:eventProperties forKey:@"properties"];
+//
+//    NSMutableDictionary *paramsDict = [[NSMutableDictionary alloc] init];
+//    [paramsDict setObject:appId forKey:@"appid"];
+//    [paramsDict setObject:@"1" forKey:@"client"];
+//
+//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
+//    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+//    jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+//    jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\t" withString:@""];
+//    jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+//    [paramsDict setObject:jsonStr forKey:@"data"];
+//
+//        //开始上报
+//        [LTHTTPRequest post:url
+//              withParameter:paramsDict
+//                    success:^(NSDictionary *data, NSURLResponse *response) {
+//            NSLog(@"postTDLog %@", data);
+//            NSString *code = [data objectForKey:@"code"];
+//            if (code.intValue == 0) {
+//                NSLog(@"上报SDK数数成功");
+//            }
+//            else {
+//                NSString *msg = [data objectForKey:@"msg"];
+//                NSLog(@"上报SDK数数失败 %@", msg);
+//            }
+//        } fail:^(NSError *error, NSHTTPURLResponse *response) {
+//            NSLog(@"上报SDK数数失败 %@", error);
+//        }];
+
+    
 #pragma mark 1.3 初始化
-    [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
+//    [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
 
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     // 支持初始化多个APPID实例
@@ -58,14 +100,14 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];//验证成功
     
     // v2.7.2版本以后为实例设置 name
-    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+//    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
 //    config.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    config.uploadSize = @10;
 //    config.uploadInterval = @3600;
 //    config.name = @"Монгол 13";
 //    config.debugMode = ThinkingAnalyticsDebug;
 //    config.launchOptions = launchOptions;
-    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
     
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
 //
@@ -74,6 +116,8 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [instance logout];
     
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
+    
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppEnd properties:@{@"自己填":@"123"}];
 //    [instance track:@"iOS_EVENT" properties:@{@"ios_age":@"12",@"iOS_name":@"数数科技3"}];
 //    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name":@"1&33334"}];
 //    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name&1":@"1&444"}];
@@ -93,7 +137,16 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [instance logout];
 //    [instance identify:@"identify_num2"];
 ////    [instance logout];
-    [instance track:@"iOS_E_V4"];
+    
+//    NSString *str = @"FloatingWindow;{\"url\":\"http:\/\/testjbz.leiting.com\/personal\/gameGotoShelf.do?token=&currDate=xxx&sign=xxx\"}";
+    
+//    [instance setSuperProperties:@{@"Channel":@"ABC"}];
+//
+//    [instance user_set:@{@"name":@"123"}];
+//
+//    [instance track:@"iOS_E_V4"];
+    
+//    [instance track:@"iOS_E_V4" properties:@{@"name":str}];
  
 //    [instance flush];
     
@@ -404,6 +457,27 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [lightInstance login:@"ligth0001@thinkingdata.cn"];
 //    [lightInstance track:@"some_event" properties:@{@"ligth_V1":@"第一个访客"}];
     
+    return YES;
+}
+
+#pragma mark 应用被外界打开
+//1、在info.中 添加URL Types，URL Schemes 名字不能带下划线,例如TATestiOS123
+//2、添加如下方法 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options,在SceneDelegate存在的情况下，这个回调不会走，但是这个也必须写，否则打不开
+//3、用safari打开，在safari浏览器中输入 TATestiOS123://
+
+//打开其他应用
+//1、在info中添加白名单，LSApplicationQueriesSchemes，TATestiOS123
+//2、代码打开 [[UIApplication sharedApplication] openURL:url options:@{@"name":@"dengyazhou"} completionHandler:nil];
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    NSLog(@"%s",__func__);
+//    if (url) {
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"你被唤醒了" message:@"你好" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//        }];
+//        [alertController addAction:action];
+//        [app.windows.firstObject.rootViewController presentViewController:alertController animated:YES completion:nil];
+//    }
     return YES;
 }
 

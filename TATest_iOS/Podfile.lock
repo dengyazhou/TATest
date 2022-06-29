@@ -1,5 +1,21 @@
 PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
   - Masonry (1.1.0)
+  - MJExtension (3.4.1)
   - ThinkingSDK (2.8.1):
     - ThinkingSDK/Core (= 2.8.1)
     - ThinkingSDK/Extension (= 2.8.1)
@@ -8,21 +24,27 @@ PODS:
     - ThinkingSDK/Core
 
 DEPENDENCIES:
+  - AFNetworking
   - Masonry
+  - MJExtension
   - ThinkingSDK (from `../../ios-sdk`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AFNetworking
     - Masonry
+    - MJExtension
 
 EXTERNAL SOURCES:
   ThinkingSDK:
     :path: "../../ios-sdk"
 
 SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
   ThinkingSDK: aeadb9a7ec34fcf493e898efcf686a05b90404f1
 
-PODFILE CHECKSUM: 4553034a3b92f5f93fb036e3cb4796d22c8ad7fb
+PODFILE CHECKSUM: cd0c9aa3b0db9cbd8a5c9cc5a429fb0c1efe8d2e
 
 COCOAPODS: 1.11.3
