@@ -49,3 +49,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        
+    }
+}
+

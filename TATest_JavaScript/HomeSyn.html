@@ -8,8 +8,8 @@
 <script>
     // 创建 SDK 配置对象
     var config = {
-        appId: 'a5bf4fc2f8a248a7a02b9a62a58bf1e9',
-        serverUrl: 'http://ta_test.receiver.thinkingdata.cn',
+        appId: 'af6861d085e14b5c948662e1fcdce6ef',
+        serverUrl: 'https://receiver-ta-demo.thinkingdata.cn',
     };
     // 将 SDK 实例赋给全局变量 ta，或者其他您指定的变量
     window.ta = thinkingdata;
@@ -25,19 +25,21 @@
 
     // 2.2 设置账号 ID
     // ta.login("ABC_123456yazhou.shushu");
-
     
     // 3.2 监控 HTML 元素点击事件
-    // ta.trackLink(
-    //     {
-    //         id: ["id1"] //自定义的ID名称
-    //     }, //监控元素的规则
-    //     "click", //追踪事件的名称
-    //     {
-    //         production: "产品名V1",
-    //         name: "元素标识名V1"
-    //     } //事件的属性
-    // );
+    function myOnLoad() {
+        ta.trackLink(
+            {
+                id: ["id1"] //自定义的ID名称
+            }, //监控元素的规则
+            "click", //追踪事件的名称
+            {
+                production: "产品名V1",
+                name: "元素标识名V2"
+            } //事件的属性
+        );
+    }
+    
     
     // 3.3.2 设置页面公共属性
     // ta.setPageProperty( { page_id_V_JS: "page10002" } );
@@ -84,7 +86,7 @@
     function track() {
         // document.write("<h1>这是一个标题129</h1>"); 
         console.log("点击了");
-        ta.track('test_event_JS_V4');
+        // ta.track('test_event_JS_V4');
         // console.log(navigator.userAgent);
         // console.log('test_event_JS_V10');
 
@@ -102,7 +104,7 @@
 </script>
 
 </head>
-<body>
+<body onload="myOnLoad()">
     <h1>TATest_JavaScript</h1>
     <p>首页 同步载入</p>
 

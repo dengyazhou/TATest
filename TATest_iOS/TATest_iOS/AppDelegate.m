@@ -33,50 +33,10 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 
 //    [dic objectForKeyedSubscript:@""];
     
-//    //获取外层数据
-//    NSMutableDictionary *dict = [self getBaseDataWithEvent:@"interface_ltsdk" withType:@"track"];
-//
-//        //获取属性
-//    NSMutableDictionary *eventProperties = [self getBaseProperties];
-//
-//        //接口名
-//    [eventProperties setValue:name forKey:@"interface_name"];
-//    [eventProperties setValue:param forKey:@"param"];
-//
-//
-//    [dict setObject:eventProperties forKey:@"properties"];
-//
-//    NSMutableDictionary *paramsDict = [[NSMutableDictionary alloc] init];
-//    [paramsDict setObject:appId forKey:@"appid"];
-//    [paramsDict setObject:@"1" forKey:@"client"];
-//
-//    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dict options:NSJSONWritingPrettyPrinted error:nil];
-//    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-//    jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-//    jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\t" withString:@""];
-//    jsonStr = [jsonStr stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-//    [paramsDict setObject:jsonStr forKey:@"data"];
-//
-//        //开始上报
-//        [LTHTTPRequest post:url
-//              withParameter:paramsDict
-//                    success:^(NSDictionary *data, NSURLResponse *response) {
-//            NSLog(@"postTDLog %@", data);
-//            NSString *code = [data objectForKey:@"code"];
-//            if (code.intValue == 0) {
-//                NSLog(@"上报SDK数数成功");
-//            }
-//            else {
-//                NSString *msg = [data objectForKey:@"msg"];
-//                NSLog(@"上报SDK数数失败 %@", msg);
-//            }
-//        } fail:^(NSError *error, NSHTTPURLResponse *response) {
-//            NSLog(@"上报SDK数数失败 %@", error);
-//        }];
-
-    
 #pragma mark 1.3 初始化
-//    [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
+    [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
+    
+    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];
 
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     // 支持初始化多个APPID实例
@@ -100,14 +60,18 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];//验证成功
     
     // v2.7.2版本以后为实例设置 name
-//    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
 //    config.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    config.uploadSize = @10;
 //    config.uploadInterval = @3600;
 //    config.name = @"Монгол 13";
 //    config.debugMode = ThinkingAnalyticsDebug;
 //    config.launchOptions = launchOptions;
-//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+    
+//    [instance login:@"dyz_76_V1"];
+//
+//    [instance identify:@"iid_num_V5"];
     
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
 //
@@ -117,7 +81,8 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
     
-//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAppEnd properties:@{@"自己填":@"123"}];
+    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"autoName":@"123"}];
+//    [instance login:@"deng_ya_zhou_V1"];
 //    [instance track:@"iOS_EVENT" properties:@{@"ios_age":@"12",@"iOS_name":@"数数科技3"}];
 //    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name":@"1&33334"}];
 //    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name&1":@"1&444"}];
@@ -146,7 +111,69 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //
 //    [instance track:@"iOS_E_V4"];
     
-//    [instance track:@"iOS_E_V4" properties:@{@"name":str}];
+    
+//    [instance track:@"iOS_E_V4" properties:@{@"name":@"event_9"}];
+//    [instance track:@"iOS_E_V4" properties:@{@"name":@"event_10"}];
+//    [instance track:@"iOS_E_V7" properties:@{@"name":@"123",@"name1":@"123",@"#device_id":@"1231232412"}];
+//    [instance track:@"iOS_E_V6" properties:@{@"name":@"",@"name1":@"空字符串"}];
+//    [instance track:@"iOS_E_V6" properties:@{@"name":@" ",@"name1":@"空格"}];
+//    [instance track:@"iOS_E_V6" properties:@{@"name1":@"没有key"}];
+//    [instance track:@"iOS_E_V7"];
+    
+//    [instance track:@"iOS_E_V6" properties:@{@"name":@"自己添加ip和device_id",@"#ip":@"101.88.6.111",@"#device_id":@"1234567",@"#account_id":@"8888"}];
+//    [instance track:@"iOS_E_V6" properties:@{@"name":@"自己添加ip和device_id",@"#ip":@"101.88.6.111",@"#device_id":@"1234567"}];
+//    [instance login:@"yazhou_login123"];
+//    [instance track:@"iOS_E_V6" properties:@{@"name":@"呵呵1"}];
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
+//    [instance login:@"abc_dyz"];
+//    [instance identify:@"identify_dyz"];
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
+//    [instance logout];
+//    NSDictionary *dic = @{@"itme1":@"abc1",@"itme2":@"abc2"};
+//    [instance track:@"iOS_E_V6" properties:@{@"get_items":dic,@"name":@"8888"}];
+    
+    
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll callback:^NSDictionary * _Nonnull(ThinkingAnalyticsAutoTrackEventType eventType, NSDictionary * _Nonnull properties) {
+////
+//////        if (ThinkingAnalyticsEventTypeAppEnd) {
+//////            NSLog(@"========>>>>>>>>>>:%@",properties);
+//////        }
+//////        NSLog(@"========>>>>>>>>>>:%@",properties);
+//////
+//        return @{@"name":@"自动采集 crash 之后 有end吗"};
+//    }];
+    
+//    [instance registerDynamicSuperProperties:^NSDictionary<NSString *,id> * _Nonnull{
+//        NSString *uuid = [[NSUUID UUID] UUIDString];
+//        return @{@"name1":uuid};
+//    }];
+    
+//    [instance track:@"iOS_E_V4_2" properties:@{@"name":@"event_2"}];
+//    [instance track:@"TA3" properties:@{@"name":@"event_2",@"name1":@"dyz"}];
+    
+//    NSDictionary *dic1 = @{@"name":@"dengV1",@"company":@"shushuV1"};
+//    NSDictionary *dic2 = @{@"name":@"dengV2",@"company":@"shushuV2"};
+//    NSDictionary *dic3 = @{@"name":@"dengV3",@"company":@"shushuV3"};
+//    NSDictionary *dic4 = @{@"name":@"dengV4",@"company":@"shushuV4"};
+//    NSArray *array = @[dic1,dic2,dic3,dic4];
+    
+    
+//    [instance track:@"iOS_E_V5" properties:@{@"array":array}];
+//    [instance login:@"dengyazhou_v5"];
+//    [instance track:@"iOS_E_V4" properties:@{@"name":@"event_5"}];
+//    [instance login:@"dengyazhou_v6"];
+//    [instance track:@"iOS_E_V4" properties:@{@"name":@"event_6"}];
+//    [instance logout];
+//    [instance track:@"iOS_E_V4" properties:@{@"name":@"event_1"}];
+//    [instance track:@"iOS_E_V4" properties:@{@"name":@"event_8"}];
+    
+//    [instance track:@"iOS_E_V6" properties:@{@"name":@"eventV6"}];
+
+//    [instance user_set:@{@"name":@"dengyazhouV1"}];
+//    [instance identify:@"abc_V3"];
+    
+   
+    
  
 //    [instance flush];
     
@@ -366,7 +393,7 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     
 #pragma mark 8.1 首次事件
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
-//    TDFirstEventModel *firstModel = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first2"];
+//    TDFirstEventModel *firstModel = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first5"];
 //    TDFirstEventModel *firstModel1 = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first3" firstCheckID:@"checkID_first3"];
 //    // 可选参数
 //    firstModel.properties = @{@"rtc":@"zego2222_4"};

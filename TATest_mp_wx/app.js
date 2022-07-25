@@ -5,15 +5,15 @@ var ThinkingAnalyticsAPI = require("./thinkingdata.wx.min.js");
 
 // TA SDK 配置对象
 var config = {
-  appid: "a5bf4fc2f8a248a7a02b9a62a58bf1e9",
-  serverUrl: "http://ta_test.receiver.thinkingdata.cn",
-  // autoTrack: {
-  //   appLaunch: true, // 自动采集 ta_mp_launch
-  //   appShow: true, // 自动采集 ta_mp_show
-  //   appHide: true, // 自动采集 ta_mp_hide
-  //   pageShow: true, // 自动采集 ta_mp_view
-  //   pageShare: true // 自动采集 ta_mp_share
-  // }
+  appid: "af6861d085e14b5c948662e1fcdce6ef",
+  serverUrl: "https://receiver-ta-demo.thinkingdata.cn",
+  autoTrack: {
+    appLaunch: true, // 自动采集 ta_mp_launch
+    appShow: true, // 自动采集 ta_mp_show
+    appHide: true, // 自动采集 ta_mp_hide
+    pageShow: true, // 自动采集 ta_mp_view
+    pageShare: true // 自动采集 ta_mp_share
+  }
 };
 
 // 创建 TA 实例
@@ -56,7 +56,7 @@ App({
         // });
 
         // 上报一条数据
-        ta.track("test_event_1");
+        ta.track("test_event_22");
         // console.log(ta.getDeviceId());
       }
     })

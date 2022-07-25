@@ -3,11 +3,15 @@ package com.example.tatest_android;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.TimeZone;
 
 import cn.thinkingdata.android.TDConfig;
@@ -38,7 +42,63 @@ public class MainActivity extends AppCompatActivity {
 //        TDConfig config = TDConfig.getInstance(this, TA_APP_ID, SERVER_URL, "实例1");
         // 初始化 SDK
         ThinkingAnalyticsSDK instance = ThinkingAnalyticsSDK.sharedInstance(config);
-        instance.track("some_event_V1");
+
+
+//        List<ThinkingAnalyticsSDK.AutoTrackEventType> typeList = new ArrayList<>();
+//        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_START);
+//        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_END);
+//        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_CRASH);
+//
+//        instance.enableAutoTrack(typeList);
+
+//        instance.track("some_event_V1");
+//        try {
+//            JSONObject properties = new JSONObject();
+//            properties.put("name","event_ad_V2");
+//            instance.track("Android_E_V4",properties);
+//        } catch (JSONException e) {
+//
+//        }
+//
+//        instance.login("dengyazhou_ad_V1");
+
+//        try {
+//            JSONObject properties = new JSONObject();
+//            properties.put("name","event_ad_V3");
+//            instance.track("Android_E_V4",properties);
+//        } catch (JSONException e) {
+//
+//        }
+
+//        instance.login("dengyazhou_ad_V2");
+//
+//        try {
+//            JSONObject properties = new JSONObject();
+//            properties.put("name","event_ad_V4");
+//            instance.track("Android_E_V4",properties);
+//        } catch (JSONException e) {
+//
+//        }
+//
+//        instance.logout();
+//
+//        try {
+//            JSONObject properties = new JSONObject();
+//            properties.put("name","event_ad_V5");
+//            instance.track("Android_E_V4",properties);
+//        } catch (JSONException e) {
+//
+//        }
+//
+//        try {
+//            JSONObject properties = new JSONObject();
+//            properties.put("name","event_ad_V6");
+//            instance.track("Android_E_V4",properties);
+//        } catch (JSONException e) {
+//
+//        }
+
+
 
 
         // 1.4 开启与 H5 页面的打通（可选）
@@ -103,6 +163,16 @@ public class MainActivity extends AppCompatActivity {
 //        System.out.println("你好世界！！！！");
 
 
+
+    }
+
+
+    public void dyzOnClick(View view) {
+        Log.e("TD", "onclick:");
+        List<String> strList = new ArrayList<>();
+        strList.add("str1");
+        strList.add("str2");
+        strList.get(3);
 
     }
 }

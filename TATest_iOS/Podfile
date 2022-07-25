@@ -18,4 +18,8 @@ target 'TATest_iOS' do
   ENV["ThinkingSDK_source"] = '1'
   pod 'ThinkingSDK', :path => '../../ios-sdk'
 
+#  pod 'ThinkingSDK', :git=>'https://github.com/ThinkingDataAnalytics/ios-sdk.git', :branch=>'dev_2.8.0.2_fix_tpns_push'
+  
+#  pod 'TPNS-iOS', '1.3.4.1'
+
 end

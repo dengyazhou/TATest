@@ -8,8 +8,8 @@ var ThinkingAnalyticsAPI = require("./thinkingdata.mg.wx.min.js");
 
 // TA SDK 配置对象
 var config = {
-  appId: "a5bf4fc2f8a248a7a02b9a62a58bf1e9",
-  serverUrl: "http://ta_test.receiver.thinkingdata.cn",
+  appId: "af6861d085e14b5c948662e1fcdce6ef",
+  serverUrl: "https://receiver-ta-demo.thinkingdata.cn",
   autoTrack: {
     appLaunch: true,
     appShow: true,

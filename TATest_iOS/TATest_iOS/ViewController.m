@@ -8,7 +8,11 @@
 #import "ViewController.h"
 #import "HomeViewController.h"
 #import <AFNetworking/AFNetworking.h>
-#import <MJExtension/MJExtension.h>>
+#import <MJExtension/MJExtension.h>
+#import <ThinkingSDK/ThinkingSDK.h>
+
+static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
+static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 
 @interface ViewController ()
 
@@ -31,6 +35,18 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     HomeViewController *vc = [[HomeViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
+//    static int a = 0;
+//    if (a % 2 == 0) {
+//        NSLog(@"11111");
+//        TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+//        ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+//        [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
+//    } else {
+//        NSLog(@"22222");
+//        HomeViewController *vc = [[HomeViewController alloc] init];
+//        [self.navigationController pushViewController:vc animated:YES];
+//    }
+//    a++;
     
     
 #pragma mark NSURLSession form-data
@@ -38,8 +54,8 @@
 //    NSString *str = @"FloatingWindow;{\"url\":\"http:\/\/testjbz.leiting.com\/personal\/gameGotoShelf.do?token=&currDate=xxx&sign=xxx\"}";
 //
 //    NSDictionary *dataDic = @{@"#type": @"track",
-//                              @"#event_name": @"test123456789",
-//                              @"#time": @"2022-06-29 11:35:53.648",
+//                              @"#event_name": @"test_one",
+//                              @"#time": @"2022-06-30 13:35:53.648",
 //                              @"properties": @{@"name":str},
 //                              @"#distinct_id":@"1111222"
 //    };
@@ -98,7 +114,6 @@
 //        NSLog(@"====>>>>:%@",dataStr);
 //    }];
 //    [dataTask resume];
-    
     
     
 #pragma mark AFNetWorking  json

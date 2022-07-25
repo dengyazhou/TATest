@@ -15,4 +15,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:text="按钮"
+        android:onClick="dyzOnClick"
+        android:layout_width="200dp"
+        android:layout_height="200dp"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

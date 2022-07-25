@@ -28,9 +28,6 @@ FOUNDATION_EXTERN NSString *const VERSION;
 /// 注意线程问题
 - (NSDictionary *)getAutomaticData;
 
-// 获取手机供应商信息
-+ (NSString *)currentRadio;
-
 @end
 
 NS_ASSUME_NONNULL_END

@@ -32,7 +32,7 @@ static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
     NSLog(@"====>>>touchesBegan 开始");
 #pragma mark
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:APP_ID];
-//    [instance track:@"event_6" properties:@{@"name1":@"莫斯科时间 对时成功 之后"}];
+//    [instance track:@"event_7777" properties:@{@"name1":@"莫斯科时间 对时成功 之后"}];
 //    cn.thinkingdata.analytics.log
     //TATest_iOS
     
@@ -54,8 +54,8 @@ static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
 //    [self.navigationController pushViewController:vc animated:YES];
     
 #pragma mark APP 崩溃事件 ta_app_crash
-    NSArray *array = @[@"str1",@"sr2",@"str3"];
-    NSString *str = array[3];
+//    NSArray *array = @[@"str1",@"sr2",@"str3"];
+//    NSString *str = array[3];
     
 #pragma mark 忽略自动采集事件
 //    IgnoredViewController *vc = [[IgnoredViewController alloc] init];

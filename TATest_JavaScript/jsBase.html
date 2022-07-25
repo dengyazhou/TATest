@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsBase</title>
+
+    <script>
+        // "use strict" //必选放在 第一条语句才有效果，也就是<script>下面
+        console.log("hello js!");
+        // JS 函数 Call ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // var person = {
+        //     firstName: "Bill",
+        //     lastName: "Gates",
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName; 
+        //     }
+        // }
+        // console.log("fullName: " + person.fullName());
+
+
+        // var person = {
+        //     fullName: function () {
+        //         return this.firstName + " " + this.lastName;
+        //     }
+        // }
+        // var person1 = {
+        //     firstName: "Bill",
+        //     lastName: "Gates",
+        // }
+        // var person2 = {
+        //     firstName: "Steve",
+        //     lastName: "Jobs",
+        // }
+        // console.log("fullName: " + person.fullName.call(person2));
+
+
+        // var person = {
+        //     fullName: function(city, country) {
+        //         return this.firstName + " " + this.lastName + "," + city + "," + country;
+        //     }
+        // }
+        // var person1 = {
+        //     firstName: "Bill",
+        //     lastName: "Gates"
+        // }
+        // console.log("fullName: " + person.fullName.call(person1, "Seattle", "USA"));
+        // JS 函数 Call ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+        
+        
+
+        // createElement ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // function myFunction() {
+        //     console.log("myFunction 来了!");
+        //     var btn = document.createElement("BUTTON");
+        //     // var t = document.createTextNode("CLICK ME");
+        //     // btn.appendChild(t);
+        //     document.body.appendChild(btn);
+        // }
+        // createElement ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+        // getElementsByTagName ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // function myFunction() {
+        //     var list = document.getElementsByTagName("ul")[1];
+        //     list.getElementsByTagName("li")[2].innerHTML = "数数科技";
+        // }
+        // getElementsByTagName ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+        // "use strict";
+        // var str = myFun();
+        // console.log(str);
+
+        // function myFun() {
+        //     return this;
+        // }
+
+        function Person(first, last, age, eye) {
+            this.firstName = first;
+            this.lastName = last;
+            this.age = age;
+            this.eyeColor = eye;
+            // this.nationality = "English";
+        }
+
+        // Person.nationality = "English";
+        Person.prototype.nationality = "English123";
+
+        Person.prototype.name = function() {
+            return this.firstName + " " + this.lastName;
+        }
+
+        var myFather = new Person("John", "Doe", 50, "Blue");
+        var myMother = new Person("Sally", "Rally", 48, "Green");
+
+        console.log("first: " + myFather.firstName + " last: " + myFather.lastName + " age: " + myFather.age + " eye: " + myFather.eyeColor);
+        console.log("nationality: " + myFather.nationality);
+        console.log("name: " + myFather.name());
+
+        function myFunction() {
+            // var i = 10;
+            // debugger;
+            // var b = i + 20;
+            // console.log(b);
+
+            // var w = window.innerWidth;
+            // var w1 = document.documentElement.clientWidth;
+            // var w2 = document.body.clientWidth;
+            // console.log("w: " + w + " w1: " + w1 + " w2: " + w2);
+
+
+            console.log("来了老弟");
+            // window.open("HomeSyn.html");
+            // window.close();
+            // window.moveTo(100, 200);
+            // window.resizeTo(200,800);
+            
+            // var w = window.screen.availWidth;
+            // var w1 = screen.availWidth;
+            // console.log(window.innerWidth + "w: " + w + " w1: " + w1);
+
+            // hostname = location.pathname;
+            // console.log("hostname: " + hostname);
+
+            window.location.assign("HomeSyn.html");//当前页面
+        }
+
+        
+        // var num = 011;//使用了"use strict"，就会报错
+        // console.log("str: " + num);
+
+        // var myNum = 128;
+        // console.log("16进制: " + myNum.toString(16));
+        // console.log("8进制: " + myNum.toString(8));
+        // console.log("2进制: " + myNum.toString(2));
+
+        // myNum = 2;
+        // while (myNum != Infinity) {
+        //     myNum = myNum * myNum;
+        //     console.log("num: " + myNum);
+        // }
+
+        // var x = 1000 / "Apple";
+        // var y = 1000 / "1000";
+        // console.log("x: " + x + " y: " + y);
+        
+        // var x = 123;
+        // var y = new Number(123);
+        // var s = "str";
+        // var ss = new String("str");
+        // console.log("x: " + x);
+        // console.log("y: " + y);
+        // console.log("(x == y): " + (x == y));
+        // console.log("(x === y): " + (x === y));
+        // console.log("s: " + s);
+        // console.log("ss: " + ss);
+        // console.log("(s == ss): " + (s == ss));
+        // console.log("(s === ss): " + (s === ss));
+
+
+        // var carname1 = "Volvo\" XC60";
+        // var a = carname1[5];
+        // console.log("carname1: " + carname1);
+        // console.log("a: " + a);
+
+        // var w = window.innerWidth;
+        // var w1 = "hh";//document.documentElement.clientWidth;
+        // var w2 = "ww";//document.body.clientHeight;
+        // console.log("w: " + w + " w1: " + w1 + " w2: " + w2);
+
+
+
+        // window.abc = "你好世界";
+        // console.log("abc: " + window.abc);
+
+        // window["name123"] = function (e) {
+
+        // }
+        
+        // window["name123"].param = "参数";
+        // window["name123"].__SV = "Ss__sS";
+        // console.log("name123" + window["name123"].__SV);
+
+
+        // let a = 'str';
+        // console.log("a: " + a);
+        // a = 10;
+        // console.log("a: " + a);
+        // a = true;
+        // console.log("a: " + a);
+
+        document.onload = function() {
+            console.log("document onload 来了");
+        };
+        window.onload = function() {
+            console.log("window onload 来了");
+        };
+
+        function myOnload() {
+            console.log("body onload 来了");
+        }
+
+
+    </script>
+</head>
+<body onload="myOnload()">
+    
+
+    <button onclick="myFunction()">点我</button>
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <ul>
+        <li>Coffee1</li>
+        <li>Tea1</li>
+        <li>五号楼</li>
+    </ul>
+    
+</body>
+</html>

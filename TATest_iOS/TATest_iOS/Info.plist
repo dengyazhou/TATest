@@ -19,7 +19,9 @@
 		<true/>
 	</dict>
 	<key>TDDisPresetProperties</key>
-	<array/>
+	<array>
+		<string>#duration</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
