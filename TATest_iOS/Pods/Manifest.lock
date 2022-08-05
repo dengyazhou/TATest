@@ -16,7 +16,12 @@ PODS:
     - AFNetworking/NSURLSession
   - Masonry (1.1.0)
   - MJExtension (3.4.1)
-  - ThinkingSDK (2.8.0.1)
+  - ThinkingSDK (2.8.1.2):
+    - ThinkingSDK/Core (= 2.8.1.2)
+    - ThinkingSDK/Extension (= 2.8.1.2)
+  - ThinkingSDK/Core (2.8.1.2)
+  - ThinkingSDK/Extension (2.8.1.2):
+    - ThinkingSDK/Core
 
 DEPENDENCIES:
   - AFNetworking
@@ -38,7 +43,7 @@ SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 21c5f6f8c4d5d8844b7ae8fbae08fed0b501f961
-  ThinkingSDK: 4b78b6e5fa5fda7f3614d24d0a271cdacc8ce8c9
+  ThinkingSDK: 1b98dd0881b87503c98a93be9c5544c1b6ecdafa
 
 PODFILE CHECKSUM: d28c31282a3b06ca9edc06dc81331a079352dfc4
 

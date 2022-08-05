@@ -57,6 +57,12 @@ App({
 
         // 上报一条数据
         ta.track("test_event_22");
+        ta.track({
+          eventName:"test_event_33",
+          onComplete: res => {
+            console.log("来了老弟" + res);
+          }
+        })
         // console.log(ta.getDeviceId());
       }
     })

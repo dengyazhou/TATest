@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4679CFA9289CBEA5007786CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFA8289CBEA5007786CF /* AppDelegate.m */; };
+		4679CFAC289CBEA5007786CF /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFAB289CBEA5007786CF /* ViewController.mm */; };
+		4679CFAE289CBEA6007786CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4679CFAD289CBEA6007786CF /* Assets.xcassets */; };
+		4679CFB1289CBEA6007786CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4679CFAF289CBEA6007786CF /* Main.storyboard */; };
+		4679CFB3289CBEA6007786CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFB2289CBEA6007786CF /* main.m */; };
+		4679CFCD289CBEFA007786CF /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4679CFCC289CBEFA007786CF /* IOKit.framework */; };
+		4679CFCF289CBF18007786CF /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4679CFCE289CBF09007786CF /* libc++.tbd */; };
+		4679CFD1289CBF34007786CF /* libcurl.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4679CFD0289CBF26007786CF /* libcurl.tbd */; };
+		4679CFD3289CBF49007786CF /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4679CFD2289CBF3F007786CF /* libz.tbd */; };
+		4679CFE3289CC41A007786CF /* ta_cpp_network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFDE289CC41A007786CF /* ta_cpp_network.cpp */; };
+		4679CFE4289CC41A007786CF /* ta_cpp_helper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFDF289CC41A007786CF /* ta_cpp_helper.cpp */; };
+		4679CFE5289CC41A007786CF /* ta_cpp_utils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFE0289CC41A007786CF /* ta_cpp_utils.cpp */; };
+		4679CFE6289CC41A007786CF /* ta_mac_tool.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFE1289CC41A007786CF /* ta_mac_tool.mm */; };
+		4679CFE7289CC41A007786CF /* ta_analytics_sdk.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFE2289CC41A007786CF /* ta_analytics_sdk.cpp */; };
+		4679CFEA289CC807007786CF /* TATestCPPMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4679CFE8289CC807007786CF /* TATestCPPMain.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4679CFA4289CBEA5007786CF /* TATest_macOS_cpp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TATest_macOS_cpp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4679CFA7289CBEA5007786CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4679CFA8289CBEA5007786CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4679CFAA289CBEA5007786CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4679CFAB289CBEA5007786CF /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		4679CFAD289CBEA6007786CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4679CFB0289CBEA6007786CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4679CFB2289CBEA6007786CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4679CFB4289CBEA6007786CF /* TATest_macOS_cpp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TATest_macOS_cpp.entitlements; sourceTree = "<group>"; };
+		4679CFCC289CBEFA007786CF /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		4679CFCE289CBF09007786CF /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		4679CFD0289CBF26007786CF /* libcurl.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libcurl.tbd; path = usr/lib/libcurl.tbd; sourceTree = SDKROOT; };
+		4679CFD2289CBF3F007786CF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		4679CFD9289CC41A007786CF /* ta_cpp_network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ta_cpp_network.h; sourceTree = "<group>"; };
+		4679CFDA289CC41A007786CF /* ta_cpp_utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ta_cpp_utils.h; sourceTree = "<group>"; };
+		4679CFDB289CC41A007786CF /* ta_cpp_helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ta_cpp_helper.h; sourceTree = "<group>"; };
+		4679CFDC289CC41A007786CF /* ta_analytics_sdk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ta_analytics_sdk.h; sourceTree = "<group>"; };
+		4679CFDE289CC41A007786CF /* ta_cpp_network.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ta_cpp_network.cpp; sourceTree = "<group>"; };
+		4679CFDF289CC41A007786CF /* ta_cpp_helper.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ta_cpp_helper.cpp; sourceTree = "<group>"; };
+		4679CFE0289CC41A007786CF /* ta_cpp_utils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ta_cpp_utils.cpp; sourceTree = "<group>"; };
+		4679CFE1289CC41A007786CF /* ta_mac_tool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ta_mac_tool.mm; sourceTree = "<group>"; };
+		4679CFE2289CC41A007786CF /* ta_analytics_sdk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ta_analytics_sdk.cpp; sourceTree = "<group>"; };
+		4679CFE8289CC807007786CF /* TATestCPPMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TATestCPPMain.cpp; sourceTree = "<group>"; };
+		4679CFE9289CC807007786CF /* TATestCPPMain.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TATestCPPMain.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4679CFA1289CBEA5007786CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4679CFCF289CBF18007786CF /* libc++.tbd in Frameworks */,
+				4679CFD3289CBF49007786CF /* libz.tbd in Frameworks */,
+				4679CFCD289CBEFA007786CF /* IOKit.framework in Frameworks */,
+				4679CFD1289CBF34007786CF /* libcurl.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4679CF9B289CBEA5007786CF = {
+			isa = PBXGroup;
+			children = (
+				4679CFA6289CBEA5007786CF /* TATest_macOS_cpp */,
+				4679CFA5289CBEA5007786CF /* Products */,
+				4679CFCB289CBEFA007786CF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4679CFA5289CBEA5007786CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4679CFA4289CBEA5007786CF /* TATest_macOS_cpp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4679CFA6289CBEA5007786CF /* TATest_macOS_cpp */ = {
+			isa = PBXGroup;
+			children = (
+				4679CFD7289CC41A007786CF /* cpp */,
+				4679CFA7289CBEA5007786CF /* AppDelegate.h */,
+				4679CFA8289CBEA5007786CF /* AppDelegate.m */,
+				4679CFAA289CBEA5007786CF /* ViewController.h */,
+				4679CFAB289CBEA5007786CF /* ViewController.mm */,
+				4679CFE8289CC807007786CF /* TATestCPPMain.cpp */,
+				4679CFE9289CC807007786CF /* TATestCPPMain.hpp */,
+				4679CFAD289CBEA6007786CF /* Assets.xcassets */,
+				4679CFAF289CBEA6007786CF /* Main.storyboard */,
+				4679CFB2289CBEA6007786CF /* main.m */,
+				4679CFB4289CBEA6007786CF /* TATest_macOS_cpp.entitlements */,
+			);
+			path = TATest_macOS_cpp;
+			sourceTree = "<group>";
+		};
+		4679CFCB289CBEFA007786CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4679CFD2289CBF3F007786CF /* libz.tbd */,
+				4679CFD0289CBF26007786CF /* libcurl.tbd */,
+				4679CFCE289CBF09007786CF /* libc++.tbd */,
+				4679CFCC289CBEFA007786CF /* IOKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4679CFD7289CC41A007786CF /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				4679CFD8289CC41A007786CF /* include */,
+				4679CFDD289CC41A007786CF /* src */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		4679CFD8289CC41A007786CF /* include */ = {
+			isa = PBXGroup;
+			children = (
+				4679CFD9289CC41A007786CF /* ta_cpp_network.h */,
+				4679CFDA289CC41A007786CF /* ta_cpp_utils.h */,
+				4679CFDB289CC41A007786CF /* ta_cpp_helper.h */,
+				4679CFDC289CC41A007786CF /* ta_analytics_sdk.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		4679CFDD289CC41A007786CF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4679CFDE289CC41A007786CF /* ta_cpp_network.cpp */,
+				4679CFDF289CC41A007786CF /* ta_cpp_helper.cpp */,
+				4679CFE0289CC41A007786CF /* ta_cpp_utils.cpp */,
+				4679CFE1289CC41A007786CF /* ta_mac_tool.mm */,
+				4679CFE2289CC41A007786CF /* ta_analytics_sdk.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4679CFA3289CBEA5007786CF /* TATest_macOS_cpp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4679CFB7289CBEA6007786CF /* Build configuration list for PBXNativeTarget "TATest_macOS_cpp" */;
+			buildPhases = (
+				4679CFA0289CBEA5007786CF /* Sources */,
+				4679CFA1289CBEA5007786CF /* Frameworks */,
+				4679CFA2289CBEA5007786CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TATest_macOS_cpp;
+			productName = TATest_macOS_cpp;
+			productReference = 4679CFA4289CBEA5007786CF /* TATest_macOS_cpp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4679CF9C289CBEA5007786CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					4679CFA3289CBEA5007786CF = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 4679CF9F289CBEA5007786CF /* Build configuration list for PBXProject "TATest_macOS_cpp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4679CF9B289CBEA5007786CF;
+			productRefGroup = 4679CFA5289CBEA5007786CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4679CFA3289CBEA5007786CF /* TATest_macOS_cpp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4679CFA2289CBEA5007786CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4679CFAE289CBEA6007786CF /* Assets.xcassets in Resources */,
+				4679CFB1289CBEA6007786CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4679CFA0289CBEA5007786CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4679CFAC289CBEA5007786CF /* ViewController.mm in Sources */,
+				4679CFE4289CC41A007786CF /* ta_cpp_helper.cpp in Sources */,
+				4679CFE7289CC41A007786CF /* ta_analytics_sdk.cpp in Sources */,
+				4679CFEA289CC807007786CF /* TATestCPPMain.cpp in Sources */,
+				4679CFE5289CC41A007786CF /* ta_cpp_utils.cpp in Sources */,
+				4679CFB3289CBEA6007786CF /* main.m in Sources */,
+				4679CFE6289CC41A007786CF /* ta_mac_tool.mm in Sources */,
+				4679CFA9289CBEA5007786CF /* AppDelegate.m in Sources */,
+				4679CFE3289CC41A007786CF /* ta_cpp_network.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4679CFAF289CBEA6007786CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4679CFB0289CBEA6007786CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4679CFB5289CBEA6007786CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4679CFB6289CBEA6007786CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4679CFB8289CBEA6007786CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TATest_macOS_cpp/TATest_macOS_cpp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM4B9EWD95;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.td.cn.TATest-macOS-cpp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		4679CFB9289CBEA6007786CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = TATest_macOS_cpp/TATest_macOS_cpp.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = PM4B9EWD95;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.td.cn.TATest-macOS-cpp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4679CF9F289CBEA5007786CF /* Build configuration list for PBXProject "TATest_macOS_cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4679CFB5289CBEA6007786CF /* Debug */,
+				4679CFB6289CBEA6007786CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4679CFB7289CBEA6007786CF /* Build configuration list for PBXNativeTarget "TATest_macOS_cpp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4679CFB8289CBEA6007786CF /* Debug */,
+				4679CFB9289CBEA6007786CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4679CF9C289CBEA5007786CF /* Project object */;
+}

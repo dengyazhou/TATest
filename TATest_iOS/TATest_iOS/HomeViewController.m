@@ -31,8 +31,8 @@ static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     NSLog(@"====>>>touchesBegan 开始");
 #pragma mark
-//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:APP_ID];
-//    [instance track:@"event_7777" properties:@{@"name1":@"莫斯科时间 对时成功 之后"}];
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:APP_ID];
+    [instance track:@"event_7777" properties:@{@"name1":@"莫斯科时间 对时成功 之后"}];
 //    cn.thinkingdata.analytics.log
     //TATest_iOS
     

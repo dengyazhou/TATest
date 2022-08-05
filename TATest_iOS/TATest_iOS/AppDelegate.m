@@ -21,7 +21,7 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+//    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];
 //    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
 ////    dic = nil;
 ////    dic[@"name1"] = @"11";
@@ -36,7 +36,7 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 #pragma mark 1.3 初始化
     [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
     
-    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];
+//    [ThinkingAnalyticsSDK calibrateTimeWithNtp:@"time.apple.com"];
 
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
     // 支持初始化多个APPID实例
@@ -61,6 +61,8 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     
     // v2.7.2版本以后为实例设置 name
     TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+    config.launchOptions = launchOptions;
+//    config.trackRelaunchedInBackgroundEvents = YES;
 //    config.defaultTimeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
 //    config.uploadSize = @10;
 //    config.uploadInterval = @3600;
@@ -73,7 +75,7 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //
 //    [instance identify:@"iid_num_V5"];
     
-//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"namedyz":@"dengyazhou"}];
 //
 //    // 根据name获取实例
 //    ThinkingAnalyticsSDK *ta = [ThinkingAnalyticsSDK sharedInstanceWithAppid:@"Монгол 13"];
@@ -81,7 +83,7 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     
 //    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll];
     
-    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"autoName":@"123"}];
+//    [instance enableAutoTrack:ThinkingAnalyticsEventTypeAll properties:@{@"autoName":@"123"}];
 //    [instance login:@"deng_ya_zhou_V1"];
 //    [instance track:@"iOS_EVENT" properties:@{@"ios_age":@"12",@"iOS_name":@"数数科技3"}];
 //    [instance track:@"t000_match_getmatchs" properties:@{@"ios_name":@"1&33334"}];
@@ -98,7 +100,7 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为1",@"channel":@"1"}];// 1
 //    [instance track:@"iOS_E_V4" properties:@{@"iOS_name":@"channel字段为-",@"channel":@"-"}];// -
     
-//    [instance login:@"dengauzhou_num2"];
+//    [instance login::@"dengauzhou_num2"];
 //    [instance logout];
 //    [instance identify:@"identify_num2"];
 ////    [instance logout];
@@ -117,8 +119,9 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    [instance track:@"iOS_E_V7" properties:@{@"name":@"123",@"name1":@"123",@"#device_id":@"1231232412"}];
 //    [instance track:@"iOS_E_V6" properties:@{@"name":@"",@"name1":@"空字符串"}];
 //    [instance track:@"iOS_E_V6" properties:@{@"name":@" ",@"name1":@"空格"}];
-//    [instance track:@"iOS_E_V6" properties:@{@"name1":@"没有key"}];
-//    [instance track:@"iOS_E_V7"];
+//    [instance logout];
+//    [instance track:@"iOS_E_V10" properties:@{@"#account_id":@"bbbb"}];
+//    [instance track:@"iOS_E_V9" properties:@{@"name":@"印度 8.04.12:25"}];
     
 //    [instance track:@"iOS_E_V6" properties:@{@"name":@"自己添加ip和device_id",@"#ip":@"101.88.6.111",@"#device_id":@"1234567",@"#account_id":@"8888"}];
 //    [instance track:@"iOS_E_V6" properties:@{@"name":@"自己添加ip和device_id",@"#ip":@"101.88.6.111",@"#device_id":@"1234567"}];
@@ -395,10 +398,10 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
 //    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithAppId:APP_ID withUrl:SERVER_URL];
 //    TDFirstEventModel *firstModel = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first5"];
 //    TDFirstEventModel *firstModel1 = [[TDFirstEventModel alloc] initWithEventName:@"dyz_first3" firstCheckID:@"checkID_first3"];
-//    // 可选参数
+    // 可选参数
 //    firstModel.properties = @{@"rtc":@"zego2222_4"};
 //    firstModel1.properties = @{@"rtc":@"zego3333_4"};
-////    [firstModel configTime:[NSDate date] timeZone:[NSTimeZone localTimeZone]];
+//    [firstModel configTime:[NSDate date] timeZone:[NSTimeZone localTimeZone]];
 //    [instance trackWithEventModel:firstModel];
 //    [instance trackWithEventModel:firstModel1];
     
@@ -508,6 +511,10 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     return YES;
 }
 
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {
+    
+}
 
 #pragma mark - UISceneSession lifecycle
 

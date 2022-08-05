@@ -19,6 +19,19 @@
 
     // 之后您就可以使用 ta 来上报事件了
     // ta.track('test_event_JS_V2');
+    ta.track(
+        "test_event_js",
+        {
+            Item: "商品",
+            items: [{
+                aaa: "数数aaa",
+                bbb: "数数bbb"
+            },{
+                aaa: "数数aaa1",
+                bbb: "数数bbb2"
+            }]
+        }
+    );
 
     // 2.1 设置访客 ID（可选）
     // ta.identify("123yazhou.deng");
@@ -28,16 +41,16 @@
     
     // 3.2 监控 HTML 元素点击事件
     function myOnLoad() {
-        ta.trackLink(
-            {
-                id: ["id1"] //自定义的ID名称
-            }, //监控元素的规则
-            "click", //追踪事件的名称
-            {
-                production: "产品名V1",
-                name: "元素标识名V2"
-            } //事件的属性
-        );
+        // ta.trackLink(
+        //     {
+        //         id: ["id1"] //自定义的ID名称
+        //     }, //监控元素的规则
+        //     "click", //追踪事件的名称
+        //     {
+        //         production: "产品名V1",
+        //         name: "元素标识名V2"
+        //     } //事件的属性
+        // );
     }
     
     
