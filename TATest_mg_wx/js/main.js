@@ -5,6 +5,14 @@ import GameInfo from './runtime/gameinfo'
 import Music from './runtime/music'
 import DataBus from './databus'
 
+// var ThinkingAnalyticsAPI = require("../thinkingdata.mg.wx.min.js");
+var ThinkingAnalyticsAPIDYZ = require("../thinkingdata.mg.wx.js");
+// var ThinkingAnalyticsAPIDYZ = require("../thinkingdata.mg.oppo.min.js");
+// var ThinkingAnalyticsAPIDYZ = require("../thinkingdata.mg.xiaomi.min.js");
+// window.ThinkingAnalyticsAPIDYZ = require("../thinkingdata.mg.xiaomi.min.js");
+// window.ThinkingAnalyticsAPIDYZ = require("thinkingdata.mg.oppo.min.js");
+// console.log("window.ThinkingAnalyticsAPIDYZ1: ", window.ThinkingAnalyticsAPIDYZ);
+
 const ctx = canvas.getContext('2d')
 const databus = new DataBus()
 
@@ -17,6 +25,56 @@ export default class Main {
     this.aniId = 0
 
     this.restart()
+
+    // var config = {
+    //   appId: "af6861d085e14b5c948662e1fcdce6ef",
+    //   serverUrl: "https://receiver-ta-demo.thinkingdata.cn",
+    //   // autoTrack: {
+    //   //   appLaunch: true,
+    //   //   appShow: true,
+    //   //   appHide: true,
+    //   //   pageShow: true,
+    //   //   pageShare: true
+    //   // },
+    //   // enableLog: false,
+    // }
+
+    var config = {
+      appId: "af6861d085e14b5c948662e1fcdce6ef",
+      serverUrl: "https://receiver-ta-demo.thinkingdata.cn",
+      // autoTrack: {
+      //   appLaunch: true,
+      //   appShow: true,
+      //   appHide: true,
+      //   pageShow: true,
+      //   pageShare: true
+      // },
+      // enableLog: false,
+    }
+
+    var ta = new ThinkingAnalyticsAPIDYZ(config);
+    ta.init();
+  
+    // ta.track({
+    //   eventName: "test_vent11_mg", // 必填
+    //   // properties: { testkey: 123 }, // 可选
+    //   // time: new Date(), // 可选
+    //   onComplete: res => {
+    //     console.log("123======>>>>>>>>>>>123");
+    //   } // 必填
+    // });
+    // getPresetProperties
+    ta.track("Test888999")
+    // ta.userSet({
+    //   properties: {
+    //     "namedyz":"abcd"
+    //   },
+    //   onComplete:res => {
+    //     console.log("回调来啦");
+    //   }
+    // })
+    // console.log("==== getPresetProperties:"+JSON.stringify(ta.getPresetProperties().toEventPresetProperties()));
+    
   }
 
   restart() {

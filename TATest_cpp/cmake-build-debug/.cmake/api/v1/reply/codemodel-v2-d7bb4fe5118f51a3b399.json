@@ -1,0 +1,69 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "TATest_cpp",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "TATest_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TATest_cpp-Debug-7a8800066efeb7c65f8a.json",
+					"name" : "TATest_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "thinkingdata::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-thinkingdata-Debug-23321c72f904cd773c60.json",
+					"name" : "thinkingdata",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug",
+		"source" : "/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

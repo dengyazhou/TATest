@@ -26,7 +26,9 @@
       "outputPath": ""
     },
     "disableUseStrict": false,
-    "useCompilerPlugins": false
+    "useCompilerPlugins": false,
+    "localPlugins": false,
+    "compileHotReLoad": false
   },
   "compileType": "game",
   "libVersion": "2.20.1",
@@ -40,5 +42,6 @@
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2
-  }
+  },
+  "simulatorPluginLibVersion": {}
 }

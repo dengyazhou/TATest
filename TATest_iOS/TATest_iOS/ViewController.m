@@ -11,8 +11,13 @@
 #import <MJExtension/MJExtension.h>
 #import <ThinkingSDK/ThinkingSDK.h>
 
+#import "TEObject.h"
+
 static NSString *APP_ID = @"af6861d085e14b5c948662e1fcdce6ef";
 static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
+
+
+static NSMutableDictionary *instances;
 
 @interface ViewController ()
 
@@ -30,11 +35,43 @@ static NSString *SERVER_URL = @"https://receiver-ta-demo.thinkingdata.cn";
     // Do any additional setup after loading the view.
     self.title = @"第一个页面";
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    
+    
+//    [ThinkingAnalyticsSDK setLogLevel:TDLoggingLevelDebug];
+//    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+    
+//    TEObject *obj = [[TEObject alloc] init];
+//
+//
+//    instances = [[NSMutableDictionary alloc] init];
+////    instances[@"aa"] = @"shushu";
+//    instances[@"obj1"] = obj;
+//
+//    NSLog(@"====>>>>:%@",instances);
+    
+    
+    
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    HomeViewController *vc = [[HomeViewController alloc] init];
-    [self.navigationController pushViewController:vc animated:YES];
+//    NSLog(@"====>>>>:%@",instances);
+    
+    
+    
+    [[ThinkingAnalyticsSDK sharedInstance] getDeviceId];
+    
+//    TDConfig *config = [[TDConfig alloc] initWithAppId:APP_ID serverUrl:SERVER_URL];
+//    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK startWithConfig:config];
+    ThinkingAnalyticsSDK *instance = [ThinkingAnalyticsSDK sharedInstanceWithAppid:APP_ID];
+    [instance track:@"TestA"];
+    [instance track:@"TestB"];
+//
+//    [instance track:@"duration"];
+    
+//    HomeViewController *vc = [[HomeViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
 //    static int a = 0;
 //    if (a % 2 == 0) {
 //        NSLog(@"11111");

@@ -1,0 +1,6 @@
+framework module Foggy {
+  umbrella header "Foggy-umbrella.h"
+
+  export *
+  module * { export * }
+}

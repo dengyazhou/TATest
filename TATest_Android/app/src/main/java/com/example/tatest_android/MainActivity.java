@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,6 +17,7 @@ import java.util.TimeZone;
 
 import cn.thinkingdata.android.TDConfig;
 import cn.thinkingdata.android.ThinkingAnalyticsSDK;
+import cn.thinkingdata.android.ThinkingDataTrackViewOnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,12 +46,14 @@ public class MainActivity extends AppCompatActivity {
         ThinkingAnalyticsSDK instance = ThinkingAnalyticsSDK.sharedInstance(config);
 
 
-//        List<ThinkingAnalyticsSDK.AutoTrackEventType> typeList = new ArrayList<>();
-//        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_START);
-//        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_END);
-//        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_CRASH);
-//
-//        instance.enableAutoTrack(typeList);
+        List<ThinkingAnalyticsSDK.AutoTrackEventType> typeList = new ArrayList<>();
+        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_START);
+        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_END);
+        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_CRASH);
+        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_VIEW_SCREEN);
+        typeList.add(ThinkingAnalyticsSDK.AutoTrackEventType.APP_CLICK);
+
+        instance.enableAutoTrack(typeList);
 
 //        instance.track("some_event_V1");
 //        try {
@@ -163,16 +167,23 @@ public class MainActivity extends AppCompatActivity {
 //        System.out.println("你好世界！！！！");
 
 
+        Button btn = findViewById(R.id.btn001);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.e("TD", "onclick1:");
+            }
+        });
 
     }
 
-
+    @ThinkingDataTrackViewOnClick //只有添加了，@ThinkingDataTrackViewOnClick，才能触发ta_app_click
     public void dyzOnClick(View view) {
         Log.e("TD", "onclick:");
-        List<String> strList = new ArrayList<>();
-        strList.add("str1");
-        strList.add("str2");
-        strList.get(3);
+//        List<String> strList = new ArrayList<>();
+//        strList.add("str1");
+//        strList.add("str2");
+//        strList.get(3);
 
     }
 }

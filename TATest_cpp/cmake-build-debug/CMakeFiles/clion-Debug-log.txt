@@ -1,0 +1,13 @@
+/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Applications/CLion.app/Contents/bin/ninja/mac/ninja -G Ninja -S /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp -B /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug
+-- Configuring done
+CMake Error at CMakeLists.txt:13 (add_library):
+  Cannot find source file:
+
+    cpp/src/ta_sqlite.cpp
+
+
+CMake Error at CMakeLists.txt:13 (add_library):
+  No SOURCES given to target: thinkingdata
+
+
+CMake Generate step failed.  Build files cannot be regenerated correctly.

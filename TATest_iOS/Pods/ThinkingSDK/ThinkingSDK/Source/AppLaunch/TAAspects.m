@@ -477,7 +477,11 @@ static void __TA_ASPECTS_ARE_BEING_CALLED__(__unsafe_unretained NSObject *self, 
         Class klass = object_getClass(invocation.target);
         do {
             if ((respondsToAlias = [klass instancesRespondToSelector:aliasSelector])) {
-                [invocation invoke];
+                @try {
+                    [invocation invoke];
+                } @catch (NSException *exception) {
+                    NSLog(@" [THINKING] %@", exception);
+                }
                 break;
             }
         }while (!respondsToAlias && (klass = class_getSuperclass(klass)));

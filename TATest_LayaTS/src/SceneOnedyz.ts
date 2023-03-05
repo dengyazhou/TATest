@@ -3,7 +3,7 @@ import { ui } from "./ui/layaMaxUI"
 export default class SceneDyz extends ui.SceneOnedyzUI {
     constructor() {
         super();
-        console.log("hello TS");
+        console.log("=======>>>>>>>>>>>>>>>>>>>>> hello TS");
 
         let spr:Laya.Sprite = new Laya.Sprite()
         this.addChild(spr);
@@ -13,6 +13,7 @@ export default class SceneDyz extends ui.SceneOnedyzUI {
         var config = {
             appId: "af6861d085e14b5c948662e1fcdce6ef",
             serverUrl: "https://receiver-ta-demo.thinkingdata.cn",
+            enableNative: true
         };
 
         // 创建 TA 实例
@@ -20,17 +21,17 @@ export default class SceneDyz extends ui.SceneOnedyzUI {
         // 初始化
         ta.init();
         // 上报一个简单事件, 事件名为 test_event_laya
-        // ta.track("test_event_laya1");
+        ta.track("test_event_laya15");
 
-        ta.track({
-            eventName: "test_event_laya2",
-            onComplete: res => {
-                console.log("来了老弟 code: " + res.code + " msg: " + res.msg);
-            }
-        });
+        // ta.track({
+        //     eventName: "test_event_laya10",
+        //     onComplete: res => {
+        //         console.log("来了老弟 code: " + res.code + " msg: " + res.msg);
+        //     }
+        // });
 
 
-        console.log("getDeviceId: " + ta.getDeviceId());
+        // console.log("getDeviceId: " + ta.getDeviceId());
 
     
     }

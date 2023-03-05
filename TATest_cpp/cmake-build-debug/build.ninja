@@ -1,0 +1,245 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: TATest_cpp
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target TATest_cpp
+
+
+#############################################
+# Order-only phony target for TATest_cpp
+
+build cmake_object_order_depends_target_TATest_cpp: phony || CMakeFiles/TATest_cpp.dir
+
+build CMakeFiles/TATest_cpp.dir/main.cpp.o: CXX_COMPILER__TATest_cpp_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/main.cpp || cmake_object_order_depends_target_TATest_cpp
+  DEP_FILE = CMakeFiles/TATest_cpp.dir/main.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/TATest_cpp.dir
+  OBJECT_FILE_DIR = CMakeFiles/TATest_cpp.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target TATest_cpp
+
+
+#############################################
+# Link the executable TATest_cpp
+
+build TATest_cpp: CXX_EXECUTABLE_LINKER__TATest_cpp_Debug CMakeFiles/TATest_cpp.dir/main.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+  OBJECT_DIR = CMakeFiles/TATest_cpp.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = TATest_cpp
+  TARGET_PDB = TATest_cpp.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target thinkingdata
+
+
+#############################################
+# Order-only phony target for thinkingdata
+
+build cmake_object_order_depends_target_thinkingdata: phony || CMakeFiles/thinkingdata.dir
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_analytics_sdk.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_analytics_sdk.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_analytics_sdk.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_helper.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_cpp_helper.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_helper.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_network.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_cpp_network.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_network.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_utils.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_cpp_utils.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_utils.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_sqlite.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_sqlite.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_sqlite.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_timer.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_timer.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_timer.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_event_task.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_event_task.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_event_task.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_send.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_cpp_send.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_send.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_json_object.cpp.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_json_object.cpp || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_json_object.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_cJSON.c.o: C_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_cJSON.c || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_cJSON.c.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+build CMakeFiles/thinkingdata.dir/cpp/src/ta_mac_tool.mm.o: CXX_COMPILER__thinkingdata_Debug /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/src/ta_mac_tool.mm || cmake_object_order_depends_target_thinkingdata
+  DEP_FILE = CMakeFiles/thinkingdata.dir/cpp/src/ta_mac_tool.mm.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk -fcolor-diagnostics -std=gnu++17
+  INCLUDES = -I/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cpp/include
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  OBJECT_FILE_DIR = CMakeFiles/thinkingdata.dir/cpp/src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target thinkingdata
+
+
+#############################################
+# Link the static library libthinkingdata.a
+
+build libthinkingdata.a: CXX_STATIC_LIBRARY_LINKER__thinkingdata_Debug CMakeFiles/thinkingdata.dir/cpp/src/ta_analytics_sdk.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_helper.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_network.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_utils.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_sqlite.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_timer.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_event_task.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_cpp_send.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_json_object.cpp.o CMakeFiles/thinkingdata.dir/cpp/src/ta_cJSON.c.o CMakeFiles/thinkingdata.dir/cpp/src/ta_mac_tool.mm.o
+  ARCH_FLAGS = -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.1.sdk
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = CMakeFiles/thinkingdata.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = libthinkingdata.a
+  TARGET_PDB = thinkingdata.a.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp -B/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+build thinkingdata: phony libthinkingdata.a
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug
+
+build all: phony TATest_cpp libthinkingdata.a
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.24/Modules/Platform/UnixPaths.cmake /Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/CMakeLists.txt CMakeCache.txt CMakeFiles/3.24.2/CMakeCCompiler.cmake CMakeFiles/3.24.2/CMakeCXXCompiler.cmake CMakeFiles/3.24.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all

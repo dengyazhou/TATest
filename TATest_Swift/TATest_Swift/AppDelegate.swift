@@ -9,23 +9,37 @@ import UIKit
 
 import ThinkingSDK
 
-let APP_ID = "a5bf4fc2f8a248a7a02b9a62a58bf1e9"
-let SERVER_URL = "http://ta_test.receiver.thinkingdata.cn"
+let APP_ID = "af6861d085e14b5c948662e1fcdce6ef"
+let SERVER_URL = "https://receiver-ta-demo.thinkingdata.cn"
 
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    var trackAppid: String?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let config = TDConfig()
-        config.debugMode = .on
+        ThinkingAnalyticsSDK.setLogLevel(.debug)
         
-        let instance = ThinkingAnalyticsSDK.start(withAppId: APP_ID, withUrl: SERVER_URL)
+//        trackAppid = "af6861d085e14b5c948662e1fcdce6ef"
+        
+        let config: TDConfig = .init(appId: APP_ID, serverUrl: SERVER_URL)
+//        config.autoTrackEventType = .eventTypeAll
+//        config.launchOptions = launchOptions ?? [:]
+//        config.trackRelaunchedInBackgroundEvents = true
+//        let config = TDConfig()
+//        config.debugMode = .on
+        
+//        let instance = ThinkingAnalyticsSDK.start(withAppId: "", withUrl: SERVER_URL)
+        let instance = ThinkingAnalyticsSDK.start(with: config)
+        ThinkingAnalyticsSDK.sharedInstance(withAppid: trackAppid ?? "").enableAutoTrack(.eventTypeAll)
 //        instance.enableAutoTrack(ThinkingAnalyticsAutoTrackEventType.eventTypeAll)
         
-        instance.track("eventV1")
+//        instance.track("eventV2")
+        var dic = ["name":"邓亚洲", "#AbType":"aa"]
+        instance.track("eventV4", properties: dic)
         
         
         

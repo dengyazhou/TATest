@@ -1,7 +1,8 @@
 // app.js
 
 // 引入SDK
-var ThinkingAnalyticsAPI = require("./thinkingdata.wx.min.js");
+// var Thinkingdyz123 = require("./thinkingdata.wx.min.js");
+var Thinkingdyz123 = require("./thinkingdata.wx.js");
 
 // TA SDK 配置对象
 var config = {
@@ -13,14 +14,40 @@ var config = {
     appHide: true, // 自动采集 ta_mp_hide
     pageShow: true, // 自动采集 ta_mp_view
     pageShare: true // 自动采集 ta_mp_share
-  }
+  },
+  // debugMode: "debugOnly"
 };
 
-// 创建 TA 实例
-var ta = new ThinkingAnalyticsAPI(config);
+// var config = {
+//   appid: "166b0574cd4045b8b5e862e4f26407e4",
+//   serverUrl: "https://global-receiver-ta.thinkingdata.cn",
+// };
 
+// 创建 TA 实例
+var ta = new Thinkingdyz123(config);
+
+// var superProperties = {
+//   channel : "ta", //字符串
+//   age : 1,//数字
+// };
+
+
+// ta.setSuperProperties(superProperties);
 // 初始化
+// ta.init();
+
+// var superProperties1 = {
+//   channel1 : "ta", //字符串
+//   age1 : 1,//数字
+// };
+
+// ta.setSuperProperties(superProperties1);
+// ta.clearSuperProperties();
+// ta.login("qqq");
 ta.init();
+ta.track("aaaTest4")
+
+// ta.init();
 
 App({
   onLaunch() {
@@ -56,13 +83,13 @@ App({
         // });
 
         // 上报一条数据
-        ta.track("test_event_22");
-        ta.track({
-          eventName:"test_event_33",
-          onComplete: res => {
-            console.log("来了老弟" + res);
-          }
-        })
+        // ta.track("Test1");
+        // ta.track({
+        //   eventName:"test_event_33",
+        //   onComplete: res => {
+        //     console.log("来了老弟" + res);
+        //   }
+        // })
         // console.log(ta.getDeviceId());
       }
     })

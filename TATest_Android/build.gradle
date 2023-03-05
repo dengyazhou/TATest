@@ -1,4 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    dependencies {
+        classpath 'cn.thinkingdata.android:android-gradle-plugin2:1.0.5' //采集ta_app_click的插件，它是编译的时候插进去的，所以需要放在最外层的build.gradle中
+    }
+}
+
 plugins {
     id 'com.android.application' version '7.2.1' apply false
     id 'com.android.library' version '7.2.1' apply false
@@ -7,3 +14,4 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+

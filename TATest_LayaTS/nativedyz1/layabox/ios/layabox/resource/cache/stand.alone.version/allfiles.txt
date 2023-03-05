@@ -1,0 +1,12 @@
+/SceneOnedyz.json
+/fileconfig.json
+/index.html
+/index.js
+/js/bundle.js
+/js/thinkingdata.mg.layats.min.js
+/libs/min/laya.core.min.js
+/libs/min/laya.physics.min.js
+/libs/min/laya.ui.min.js
+/res/atlas/comp.atlas
+/res/atlas/comp.png
+/version.json

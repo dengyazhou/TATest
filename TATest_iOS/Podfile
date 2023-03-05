@@ -15,11 +15,19 @@ target 'TATest_iOS' do
   pod 'AFNetworking'
   pod 'MJExtension'
 
-  ENV["ThinkingSDK_source"] = '1'
-  pod 'ThinkingSDK', :path => '../../ios-sdk'
+#  ENV["ThinkingSDK_source"] = '1'
+#  pod 'ThinkingSDK', :path => '../../ios-sdk'
+#pod 'ThinkingSDK', '2.8.1.7'
+#pod 'ThinkingSDK', '2.6.5'
+#  pod 'Firebase/Messaging', '8.11.0'
 
 #  pod 'ThinkingSDK', :git=>'https://github.com/ThinkingDataAnalytics/ios-sdk.git', :branch=>'dev_2.8.0.2_fix_tpns_push'
   
 #  pod 'TPNS-iOS', '1.3.4.1'
+
+#  pod 'Adjust', '~> 4.31.0'
+  pod 'ThinkingSDK', '2.8.3.1'
+#pod 'ThinkingSDK', '2.7.1'
+  pod 'Foggy'
 
 end

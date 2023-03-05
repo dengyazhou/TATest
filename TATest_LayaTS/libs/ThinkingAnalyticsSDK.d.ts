@@ -23,6 +23,7 @@ declare class ThinkingAnalyticsAPI {
 	userAdd(properties:any): void;
 	userUnset(property:string): void;
 	userDel(): void;
+	flush(): void;
 	authorizeOpenID(distinctId:string): void;
 	identify(distinctId:string): void;
 	initInstance(name:string): ThinkingAnalyticsAPI;

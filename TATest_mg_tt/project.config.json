@@ -1,0 +1,12 @@
+{
+    "setting": {
+        "urlCheck": false,
+        "es6": true,
+        "postcss": true,
+        "minified": true,
+        "newFeature": true,
+        "autoCompile": true
+    },
+    "appid": "testAppId",
+    "projectname": "TATest_mg_tt"
+}

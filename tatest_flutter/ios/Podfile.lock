@@ -1,28 +1,45 @@
 PODS:
-  - Flutter (1.0.0)
-  - thinking_analytics (2.1.0):
+  - appsflyer_sdk (6.8.0):
+    - AppsFlyerFramework (= 6.8.0)
     - Flutter
-    - ThinkingSDK (= 2.8.0.1)
-  - ThinkingSDK (2.8.0.1)
+  - AppsFlyerFramework (6.8.0):
+    - AppsFlyerFramework/Main (= 6.8.0)
+  - AppsFlyerFramework/Main (6.8.0)
+  - Flutter (1.0.0)
+  - thinking_analytics (2.2.0):
+    - Flutter
+    - ThinkingSDK (= 2.8.1.7)
+  - ThinkingSDK (2.8.1.7):
+    - ThinkingSDK/Core (= 2.8.1.7)
+    - ThinkingSDK/Extension (= 2.8.1.7)
+  - ThinkingSDK/Core (2.8.1.7)
+  - ThinkingSDK/Extension (2.8.1.7):
+    - ThinkingSDK/Core
 
 DEPENDENCIES:
+  - appsflyer_sdk (from `.symlinks/plugins/appsflyer_sdk/ios`)
   - Flutter (from `Flutter`)
   - thinking_analytics (from `.symlinks/plugins/thinking_analytics/ios`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - AppsFlyerFramework
     - ThinkingSDK
 
 EXTERNAL SOURCES:
+  appsflyer_sdk:
+    :path: ".symlinks/plugins/appsflyer_sdk/ios"
   Flutter:
     :path: Flutter
   thinking_analytics:
     :path: ".symlinks/plugins/thinking_analytics/ios"
 
 SPEC CHECKSUMS:
+  appsflyer_sdk: 6d03341418c1acf261fdfde2eb27fdeaf04fa2c2
+  AppsFlyerFramework: a8de532f81b1d3c1dfc451f0ecded91ebb6a0e47
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
-  thinking_analytics: d0ea0fc499021749a885c487e13655dc93167870
-  ThinkingSDK: 4b78b6e5fa5fda7f3614d24d0a271cdacc8ce8c9
+  thinking_analytics: 2e8bbce4923de7aab426660a9c6fc25744a79aec
+  ThinkingSDK: baa689f43d5704a2571b693894417f6f5f261019
 
 PODFILE CHECKSUM: 914c39a0f1b745cf90d53da8c3fe4c9c2766f4ad
 

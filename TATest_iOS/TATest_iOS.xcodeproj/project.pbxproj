@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3CDF7375533E3C3F8FA09F1C /* Pods_TATest_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F3E8F677B5BB84227B665CD /* Pods_TATest_iOS.framework */; };
+		4642F4D528D2F85E0048D26D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4642F4D428D2F85E0048D26D /* GoogleService-Info.plist */; };
+		4646692E28D18FFB0076A3E3 /* APNSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4646692D28D18FFB0076A3E3 /* APNSManager.m */; };
+		46BFD05829376DB900EEB478 /* TEObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 46BFD05729376DB900EEB478 /* TEObject.m */; };
 		B6756E9A2841B3F100CAF38C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756E992841B3F100CAF38C /* AppDelegate.m */; };
 		B6756E9D2841B3F100CAF38C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756E9C2841B3F100CAF38C /* SceneDelegate.m */; };
 		B6756EA02841B3F100CAF38C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6756E9F2841B3F100CAF38C /* ViewController.m */; };
@@ -24,6 +27,11 @@
 
 /* Begin PBXFileReference section */
 		0F3E8F677B5BB84227B665CD /* Pods_TATest_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TATest_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4642F4D428D2F85E0048D26D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4646692C28D18FFB0076A3E3 /* APNSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APNSManager.h; sourceTree = "<group>"; };
+		4646692D28D18FFB0076A3E3 /* APNSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APNSManager.m; sourceTree = "<group>"; };
+		46BFD05629376DB900EEB478 /* TEObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEObject.h; sourceTree = "<group>"; };
+		46BFD05729376DB900EEB478 /* TEObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEObject.m; sourceTree = "<group>"; };
 		67816C72EC8BCC530D10AFD6 /* Pods-TATest_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TATest_iOS.release.xcconfig"; path = "Target Support Files/Pods-TATest_iOS/Pods-TATest_iOS.release.xcconfig"; sourceTree = "<group>"; };
 		B6756E952841B3F100CAF38C /* TATest_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TATest_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6756E982841B3F100CAF38C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +100,9 @@
 		B6756E972841B3F100CAF38C /* TATest_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				4642F4D428D2F85E0048D26D /* GoogleService-Info.plist */,
+				4646692C28D18FFB0076A3E3 /* APNSManager.h */,
+				4646692D28D18FFB0076A3E3 /* APNSManager.m */,
 				B6756E982841B3F100CAF38C /* AppDelegate.h */,
 				B6756E992841B3F100CAF38C /* AppDelegate.m */,
 				B6756E9B2841B3F100CAF38C /* SceneDelegate.h */,
@@ -100,6 +111,8 @@
 				B6756E9F2841B3F100CAF38C /* ViewController.m */,
 				B6756EB62842025000CAF38C /* HomeViewController.h */,
 				B6756EB72842025000CAF38C /* HomeViewController.m */,
+				46BFD05629376DB900EEB478 /* TEObject.h */,
+				46BFD05729376DB900EEB478 /* TEObject.m */,
 				B6756EB52842020200CAF38C /* AutoTracker */,
 				B6756EA12841B3F100CAF38C /* Main.storyboard */,
 				B6756EA42841B3F200CAF38C /* Assets.xcassets */,
@@ -193,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6756EA82841B3F200CAF38C /* LaunchScreen.storyboard in Resources */,
+				4642F4D528D2F85E0048D26D /* GoogleService-Info.plist in Resources */,
 				B6756EA52841B3F200CAF38C /* Assets.xcassets in Resources */,
 				B6756EA32841B3F100CAF38C /* Main.storyboard in Resources */,
 			);
@@ -252,9 +266,11 @@
 				B6756EBB2842091600CAF38C /* AppViewViewController.m in Sources */,
 				B6756EC128421BA700CAF38C /* AppClickTableViewVC.m in Sources */,
 				B6756EAB2841B3F200CAF38C /* main.m in Sources */,
+				4646692E28D18FFB0076A3E3 /* APNSManager.m in Sources */,
 				B6756EB82842025100CAF38C /* HomeViewController.m in Sources */,
 				B6756EBE28420EFA00CAF38C /* AppClickViewController.m in Sources */,
 				B6756E9D2841B3F100CAF38C /* SceneDelegate.m in Sources */,
+				46BFD05829376DB900EEB478 /* TEObject.m in Sources */,
 				B6756EC42842285600CAF38C /* IgnoredViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -402,6 +418,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PM4B9EWD95;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TATest_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -414,7 +431,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "xmly.TATest-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -431,6 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PM4B9EWD95;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TATest_iOS/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -443,7 +461,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "xmly.TATest-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

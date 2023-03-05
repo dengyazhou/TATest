@@ -18,10 +18,10 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>TAConfigInfo</key>
+	<dict/>
 	<key>TDDisPresetProperties</key>
-	<array>
-		<string>#duration</string>
-	</array>
+	<array/>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -1,20 +1,59 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:thinking_analytics/thinking_analytics.dart';
+// import 'package:appsflyer_sdk/appsflyer_sdk.dart';
+
 
 void main() {
   runApp(const MyApp());
 }
+
+
+// late final AppsFlyerOptions _options;
+// late final AppsflyerSdk _appsflyerSdk;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
 
   _test() async {
-    ThinkingAnalyticsAPI.enableLog();
-    final ThinkingAnalyticsAPI ta = await ThinkingAnalyticsAPI.getInstance("a5bf4fc2f8a248a7a02b9a62a58bf1e9", "http://ta_test.receiver.thinkingdata.cn", mode:ThinkingAnalyticsMode.DEBUG);
 
-    ta.track('Simple_ss1');
+    // _options = AppsFlyerOptions(afDevKey: 'JRA7UhXd8ngM47bE3ENA3f', showDebug: true, appId: '1524257092');
+    // _appsflyerSdk  = AppsflyerSdk(_options);
+    // _appsflyerSdk.initSdk(registerConversionDataCallback: true, registerOnAppOpenAttributionCallback: true);
+
+    ThinkingAnalyticsAPI.enableLog();
+    final ThinkingAnalyticsAPI ta = await ThinkingAnalyticsAPI.getInstance("af6861d085e14b5c948662e1fcdce6ef", "https://receiver-ta-demo.thinkingdata.cn", timeZone: 'UTC',mode: ThinkingAnalyticsMode.NORMAL,enableEncrypt: false);
+
+    // print("hello flutter 开始");
+    // sleep(Duration(seconds: 2));
+    // print("hello flutter 结束");
+
+    // ta.enableAutoTrack([
+    //   ThinkingAnalyticsAutoTrackType.APP_START,
+    //   ThinkingAnalyticsAutoTrackType.APP_END,
+    //   ThinkingAnalyticsAutoTrackType.APP_INSTALL,
+    //   ThinkingAnalyticsAutoTrackType.APP_CRASH,
+    // ]);
+    
+
+
+    // ta.track('Simple_ss4');
     // ta.track('Simple_ss1',properties:{"AsS":"123"});
+
+    // ta.login("dengyazhou_0907");
+    // ta.userSet(<String, dynamic>{
+    //   'name': 222333,
+    // });
+
+    ta.track('Simple_ss02');
+
+
+    // ta.enableThirdPartySharing(TAThirdPartyShareType.TA_APPS_FLYER);
+    ta.enableThirdPartySharing([TAThirdPartyShareType.TA_APPS_FLYER]);
+    // ta.enableThirdPartySharing(TAThirdPartyShareType.TA_APPS_FLYER,{});
+    // ta.setAutoTrackProperties(autoTrackTypes, autoTrackEventProperties)
   }
 
   // This widget is the root of your application.

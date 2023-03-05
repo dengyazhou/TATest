@@ -6,49 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jsBase</title>
 
+
+    <!-- JS ValueOf -->
+    <script src="./dyz_js/JSSystemMethod.js"></script>
+
+    <!-- JS 对象 -->
+    <script src="./dyz_js/JSObject.js">
+        console.log("对象");//添加了src，这里就不会走。
+    </script>
+
+    <!--  JS 函数 -->
+    <script src="./dyz_js/JSFunction.js"></script>
+
+    <!--  JS 类 -->
+    <script src="./dyz_js/JSClass.js"></script>
+
+    <!-- JS Async -->
+    <script src="./dyz_js/JSAsync.js"></script>
+
+    <!-- JSTATest -->
+    <script src="./dyz_js/JSTATest.js"></script>
+
+    
+
+
+    <!-- <script src="./Base.js"></script>
+    <script src="./Home.js"></script> -->
+
     <script>
-        // "use strict" //必选放在 第一条语句才有效果，也就是<script>下面
         console.log("hello js!");
-        // JS 函数 Call ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-        // var person = {
-        //     firstName: "Bill",
-        //     lastName: "Gates",
-        //     fullName: function () {
-        //         return this.firstName + " " + this.lastName; 
-        //     }
+
+        // console.log(typeof Date.prototype.toJSON);
+
+        // var d = new Date();
+        // var dd = d.toJSON();
+        // console.log(dd);
+
+        // console.log(typeof Date.prototype.toJSON);
+        // if (typeof Date.prototype.toJSON !== 'function') {
+        //     console.log("来了");
         // }
-        // console.log("fullName: " + person.fullName());
+
+      
+
+        // var s = "abc";
+        // var ss = s.toJSON();
+        // console.log(ss);
+
+        // console.log(typeof JSON);
+        // if (typeof JSON !== 'object') {
+        //     console.log(111111);
+        //     console.log(typeof JSON);
+        //     JSON = {};
+        // }
+        // // console.log(typeof JSON);
+        // if (typeof JSON !== 'object') {
+        //     console.log(222222);
+        //     console.log(typeof JSON);
+        // }
 
 
-        // var person = {
-        //     fullName: function () {
-        //         return this.firstName + " " + this.lastName;
-        //     }
-        // }
-        // var person1 = {
-        //     firstName: "Bill",
-        //     lastName: "Gates",
-        // }
-        // var person2 = {
-        //     firstName: "Steve",
-        //     lastName: "Jobs",
-        // }
-        // console.log("fullName: " + person.fullName.call(person2));
+       
 
 
-        // var person = {
-        //     fullName: function(city, country) {
-        //         return this.firstName + " " + this.lastName + "," + city + "," + country;
-        //     }
-        // }
-        // var person1 = {
-        //     firstName: "Bill",
-        //     lastName: "Gates"
-        // }
-        // console.log("fullName: " + person.fullName.call(person1, "Seattle", "USA"));
-        // JS 函数 Call ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+
+
+        // var p123 = new Person("aaaaaaa1");
+
+        // console.log(p123.firstName);
+        // console.log(per.firstName);
         
+        // "use strict" //必选放在 第一条语句才有效果，也就是<script>下面
+      
+
+        // import {
+        //     person0,
+        // } from './jsBase';
+
+        // for (item in person0) {
+        //     console.log("key:" + item + " value:" + person0[item]);
+        // }
+
+        // JS window ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // var key = "键:";
+        // var value = "值:";
+        // for (const x in window) {
+        //     console.log("window:===>key:" + x + " value:" + window[x]);
+        // }
+        // JS window ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
         
 
         // createElement ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -69,63 +115,48 @@
         // }
         // getElementsByTagName ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
+        // String() ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // var car = {type:"porsche", model:"911", color:"white"}
+        // console.log(car.type)
+        // String() ==========================================>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        
+
         // "use strict";
         // var str = myFun();
         // console.log(str);
+        // console.log(this);
 
         // function myFun() {
         //     return this;
         // }
 
-        function Person(first, last, age, eye) {
-            this.firstName = first;
-            this.lastName = last;
-            this.age = age;
-            this.eyeColor = eye;
-            // this.nationality = "English";
-        }
+        // function myFunction() {
+        //     // var i = 10;
+        //     // debugger;
+        //     // var b = i + 20;
+        //     // console.log(b);
 
-        // Person.nationality = "English";
-        Person.prototype.nationality = "English123";
-
-        Person.prototype.name = function() {
-            return this.firstName + " " + this.lastName;
-        }
-
-        var myFather = new Person("John", "Doe", 50, "Blue");
-        var myMother = new Person("Sally", "Rally", 48, "Green");
-
-        console.log("first: " + myFather.firstName + " last: " + myFather.lastName + " age: " + myFather.age + " eye: " + myFather.eyeColor);
-        console.log("nationality: " + myFather.nationality);
-        console.log("name: " + myFather.name());
-
-        function myFunction() {
-            // var i = 10;
-            // debugger;
-            // var b = i + 20;
-            // console.log(b);
-
-            // var w = window.innerWidth;
-            // var w1 = document.documentElement.clientWidth;
-            // var w2 = document.body.clientWidth;
-            // console.log("w: " + w + " w1: " + w1 + " w2: " + w2);
+        //     // var w = window.innerWidth;
+        //     // var w1 = document.documentElement.clientWidth;
+        //     // var w2 = document.body.clientWidth;
+        //     // console.log("w: " + w + " w1: " + w1 + " w2: " + w2);
 
 
-            console.log("来了老弟");
-            // window.open("HomeSyn.html");
-            // window.close();
-            // window.moveTo(100, 200);
-            // window.resizeTo(200,800);
+        //     console.log("来了老弟");
+        //     // window.open("HomeSyn.html");
+        //     // window.close();
+        //     // window.moveTo(100, 200);
+        //     // window.resizeTo(200,800);
             
-            // var w = window.screen.availWidth;
-            // var w1 = screen.availWidth;
-            // console.log(window.innerWidth + "w: " + w + " w1: " + w1);
+        //     // var w = window.screen.availWidth;
+        //     // var w1 = screen.availWidth;
+        //     // console.log(window.innerWidth + "w: " + w + " w1: " + w1);
 
-            // hostname = location.pathname;
-            // console.log("hostname: " + hostname);
+        //     // hostname = location.pathname;
+        //     // console.log("hostname: " + hostname);
 
-            window.location.assign("HomeSyn.html");//当前页面
-        }
+        //     // window.location.assign("HomeSyn.html");//当前页面
+        // }
 
         
         // var num = 011;//使用了"use strict"，就会报错
@@ -191,24 +222,64 @@
         // a = true;
         // console.log("a: " + a);
 
-        document.onload = function() {
-            console.log("document onload 来了");
-        };
-        window.onload = function() {
-            console.log("window onload 来了");
-        };
+        // document.onload = function() {
+        //     console.log("document onload 来了");
+        // };
+        // window.onload = function() {
+        //     console.log("window onload 来了");
+        // };
 
-        function myOnload() {
-            console.log("body onload 来了");
-        }
+        
 
 
     </script>
-</head>
-<body onload="myOnload()">
-    
 
+    <script>
+        class ThinkingDataAPIForNativeDYZ {
+            constructor() {
+                console.log("开始初始化");
+            }
+
+            setDynamicSuperPropertiesDyz(dynamicProperties) {
+                
+                console.log( typeof dynamicProperties );
+            }
+
+        }
+
+        function myFunction1() {
+            console.log("myFunction1 执行了");
+            // let obj = new ThinkingDataAPIForNativeDYZ();
+            // obj.setDynamicSuperPropertiesDyz("abc");
+
+            this.abc123 = "123456";
+            console.log(this.abc123);
+
+            // var p123 = {
+            //     firstName:"Bill",
+            //     lastName:"Gates",
+            //     age:50,
+            //     eyeColor:"blue",
+            // }
+            // console.log( p123.firstName );
+            // console.log( p123["firstName"] );
+            // console.log( p123.first123 );
+        }
+
+        function myFunction2() {
+            console.log("呵呵" + this.abc123);
+        }
+        
+        function myOnload() {
+            console.log("body onload 来了");
+            document.cookie = "expires=Thu, 23 Feb 2023 11:22:12 GMT; path=/; domain=*"
+        }
+    </script>
+</head>
+<body > 
     <button onclick="myFunction()">点我</button>
+    <button onclick="myFunction1()">点我</button>
+    <button onclick="myFunction2()">呵呵点我</button>
     <ul>
         <li>Coffee</li>
         <li>Tea</li>
@@ -218,6 +289,7 @@
         <li>Tea1</li>
         <li>五号楼</li>
     </ul>
+
     
 </body>
 </html>

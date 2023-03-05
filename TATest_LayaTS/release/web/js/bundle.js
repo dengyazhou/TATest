@@ -19,18 +19,18 @@
     class SceneDyz extends ui.SceneOnedyzUI {
         constructor() {
             super();
-            console.log("hello TS");
+            console.log("=======>>>>>>>>>>>>>>>>>>>>> hello TS");
             let spr = new Laya.Sprite();
             this.addChild(spr);
             spr.graphics.drawRect(100, 100, 50, 50, "#ffa1dd");
             var config = {
                 appId: "af6861d085e14b5c948662e1fcdce6ef",
                 serverUrl: "https://receiver-ta-demo.thinkingdata.cn",
+                enableNative: true
             };
             var ta = new ThinkingAnalyticsAPI(config);
             ta.init();
-            ta.track("test_event_laya");
-            console.log("getDeviceId: " + ta.getDeviceId());
+            ta.track("test_event_laya14");
         }
     }
 

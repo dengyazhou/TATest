@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function localStorage_setItem() {
+            console.log("存");
+            window.localStorage.setItem("key_name","邓ya124");
+            window.localStorage.setItem("key_age","23");
+        }
+
+        function localStorage_getItem() {
+            console.log("取");
+            var name = window.localStorage.getItem("key_name");
+            console.log(name);
+        }
+        
+        function localStorage_removeItem() {
+            console.log("移除");
+            window.localStorage.removeItem("key_name");
+        }
+
+        function localStorage_length() {
+            console.log("length");
+            var length = window.localStorage.length;
+            console.log(length);
+
+            for (let index = 0; index < window.localStorage.length; index++) {
+                var element = window.localStorage.key(index);//取出key
+                console.log(element);
+            }
+        }
+
+        function myOnLoad() {
+            console.log("===>>>:onLoad1");
+            document.cookie = "abc=呵呵";
+            console.log(document.cookie);
+            console.log("===>>>:onLoad2");
+        }
+        
+    </script>
+</head>
+<body onload="myOnLoad()">
+    <button onclick="localStorage_setItem()">localStorage 存</button>
+    <button onclick="localStorage_getItem()">localStorage 取</button>
+    <button onclick="localStorage_removeItem()">localStorage 移除</button>
+    <button onclick="localStorage_length()">localStorage length</button>
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug/CMakeFiles/TATest_cpp.dir
+/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug/CMakeFiles/thinkingdata.dir
+/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/thinkingdata-yazhou/Desktop/td_yazhou/TATest/TATest_cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
